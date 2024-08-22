@@ -17,7 +17,7 @@ let project_url = "/project/";
 let github_url = "https://github.com/wilhelmusolejr/";
 
 export const projects = [
-  // Philippine Currency Identifier
+  // 1 Philippine Currency Identifier
   {
     id: 1,
     name: "Philippine Currency Identifier",
@@ -32,22 +32,21 @@ export const projects = [
       },
     },
     project_showcase: {
-      intro: {
+      is_intro: {
         order: 1,
         image: philippinecurrency,
       },
-      project: {
-        is_pinned: {
-          order: 1,
-          image: philippinecurrency,
-        },
-        other: null,
+      is_pinned: {
+        order: 1,
+        image: philippinecurrency,
       },
+      is_other: null,
     },
     link: {
       name: "philippine-currency-identifier",
-      github: "",
-      project: "",
+      github: undefined,
+      project: undefined,
+      external: null,
     },
     design: {
       font: ["poppins"],
@@ -64,26 +63,517 @@ export const projects = [
       ],
     },
   },
-  // Foodify
-  // Online Consultationn Clinic
-  // Depression Predictor
+  // 4 Foodify
 
-  // mobhie
-  // PennyWise
-  // JollyMax
-  // Tech Vuitton
-  // Shopeeling
-  // Video to image converter
-  // MoneyTracker v1
-  // Gcash PH
-  // NFT Marketplace
-  // Microsoft Reward Bot
-  // Netflakes
-  // E-Commerce
-
+  // 3 Online Consultationn Clinic
   {
-    id: 1,
-    name: "",
+    id: 3,
+    name: "Consultation Clinic",
+    information: {
+      short_description: "Online Consultation Clinic",
+      description: [],
+      features: [],
+      type: [],
+      tags: {
+        technology: [],
+        project: [],
+      },
+    },
+    project_showcase: {
+      is_intro: {
+        order: 2,
+        image: clinic,
+      },
+      is_pinned: {
+        order: 3,
+        image: clinic,
+      },
+      is_other: null,
+    },
+    link: {
+      name: "online-appointment-and-consultation-clinic",
+      github: undefined,
+      project: undefined,
+      external: null,
+    },
+    design: {
+      font: ["poppins"],
+      color: ["#000000", "#ffffff"],
+      structure: [
+        {
+          name: "html",
+          percent: "80",
+        },
+        {
+          name: "css",
+          percent: "20",
+        },
+      ],
+    },
+  },
+
+  // 2 Depression Predictor
+  {
+    id: 2,
+    name: "Depression Level Predictor (DASS)",
+    information: {
+      short_description: "Predicts person's depression level",
+      description: ["test", "test"],
+      features: ["test", "test"],
+      type: ["design", "develop"],
+      tags: {
+        technology: ["test"],
+        project: ["test"],
+      },
+    },
+    project_showcase: {
+      is_intro: null,
+      is_pinned: {
+        order: 4,
+        image: depression,
+      },
+      is_other: null,
+    },
+    link: {
+      name: "dass-depression-level-predictor",
+      github: undefined,
+      project: undefined,
+      external: null,
+    },
+    design: {
+      font: ["poppins"],
+      color: ["#000000", "#ffffff"],
+      structure: [
+        {
+          name: "html",
+          percent: "80",
+        },
+        {
+          name: "css",
+          percent: "20",
+        },
+      ],
+    },
+  },
+
+  // -- /////////////////
+
+  // 6 mobhie = other = 2
+  {
+    id: 6,
+    name: "Mobhie",
+    information: {
+      short_description: "Online movie platform",
+      description: ["test", "test"],
+      features: ["test"],
+      type: ["Design", "Develop"],
+      tags: {
+        technology: ["test"],
+        project: ["test"],
+      },
+    },
+    project_showcase: {
+      is_intro: {
+        order: 1,
+        image: mobhie,
+      },
+      is_pinned: null,
+      is_other: {
+        orderr: 2,
+        image: mobhie,
+      },
+    },
+    link: {
+      name: "mobhie",
+      github: undefined,
+      project: undefined,
+      external: null,
+    },
+    design: {
+      font: ["poppins"],
+      color: ["#000000", "#ffffff"],
+      structure: [
+        {
+          name: "html",
+          percent: "80",
+        },
+        {
+          name: "css",
+          percent: "20",
+        },
+      ],
+    },
+  },
+
+  // 5 PennyWise = other = 1
+  {
+    id: 5,
+    name: "PennyWISE PH",
+    information: {
+      short_description: "Online money tracker application",
+      description: ["test", "test"],
+      features: ["test"],
+      type: ["Design", "Develop"],
+      tags: {
+        technology: ["test"],
+        project: ["test"],
+      },
+    },
+    project_showcase: {
+      is_intro: {
+        order: 4,
+        image: pennywise,
+      },
+      is_pinned: null,
+      is_other: {
+        orderr: 1,
+        image: pennywise,
+      },
+    },
+    link: {
+      name: "pennywise",
+      github: undefined,
+      project: undefined,
+      external: null,
+    },
+    design: {
+      font: ["poppins"],
+      color: ["#000000", "#ffffff"],
+      structure: [
+        {
+          name: "html",
+          percent: "80",
+        },
+        {
+          name: "css",
+          percent: "20",
+        },
+      ],
+    },
+  },
+
+  // 7 JollyMax = other = 3
+  {
+    id: 7,
+    name: "J077YM4X PH",
+    information: {
+      short_description: "Bot for auto buy digital items.",
+      description: ["test", "test"],
+      features: ["test"],
+      type: ["automate"],
+      tags: {
+        technology: ["test"],
+        project: ["test"],
+      },
+    },
+    project_showcase: {
+      is_intro: null,
+      is_pinned: null,
+      is_other: {
+        orderr: 3,
+        image: jollymax_bot,
+      },
+    },
+    link: {
+      name: "jollymax",
+      github: undefined,
+      project: undefined,
+      external: null,
+    },
+    design: null,
+  },
+
+  // 12 Tech Vuitton = other = 7
+  {
+    id: 12,
+    name: "Tech Vuitton",
+    information: {
+      short_description: "Minimalist high tech E-Commerce",
+      description: ["test", "test"],
+      features: ["test"],
+      type: ["design"],
+      tags: {
+        technology: ["test"],
+        project: ["test"],
+      },
+    },
+    project_showcase: {
+      is_intro: null,
+      is_pinned: null,
+      is_other: {
+        order: 7,
+        image: techvouitton,
+      },
+    },
+    link: {
+      name: "tech-vuitton",
+      github: undefined,
+      project: undefined,
+      external: null,
+    },
+    design: {
+      font: ["poppins"],
+      color: ["#000000", "#ffffff"],
+      structure: [
+        {
+          name: "html",
+          percent: "80",
+        },
+        {
+          name: "css",
+          percent: "20",
+        },
+      ],
+    },
+  },
+
+  // 8 Shopeeling = other = 4
+  {
+    id: 8,
+    name: "Shopeeling",
+    information: {
+      short_description: "E-commerce platform",
+      description: ["test", "test"],
+      features: ["test"],
+      type: ["automate"],
+      tags: {
+        technology: ["test"],
+        project: ["test"],
+      },
+    },
+    project_showcase: {
+      is_intro: {
+        order: 3,
+        image: shopeeling,
+      },
+      is_pinned: null,
+      is_other: {
+        order: 4,
+        image: shopeeling,
+      },
+    },
+    link: {
+      name: "shopeeling",
+      github: undefined,
+      project: undefined,
+      external: null,
+    },
+    design: {
+      font: ["poppins"],
+      color: ["#000000", "#ffffff"],
+      structure: [
+        {
+          name: "html",
+          percent: "80",
+        },
+        {
+          name: "css",
+          percent: "20",
+        },
+      ],
+    },
+  },
+
+  // Video to image converter
+
+  // 13 MoneyTracker v1 = other = 8
+  {
+    id: 13,
+    name: "Money Tracker v1",
+    information: {
+      short_description: "Money Tracker Version 1",
+      description: ["test", "test"],
+      features: ["test"],
+      type: ["design", "develop"],
+      tags: {
+        technology: ["test"],
+        project: ["test"],
+      },
+    },
+    project_showcase: {
+      is_intro: null,
+      is_pinned: null,
+      is_other: {
+        order: 8,
+        image: money_tracker_v1,
+      },
+    },
+    link: {
+      name: "money-tracker-v1",
+      github: undefined,
+      project: undefined,
+      external: null,
+    },
+    design: {
+      font: ["poppins"],
+      color: ["#000000", "#ffffff"],
+      structure: [
+        {
+          name: "html",
+          percent: "80",
+        },
+        {
+          name: "css",
+          percent: "20",
+        },
+      ],
+    },
+  },
+
+  // 14 Gcash PH = other = 9
+  {
+    id: 14,
+    name: "GC4SH PH",
+    information: {
+      short_description: "Bot for account auto create",
+      description: ["test", "test"],
+      features: ["test"],
+      type: ["automate"],
+      tags: {
+        technology: ["test"],
+        project: ["test"],
+      },
+    },
+    project_showcase: {
+      is_intro: null,
+      is_pinned: null,
+      is_other: {
+        orderr: 9,
+        image: gcash_bot,
+      },
+    },
+    link: {
+      name: "gc4sh",
+      github: undefined,
+      project: undefined,
+      external: null,
+    },
+    design: null,
+  },
+
+  // 11 NFT Marketplace = other = 6
+  {
+    id: 11,
+    name: "NFT marketplace",
+    information: {
+      short_description: "NFT marketplace platform",
+      description: [],
+      features: [],
+      type: ["design"],
+      tags: {
+        technology: [],
+        project: [],
+      },
+    },
+    project_showcase: {
+      is_intro: null,
+      is_pinned: null,
+      is_other: {
+        order: 6,
+        image: nft,
+      },
+    },
+    link: {
+      name: "nft-marketplace",
+      github: undefined,
+      project: undefined,
+      external: null,
+    },
+    design: {
+      font: ["poppins"],
+      color: ["#000000", "#ffffff"],
+      structure: [
+        {
+          name: "html",
+          percent: "80",
+        },
+        {
+          name: "css",
+          percent: "20",
+        },
+      ],
+    },
+  },
+
+  // 10 Microsoft Reward Bot = 5
+  {
+    id: 10,
+    name: "M1cros0ft R3w4rd BOT",
+    information: {
+      short_description: "Bot for auto grind points",
+      description: ["test", "test"],
+      features: ["test"],
+      type: ["automate"],
+      tags: {
+        technology: ["test"],
+        project: ["test"],
+      },
+    },
+    project_showcase: {
+      is_intro: null,
+      is_pinned: null,
+      is_other: {
+        orderr: 5,
+        image: microsoft_bot,
+      },
+    },
+    link: {
+      name: "microsoft-reward",
+      github: undefined,
+      project: undefined,
+      external: null,
+    },
+    design: null,
+  },
+
+  // 9 Netflakes = other = 10
+  {
+    id: 9,
+    name: "Netflakes",
+    information: {
+      short_description: "Online movie platform",
+      description: ["test", "test"],
+      features: ["test"],
+      type: ["Design", "Develop"],
+      tags: {
+        technology: ["test"],
+        project: ["test"],
+      },
+    },
+    project_showcase: {
+      is_intro: null,
+      is_pinned: null,
+      is_other: {
+        order: 10,
+        image: netflakes,
+      },
+    },
+    link: {
+      name: "netflakes",
+      github: undefined,
+      project: undefined,
+      external: null,
+    },
+    design: {
+      font: ["poppins"],
+      color: ["#000000", "#ffffff"],
+      structure: [
+        {
+          name: "html",
+          percent: "80",
+        },
+        {
+          name: "css",
+          percent: "20",
+        },
+      ],
+    },
+  },
+
+  // 15 E-Commerce = other 11
+  {
+    id: 15,
+    name: "E-commerce",
     information: {
       short_description: "",
       description: [],
@@ -95,25 +585,18 @@ export const projects = [
       },
     },
     project_showcase: {
-      intro: {
-        order: 1,
+      is_intro: null,
+      is_pinned: null,
+      is_other: {
+        order: 11,
         image: ecommerce,
-      },
-      project: {
-        is_pinned: {
-          order: 1,
-          image: ecommerce,
-        },
-        other: {
-          order: 1,
-          image: ecommerce,
-        },
       },
     },
     link: {
       name: "",
-      github: "",
-      project: "",
+      github: undefined,
+      project: undefined,
+      external: null,
     },
     design: {
       font: ["poppins"],
@@ -128,290 +611,6 @@ export const projects = [
           percent: "20",
         },
       ],
-    },
-  },
-
-  {
-    id: 1,
-    name: "E-commerce",
-    information: {
-      short_description: "E-commerce application",
-      description: [
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nulla blanditiis praesentium unde voluptate accusantium omnis deserunt natus delectus neque?",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum voluptas perferendis sit? Id voluptatem repudiandae et hic tenetur, molestiae a aut inventore, corporis consequuntur repellat aliquid recusandae, aspernatur at asperiores.",
-      ],
-      features: [
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, quae!",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident inventore, corporis totam maiores ut obcaecati.",
-      ],
-      type: ["design"],
-      tags: {
-        technology: ["React", "CSS", "JavaScript"],
-        project: ["e-commerce", "responsive-design"],
-      },
-    },
-    project_showcase: {
-      intro: {
-        order: 1,
-        image: ecommerce,
-      },
-      project: {
-        is_pinned: {
-          order: 1,
-          image: ecommerce,
-        },
-        other: {
-          order: 1,
-          image: ecommerce,
-        },
-      },
-    },
-    link: {
-      name: "e-commerce",
-      github: undefined,
-      project: undefined,
-    },
-  },
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  {
-    id: 2,
-    title: "Netflakes",
-    description: "Movie website platform",
-    type: ["develop", "design"],
-    file: {
-      intro: null,
-      portfolio: netflakes,
-    },
-    project_showcase: null,
-    link: {
-      github: "https://github.com/wilhelmusolejr/Netflakes",
-      project: "netflakes",
-    },
-    tags: {
-      technology: ["React", "CSS", "JavaScript"],
-      project: ["movie-platform", "responsive-design"],
-    },
-  },
-  {
-    id: 3,
-    title: "Microsoft Reward BOT",
-    description: "Bot for auto grind points",
-    type: ["automate"],
-    file: {
-      intro: null,
-      portfolio: microsoft_bot,
-    },
-    project_showcase: null,
-    link: {
-      github: "https://github.com/wilhelmusolejr/Microsoft-Reward-BOT",
-      project: "microsoft-reward",
-    },
-    tags: {
-      technology: ["Python", "Selenium"],
-      project: ["bot", "automation"],
-    },
-  },
-  {
-    id: 4,
-    title: "NFT marketplace",
-    description: "NFT marketplace site",
-    type: ["design"],
-    file: {
-      intro: nft,
-      portfolio: nft,
-    },
-    project_showcase: null,
-    link: {
-      github: "https://github.com/wilhelmusolejr/NFT-Marketplace",
-      project: "nft-marketplace",
-    },
-    tags: {
-      technology: ["React", "CSS"],
-      project: ["nft", "marketplace"],
-    },
-  },
-  {
-    id: 5,
-    title: "GC4SH PH",
-    description: "Bot for auto create account",
-    type: ["automate"],
-    file: {
-      intro: null,
-      portfolio: gcash_bot,
-    },
-    project_showcase: null,
-    link: {
-      github: "https://github.com/wilhelmusolejr/GC4SH-PH",
-      project: "gc4sh",
-    },
-    tags: {
-      technology: ["Python", "Playwright"],
-      project: ["bot", "automation"],
-    },
-  },
-  {
-    id: 6,
-    title: "Money Tracker v1",
-    description: "Money Tracker",
-    type: ["develop", "design"],
-    file: {
-      intro: null,
-      portfolio: money_tracker_v1,
-    },
-    project_showcase: null,
-    link: {
-      github: "https://github.com/wilhelmusolejr/Money-Tracker-v1",
-      project: "money-tracker-v1",
-    },
-    tags: {
-      technology: ["Laravel", "Bootstrap", "MySQL"],
-      project: ["money-tracker", "responsive-design"],
-    },
-  },
-  {
-    id: 7,
-    title: "Shopeeling",
-    description: "E-commerce application",
-    type: ["develop", "design"],
-    file: {
-      intro: shopeeling,
-      portfolio: shopeeling,
-    },
-    project_showcase: null,
-    link: {
-      github: "https://github.com/wilhelmusolejr/Shopeeling",
-      project: "shopeeling",
-    },
-    tags: {
-      technology: ["React", "CSS", "JavaScript"],
-      project: ["e-commerce", "responsive-design"],
-    },
-  },
-  {
-    id: 8,
-    title: "DASS Depression Level Predictor",
-    description: "Predicts person's depression level",
-    type: ["develop"],
-    file: {
-      intro: null,
-      portfolio: depression,
-    },
-    project_showcase: 3,
-    link: {
-      github:
-        "https://github.com/wilhelmusolejr/DASS-Depression-Level-Predictor",
-      project: `${project_url}dass-depression-level-predictor`,
-    },
-    tags: {
-      technology: ["Python", "TensorFlow"],
-      project: ["ml", "depression-prediction"],
-    },
-  },
-  {
-    id: 9,
-    title: "Tech Vuitton",
-    description: "Minimalist high tech design",
-    type: ["design"],
-    file: {
-      intro: null,
-      portfolio: techvouitton,
-    },
-    project_showcase: null,
-    link: {
-      github: "https://github.com/wilhelmusolejr/Tech-Vuitton",
-      project: "tech-vuitton",
-    },
-    tags: {
-      technology: ["React", "CSS"],
-      project: ["minimalist", "high-tech-design"],
-    },
-  },
-  {
-    id: 10,
-    title: "J077YM4X PH",
-    description: "Bot for auto buy",
-    type: ["automate"],
-    file: {
-      intro: null,
-      portfolio: jollymax_bot,
-    },
-    project_showcase: null,
-    link: {
-      github: "https://github.com/wilhelmusolejr/Jollymax-BOT",
-      project: "jollymax",
-    },
-    tags: {
-      technology: ["Python", "Selenium"],
-      project: ["bot", "automation"],
-    },
-  },
-  {
-    id: 11,
-    title: "Consultation Clinic",
-    description: "Online Consultation Clinic",
-    type: ["develop", "design"],
-    file: {
-      intro: clinic,
-      portfolio: clinic,
-    },
-    project_showcase: 2,
-    link: {
-      github:
-        "https://github.com/wilhelmusolejr/Online-appointment-and-consultation-clinic",
-      project: "online-appointment-and-consultation-clinic",
-    },
-    tags: {
-      technology: ["Laravel", "Bootstrap", "MySQL"],
-      project: ["consultation", "clinic"],
-    },
-  },
-  {
-    id: 12,
-    title: "PennyWISE PH",
-    description: "Money tracker application",
-    type: ["develop", "design"],
-    file: {
-      intro: pennywise,
-      portfolio: pennywise,
-    },
-    project_showcase: 4,
-    link: {
-      github: "https://github.com/wilhelmusolejr/PennyWISE",
-      project: "pennywise",
-    },
-    tags: {
-      technology: ["Bootstrap", "Laravel", "HTML", "CSS", "MySQL"],
-      project: [
-        "mobile-responsive",
-        "dark-theme",
-        "static-website",
-        "money-tracker",
-      ],
-    },
-  },
-  {
-    id: 13,
-    title: "Mobhie",
-    description: "Movie website platform",
-    type: ["develop", "design"],
-    file: {
-      intro: mobhie,
-      portfolio: mobhie,
-    },
-    project_showcase: null,
-    link: {
-      github: "https://github.com/wilhelmusolejr/Mobhie",
-      project: "mobhie",
-    },
-    tags: {
-      technology: ["React", "CSS", "JavaScript"],
-      project: ["movie-platform", "responsive-design"],
     },
   },
 ];
