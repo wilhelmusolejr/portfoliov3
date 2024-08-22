@@ -1,0 +1,328 @@
+header {
+  min-height: 90vh;
+}
+header img {
+  width: 75%;
+  max-width: 275px;
+}
+
+section.container-fluid {
+  border-top: 1px solid var(--clr-border) !important;
+}
+
+.name {
+  font-weight: 700;
+}
+
+/* ------------------------ */
+/* ABOUT */
+.about {
+  padding-top: 10vh !important;
+}
+section.about .container {
+  border-top: 1px solid var(--clr-border);
+  border-left: 1px solid var(--clr-border);
+  border-right: 1px solid var(--clr-border);
+  padding: 20px;
+}
+
+.skill-parent {
+  border-radius: 24px;
+  width: fit-content;
+  margin-top: 10vh;
+}
+
+.skill-parent .child {
+  padding: 5px 10px;
+}
+
+.border {
+  border-color: var(--clr-border) !important;
+}
+
+.active {
+  background-color: var(--clr-white);
+  border-radius: 10px;
+
+  color: black;
+}
+.active p {
+  font-weight: 500;
+}
+
+.skill-list {
+  padding: 0 !important;
+}
+.skill-list.border {
+  border-bottom: none !important;
+}
+
+.skill-list .border {
+  border-top: none !important;
+  border-left: none !important;
+}
+
+.skill-list .border:nth-child(2n-2) {
+  border-right: none !important;
+}
+
+.skill-list .child {
+  width: 50%;
+}
+
+.skill-list > div {
+  margin: auto;
+}
+
+.skill-info {
+  padding: 10% 0;
+}
+
+/* ------------------------ */
+/* Work Experiece */
+.work-experience .container {
+  padding: 10vh 0 !important;
+
+  /* flex-direction: column; */
+}
+
+.work-experience .circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+.work-experience .circle:nth-child(1) {
+  background: #eb42f0;
+}
+.work-experience .circle:nth-child(2) {
+  background: #42f042;
+}
+
+.work-experience .left {
+  flex: 1;
+  min-height: 200px;
+}
+.work-experience .right {
+  flex: 1;
+
+  padding: 20px;
+
+  min-height: 30vh;
+  max-height: 50vh;
+  overflow: auto;
+  /* max-height: 500px; */
+}
+.work-experience .right.border {
+  border-top: none !important;
+}
+
+.work-experience .child,
+.work-experience .accordion-item {
+  min-width: 250px !important;
+  border-radius: 10px !important;
+  background-color: #131313 !important;
+  border: 1px solid var(--clr-border) !important;
+}
+
+.work-experience .accordion-button {
+  padding: 10px !important;
+}
+
+/* .accordion-button::after {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-image: none !important;
+  background: #42f042;
+  margin-left: auto;
+  content: "";
+} */
+
+.work-experience .accordion-item button {
+  background: transparent !important;
+  color: var(--clr-white);
+  border: none !important;
+
+  font-size: 18px !important;
+  font-weight: 300 !important;
+  line-height: 160% !important;
+}
+.work-experience .accordion-body {
+  font-size: 16px;
+}
+
+.accordion-button:not(.collapsed) {
+  box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0
+    var(--clr-border) !important;
+}
+
+/* ------------------------ */
+/* Projects */
+.project .container {
+  padding: 10vh 0 20vh 0;
+}
+
+.project .child {
+  width: 90%;
+  max-width: 300px;
+}
+
+.project .image-parent {
+  width: 100%;
+  height: 300px;
+
+  position: relative;
+}
+
+.project .image-design {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.75) 75%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+}
+
+.project .child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project .parent {
+  gap: 3vw;
+}
+
+.project .image-parent:hover .image-design {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0) 75%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* ------------------------ */
+/* Positive */
+.positive .layout-space {
+  padding-top: 10vh !important;
+
+  border-top: none !important;
+  border-bottom: none !important;
+}
+.positive .body p {
+  font-size: 14px;
+}
+
+.positive .parent .child {
+  width: 100%;
+  padding: 20px;
+}
+.positive .container {
+  padding: 20px;
+}
+.positive .parent {
+  gap: 20px;
+}
+
+/* ------------------------ */
+/* EMAIL */
+.contact .container {
+  padding: 10vh 0;
+
+  border-top: none !important;
+}
+
+/* ------------------------ */
+/* EMAIL */
+.email {
+  padding: 20vh 0;
+}
+.email .actual-email {
+  font-size: 8vw;
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 768px) {
+  .about {
+    padding-top: 0;
+  }
+
+  .skill-list > div {
+    width: 75% !important;
+  }
+  .skill-list .child {
+    width: 30%;
+    min-height: 200px;
+  }
+
+  .skill-list .border {
+    border: 1px solid var(--clr-border) !important;
+    border-top: none !important;
+  }
+
+  .skill-list .border:nth-child(2n-2) {
+    border-right: 1px solid var(--clr-border) !important;
+  }
+
+  .skill-list .border:nth-child(3n-2) {
+    border-right: none !important;
+  }
+
+  .skill-list .border:nth-child(3n) {
+    border-left: none !important;
+  }
+
+  /* .work-experience .container {
+    flex-wrap: wrap !important;
+  } */
+
+  .work-experience .child {
+    padding: 15px !important;
+  }
+  .work-experience .right {
+    padding: 20px;
+    min-height: 50vh;
+  }
+
+  .work-experience .right.border {
+    border-top: 1px solid var(--clr-border) !important;
+    border-left: none !important;
+  }
+
+  .project .parent {
+    gap: 3vw;
+  }
+
+  .positive .parent .child {
+    min-width: 300px;
+    max-width: 300px;
+  }
+
+  section.about .container {
+    padding: 10vh 10% 5vh 10%;
+  }
+
+  .work-experience .accordion-button {
+    padding: 10px 15px !important;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .email .actual-email {
+    font-size: 8vh;
+  }
+
+  .positive .parent .child {
+    min-width: 30%;
+  }
+}

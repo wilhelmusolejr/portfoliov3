@@ -1,0 +1,82 @@
+.project-intro .container {
+  padding: 0px 10% !important;
+}
+
+.project-intro img {
+  max-width: 400px !important;
+  border-radius: 24px;
+}
+
+.project-technology .child {
+  background: var(--clr-border);
+  border: 1px solid #3e3e3e;
+  padding: 10px;
+  min-width: 50px !important;
+  border-radius: 10px;
+
+  font-size: 22px;
+}
+
+section.container-fluid.project-design {
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.project-design {
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+}
+.project-design .container {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+.project-design .box {
+  width: 90%;
+  max-width: 500px;
+  min-height: 300px;
+  border-radius: 15px;
+}
+
+/* .project-design .box {
+  min-width: 500px;
+  min-height: 300px;
+  border-radius: 15px;
+} */
+
+.project-design .box .left {
+  flex: 1;
+}
+
+.project-design .box .font {
+  line-height: 1;
+}
+.project-design .color-box {
+  width: 4em;
+  height: 3em;
+  background: red;
+
+  border-radius: 10px;
+}
+
+.project-design .frac {
+  height: 3px;
+}
+
+.project-design .frac:nth-child(1) {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 80%;
+  background: blue;
+}
+.project-design .frac:nth-child(2) {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 20%;
+  background: violet;
+}
+
+.project-design .circle {
+  width: 10px;
+  height: 10px;
+  background: blue;
+}
