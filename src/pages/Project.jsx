@@ -67,7 +67,7 @@ export default function Project() {
             <ul className=" d-flex flex-column gap-2">
               {project.information.features.map((feature, index) => (
                 <li key={index}>
-                  <p>{feature}</p>
+                  <p>{feature}.</p>
                 </li>
               ))}
             </ul>
@@ -92,7 +92,7 @@ export default function Project() {
                   key={index}
                   href={`https://www.google.com/search?q=${tag}`}
                   target="_blank"
-                  className="child flex-center p-2 text-decoration-none text-light-white"
+                  className="child flex-center text-capitalize p-2 text-decoration-none text-light-white"
                 >
                   {tag}
                 </a>
