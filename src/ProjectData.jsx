@@ -17,68 +17,51 @@ let project_url = "/project/";
 let github_url = "https://github.com/wilhelmusolejr/";
 
 export const projects = [
-  {
-    id: 1,
-    title: "",
-    description: "",
-    type: ["develop", "design"],
-    file: {
-      intro: null,
-      portfolio: philippinecurrency,
-    },
-    project_showcase: 1,
-    link: {
-      github:
-        "https://github.com/wilhelmusolejr/Philippine-Currency-Identifier",
-      project: "philippine-currency-identifier",
-    },
-    tags: {
-      technology: ["React", "CSS", "JavaScript"],
-      project: ["currency-identifier", "responsive-design"],
-    },
-  },
-
   // Philippine Currency Identifier
   {
     id: 1,
     name: "Philippine Currency Identifier",
     information: {
       short_description: "Currency Recognition",
-      description: [],
-      features: [],
-      type: [],
+      description: ["test", "test"],
+      features: ["test", "test"],
+      type: ["design", "develop"],
       tags: {
-        technology: [],
-        project: [],
+        technology: ["test"],
+        project: ["test"],
       },
     },
     project_showcase: {
       intro: {
         order: 1,
-        image: ecommerce,
+        image: philippinecurrency,
       },
       project: {
         is_pinned: {
           order: 1,
-          image: ecommerce,
+          image: philippinecurrency,
         },
-        other: {
-          order: 1,
-          image: ecommerce,
-        },
+        other: null,
       },
     },
     link: {
-      name: "",
+      name: "philippine-currency-identifier",
       github: "",
       project: "",
     },
     design: {
-      font: [],
-      color: [],
-      structure: {
-        html: "80",
-      },
+      font: ["poppins"],
+      color: ["#000000", "#ffffff"],
+      structure: [
+        {
+          name: "html",
+          percent: "80",
+        },
+        {
+          name: "css",
+          percent: "20",
+        },
+      ],
     },
   },
   // Foodify
@@ -133,11 +116,18 @@ export const projects = [
       project: "",
     },
     design: {
-      font: [],
-      color: [],
-      structure: {
-        html: "",
-      },
+      font: ["poppins"],
+      color: ["#000000", "#ffffff"],
+      structure: [
+        {
+          name: "html",
+          percent: "80",
+        },
+        {
+          name: "css",
+          percent: "20",
+        },
+      ],
     },
   },
 
