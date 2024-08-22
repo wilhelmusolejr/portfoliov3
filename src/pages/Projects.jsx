@@ -38,12 +38,12 @@ export default function Project() {
                 {/* right */}
                 <div className="right border w-100">
                   <h2 className="text-light mt-3">{project.name}</h2>
+                  <p>{project.information.short_description}</p>
                   <p className="mt-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Fuga in porro dignissimos sit repellendus, rerum assumenda
-                    enim itaque ut! Provident?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Porro molestias asperiores rem odit maiores, quae
+                    repudiandae maxime excepturi nulla perferendis?
                   </p>
-
                   <div className="d-flex flex-wrap gap-2 mt-3">
                     {project.information.tags.project.map((tag, index) => (
                       <span

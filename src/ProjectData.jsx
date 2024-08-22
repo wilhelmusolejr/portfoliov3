@@ -44,7 +44,7 @@ function getAllProjects() {
       id: 1,
       name: "Philippine Currency Identifier",
       information: {
-        short_description: "Currency Recognition",
+        short_description: "Currency Recognition.",
         description: [
           "Philippine Currency Identifier is a thesis-developed app that helps visually impaired people in the Philippines identify currency denominations using a convolutional neural network. It offers vocal denomination recognition and a user-friendly interface for easy accessibility, enabling independent financial transactions through a quick smartphone scan. This app represents a significant advancement in assistive technology and inclusivity",
         ],
@@ -68,13 +68,13 @@ function getAllProjects() {
             "Video to Image",
           ],
           project: [
-            "Voice Assistance",
-            "Currency Identification",
-            "Machine learning",
-            "Visually Impaired Assistance",
-            "Mobile Application",
-            "Object Detection",
-            "Image Classification",
+            "Voice-Assistance",
+            "Currency-Identification",
+            "Machine-learning",
+            "Visually-Impaired-Assistance",
+            "Mobile-Application",
+            "Object-Detection",
+            "Image-Classification",
           ],
         },
       },
@@ -100,17 +100,7 @@ function getAllProjects() {
       },
       design: {
         font: ["poppins"],
-        color: ["#327b36", "#fbca01"],
-        structure: [
-          {
-            name: "html",
-            percent: "50",
-          },
-          {
-            name: "css",
-            percent: "50",
-          },
-        ],
+        color: ["#327b36", "#fbca01", "#f36969"],
       },
     },
     // 4 Foodify
@@ -120,19 +110,38 @@ function getAllProjects() {
       id: 3,
       name: "Consultation Clinic",
       information: {
-        short_description: "Online Consultation Clinic",
+        short_description: "Online Consultation Clinic.",
         description: [
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus assumenda odio beatae exercitationem totam rem tempore cumque harum deleniti!",
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, eveniet?",
+          "Online Appointment and Consultation Clinic is an innovative service provided by the Department of Nutrition and Dietetics at Western Mindanao State University. This platform is designed to offer convenient and accessible health nutrition consultations to individuals, particularly students of the university. It leverages advanced technology to deliver expert advice from experienced professors, ensuring high-quality and professional guidance.",
+          "The clinic features a user-friendly online interface, a live chatting system for real-time communication, and an optional food monitoring system for comprehensive dietary management. This initiative aims to enhance the accessibility of nutritional support and promote healthy living among the university community and beyond.",
         ],
         features: [
-          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi tempora alias quo vitae accusamus optio repellat velit numquam, omnis dolor, temporibus harum est sapiente voluptas cupiditate quas quaerat sit recusandae!",
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo earum sequi molestiae eos tempora deleniti?",
+          "Online Convenience: Provides a hassle-free platform for individuals seeking health nutrition consultations, enabling easy access from anywhere.",
+          "Free Access for Students: Available at no cost for students of Western Mindanao State University, offering valuable support without financial burden.",
+          "Expert Consultation: Consultations are conducted by professors from Western Mindanao State University, ensuring high-quality and knowledgeable guidance.",
+          "Live Chatting System: Includes a real-time chat feature for instant communication between users and consultants, enhancing the consultation experience.",
+          "Food Monitoring System: Optional food monitoring feature, if mandated by the RND, to assist in tracking and managing dietary habits.",
         ],
-        type: [],
+        type: ["design", "develop"],
         tags: {
-          technology: ["test"],
-          project: ["test"],
+          technology: [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "PHP",
+            "MySQL",
+            "Adobe XD",
+            "Adobe PS",
+          ],
+          project: [
+            "Online-Consultation",
+            "Health-Tech",
+            "Nutrition-Management",
+            "Live-Chat",
+            "Web-Application",
+            "Student-Support",
+            "Dietary-Monitoring",
+          ],
         },
       },
       project_showcase: {
@@ -157,17 +166,7 @@ function getAllProjects() {
       },
       design: {
         font: ["poppins"],
-        color: ["#000000", "#ffffff"],
-        structure: [
-          {
-            name: "html",
-            percent: "80",
-          },
-          {
-            name: "css",
-            percent: "20",
-          },
-        ],
+        color: ["#2E6a45", "#3ee57f", "#222222", "#f5f5f5"],
       },
     },
 
@@ -176,13 +175,33 @@ function getAllProjects() {
       id: 2,
       name: "Depression Level Predictor (DASS)",
       information: {
-        short_description: "Predicts person's depression level",
-        description: ["test", "test"],
-        features: ["test", "test"],
-        type: ["design", "develop"],
+        short_description: "Predicts person's depression level.",
+        description: [
+          "Depression is a mood disorder that causes a persistent feeling of sadness and loss of interest. It is also called as major depressive disorder or clinical depression, it affects how you feel, think and behave, and can lead to a variety of emotional and physical problems.",
+          "Depression Anxiety Stress Scales Responses is a dataset that was collected online from the various countries during the year of 2017 to 2019 by Openpsychometrics.org on Psychology Foundation of Australia | DASS in effort to educate the public about psychology. This dataset contains some background information of the respondents such as their race, education, religion, gender, etc. Furthermore, this dataset includes their responses from the 42 related negative emotional questions which is answerable from the scale of 1 to 4, and the 10-item personality test which is answerable from the scale of 1 to 7. Lastly, this dataset also contains the technical information of the respondent such as, what device they used while taking the test, where they found the test, etc.",
+          "https://www.kaggle.com/datasets/lucasgreenwell/depression-anxiety-stress-scales-responses",
+          "This machine learning project will create a predictive model using an algorithm that has the highest possible decent accuracy from the various machine learning algorithms. The said model will predict the level of depression of a respondent based on their responses from the 14 depressive emotional questions, 10-item personality test, and their basic information. Lastly, this project will also extract insights and interpret it from the given dataset.",
+        ],
+        features: [
+          "Predicts the level of depression based on responses to the questionnaire and basic information.",
+          "Provides insights and interpretation from the dataset.",
+          "Aids in tracking and understanding personal depression levels.",
+        ],
+        type: ["develop"],
         tags: {
-          technology: ["test"],
-          project: ["test"],
+          technology: [
+            "Python",
+            "Machine Learning",
+            "Project Jupyter",
+            "Kaggle",
+          ],
+          project: [
+            "Depression-Prediction",
+            "Mental-Health",
+            "Data-Analysis",
+            "Predictive-Modeling",
+            "Healthcare-Technology",
+          ],
         },
       },
       project_showcase: {
@@ -205,16 +224,6 @@ function getAllProjects() {
       design: {
         font: ["poppins"],
         color: ["#000000", "#ffffff"],
-        structure: [
-          {
-            name: "html",
-            percent: "80",
-          },
-          {
-            name: "css",
-            percent: "20",
-          },
-        ],
       },
     },
 
@@ -254,16 +263,6 @@ function getAllProjects() {
       design: {
         font: ["poppins"],
         color: ["#000000", "#ffffff"],
-        structure: [
-          {
-            name: "html",
-            percent: "80",
-          },
-          {
-            name: "css",
-            percent: "20",
-          },
-        ],
       },
     },
 

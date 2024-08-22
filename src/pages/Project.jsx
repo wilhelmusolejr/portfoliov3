@@ -87,6 +87,7 @@ export default function Project() {
             <p>Back</p>
           </a>
           <h1 className="text-light">{project.name}</h1>
+          <p>{project.information.short_description}</p>
         </div>
       </section>
 
@@ -99,7 +100,7 @@ export default function Project() {
           <div className="project-info">
             {project.information.description.map((description, index) => (
               <p key={index} className="mb-3">
-                {description}.
+                {description}
               </p>
             ))}
           </div>
@@ -109,7 +110,7 @@ export default function Project() {
             <ul className=" d-flex flex-column gap-2">
               {project.information.features.map((feature, index) => (
                 <li key={index}>
-                  <p>{feature}.</p>
+                  <p>{feature}</p>
                 </li>
               ))}
             </ul>
@@ -119,11 +120,16 @@ export default function Project() {
             <h2 className="mb-4 text-light">Contact</h2>
             <p>
               If you encounter any issues or have questions about this project,
-              please don't hesitate to reach out to me directly at{" "}
-              <span className="">wilhelmus.olejr@gmail.com</span>. As the sole
-              developer, I am dedicated to offering support and will do my best
-              to respond to your queries and concerns promptly, aiming to
-              provide solutions and answer your queries.
+              please don't hesitate to reach out to me directly at
+              wilhelmus.olejr@gmail.com. As the sole developer, I am dedicated
+              to providing support and will do my best to respond to your
+              concerns promptly, aiming to offer solutions and address your
+              queries.If you encounter any issues or have questions about this
+              project, please don't hesitate to reach out to me directly at{" "}
+              <span className="text-light">wilhelmus.olejr@gmail.com</span>. As
+              the sole developer, I am dedicated to providing support and will
+              do my best to respond to your concerns promptly, aiming to offer
+              solutions and address your queries.
             </p>
           </div>
 
