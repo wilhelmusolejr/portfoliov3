@@ -16,8 +16,9 @@ import Footer from "../components/Footer";
 export default function Project() {
   const location = useLocation();
   const project_name = location.pathname.split("/")[2];
-
   const project = getProject(project_name);
+
+  console.log(project.information.tags.technology);
 
   return (
     <>
@@ -47,13 +48,13 @@ export default function Project() {
       <section className="project-intro">
         <div className="container ">
           <div className="image-parent my-5 flex-center">
-            <img src={project.project_showcase.is_pinned.image} alt="" />
+            <img src={project.project_showcase.project.banner_image} alt="" />
           </div>
 
           <div className="project-info">
             {project.information.description.map((description, index) => (
               <p key={index} className="mb-3">
-                {description}
+                {description}.
               </p>
             ))}
           </div>
@@ -69,14 +70,30 @@ export default function Project() {
             </ul>
           </div>
 
-          <div className="project-technology my-5">
-            <div className="flex-center gap-2 text-light">
-              <div className="child flex-center">
-                <FontAwesomeIcon icon={faPython} />
-              </div>
-              <div className="child flex-center">
-                <FontAwesomeIcon icon={faLaravel} />
-              </div>
+          <div className="project-contact mt-5 pb-5">
+            <h2 className="mb-4 text-light">Contact</h2>
+            <p>
+              If you encounter any issues or have questions about this project,
+              please don't hesitate to reach out to me directly at{" "}
+              <span className="">wilhelmus.olejr@gmail.com</span>. As the sole
+              developer, I am dedicated to offering support and will do my best
+              to respond to your queries and concerns promptly, aiming to
+              provide solutions and answer your queries.
+            </p>
+          </div>
+
+          <div className="project-technology my-5 flex-center">
+            <div className="flex-center flex-wrap gap-2 text-light paragraph">
+              {project.information.tags.technology.map((tag, index) => (
+                <a
+                  key={index}
+                  href={`https://www.google.com/search?q=${tag}`}
+                  target="_blank"
+                  className="child flex-center p-2 text-decoration-none"
+                >
+                  {tag}
+                </a>
+              ))}
             </div>
           </div>
         </div>
