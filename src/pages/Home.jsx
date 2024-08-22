@@ -1,41 +1,15 @@
 import React from "react";
 
 import Navigator from "../components/Navigator";
+import { intro_projects } from "../ProjectData";
 
 // asset
-import mobhie from "../assets/projects/mockup/mobhie.webp";
-import clinic from "../assets/projects/mockup/clinic.webp";
-import pennywise from "../assets/projects/mockup/pennywise.webp";
 import Footer from "../components/Footer";
 
 function Home() {
-  let projects = [
-    {
-      name: "Mobhie",
-      image: mobhie,
-      short_description: "Movie website platform",
-    },
-    {
-      name: "Consultation Clinic",
-      image: clinic,
-      short_description: "Online Consultation Clinic",
-    },
-    {
-      name: "PennyWISE PH",
-      image: pennywise,
-      short_description: "Money tracker application",
-    },
-    {
-      name: "Mobhie",
-      image: mobhie,
-      short_description: "Movie website platform",
-    },
-    {
-      name: "Consultation Clinic",
-      image: clinic,
-      short_description: "Online Consultation Clinic",
-    },
-  ];
+  let projects = intro_projects();
+
+  console.log(projects);
 
   return (
     <>
@@ -56,13 +30,13 @@ function Home() {
             <div key={index} className="child">
               <div className="image-parent">
                 <a href="#">
-                  <img src={project.image} alt="" />
+                  <img src={project.project_showcase.is_intro.image} alt="" />
                 </a>
               </div>
               <div className="text-capitalize text-center py-4">
                 <h2 className="text-light">{project.name}</h2>
                 <p className="pt-1 project-description">
-                  {project.short_description}
+                  {project.information.short_description}
                 </p>
               </div>
             </div>

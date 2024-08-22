@@ -5,11 +5,6 @@ export default function Navigator() {
   const location = useLocation();
   const path = location.pathname.split("/")[1];
 
-  console.log(path);
-  console.log("projects".includes(path));
-
-  const pathSegments = location.pathname.split("/");
-
   if (location.pathname == "/") {
     return (
       <>

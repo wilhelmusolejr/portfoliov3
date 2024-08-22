@@ -1,7 +1,9 @@
 import Navigator from "../components/Navigator";
+import { useLocation } from "react-router-dom";
+
+import { getProject } from "../ProjectData";
 
 // asset
-import philippinecurrency from "../assets/projects/Portfolio/philippinecurrency.jpg";
 import gcash_bot from "../assets/projects/Portfolio/gcash_bot.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,6 +14,11 @@ import "../css/project.css";
 import Footer from "../components/Footer";
 
 export default function Project() {
+  const location = useLocation();
+  const project_name = location.pathname.split("/")[2];
+
+  const project = getProject(project_name);
+
   return (
     <>
       <Navigator />
@@ -33,52 +40,32 @@ export default function Project() {
             <FontAwesomeIcon icon={faArrowLeftLong} />
             <p>Back</p>
           </a>
-          <h1 className="text-light">Philippine Currency Identifier</h1>
+          <h1 className="text-light">{project.name}</h1>
         </div>
       </section>
 
       <section className="project-intro">
         <div className="container ">
           <div className="image-parent my-5 flex-center">
-            <img src={gcash_bot} alt="" />
+            <img src={project.project_showcase.is_pinned.image} alt="" />
           </div>
 
           <div className="project-info">
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum
-              voluptas quaerat explicabo sint asperiores temporibus a unde nam,
-              neque iusto!
-            </p>
-
-            <br />
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-              ullam labore ipsum necessitatibus saepe, maxime deserunt
-              repellendus! Delectus, error ipsam culpa labore eaque nam
-              quibusdam unde neque consequatur omnis earum.
-            </p>
+            {project.information.description.map((description, index) => (
+              <p key={index} className="mb-3">
+                {description}
+              </p>
+            ))}
           </div>
 
           <div className="project-features mt-5">
             <h2 className="mb-4 text-light">Features</h2>
             <ul className=" d-flex flex-column gap-2">
-              <li>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                  quisquam consequatur harum quibusdam sapiente? Dolore, animi
-                  rem. Illo, itaque. Quidem tenetur expedita velit ipsam atque
-                  enim, dolor magnam aperiam. Architecto!
-                </p>
-              </li>
-              <li>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-                  possimus eius iste, ea dicta doloremque eaque cum quos
-                  praesentium, alias quisquam, suscipit cupiditate repellat
-                  laudantium.
-                </p>
-              </li>
+              {project.information.features.map((feature, index) => (
+                <li key={index}>
+                  <p>{feature}</p>
+                </li>
+              ))}
             </ul>
           </div>
 
