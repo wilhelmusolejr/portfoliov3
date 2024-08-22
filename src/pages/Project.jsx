@@ -15,6 +15,7 @@ import { faLaravel, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import "../css/project.css";
 import Footer from "../components/Footer";
+import ColorBox from "../components/ColorBox";
 
 export default function Project() {
   const location = useLocation();
@@ -127,8 +128,10 @@ export default function Project() {
             </div>
             {/* right */}
             <div className="right colors d-flex flex-column gap-2">
-              <div className="color-box"></div>
-              <div className="color-box"></div>
+              {project.design &&
+                project.design.color.map((color, index) => (
+                  <ColorBox color={color} />
+                ))}
             </div>
           </div>
         </div>

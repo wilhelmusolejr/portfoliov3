@@ -100,7 +100,7 @@ function getAllProjects() {
       },
       design: {
         font: ["poppins"],
-        color: ["#000000", "#ffffff"],
+        color: ["#327b36", "#fbca01"],
         structure: [
           {
             name: "html",
