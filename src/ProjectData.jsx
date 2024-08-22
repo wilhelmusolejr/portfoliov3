@@ -104,11 +104,11 @@ function getAllProjects() {
         structure: [
           {
             name: "html",
-            percent: "80",
+            percent: "50",
           },
           {
             name: "css",
-            percent: "20",
+            percent: "50",
           },
         ],
       },

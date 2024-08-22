@@ -1,5 +1,6 @@
 import Navigator from "../components/Navigator";
 import { useLocation } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 
 import { getProject } from "../ProjectData";
 
@@ -16,13 +17,53 @@ import { faLaravel, faGithub } from "@fortawesome/free-brands-svg-icons";
 import "../css/project.css";
 import Footer from "../components/Footer";
 import ColorBox from "../components/ColorBox";
+import ProjectStructure from "../components/ProjectStructure";
 
 export default function Project() {
+  const [languages, setLanguages] = useState(null);
+
   const location = useLocation();
   const project_name = location.pathname.split("/")[2];
   const project = getProject(project_name);
 
-  console.log(project.information.tags.technology);
+  useEffect(() => {
+    const fetchLanguages = async () => {
+      try {
+        const response = await fetch(
+          `https://api.github.com/repos/wilhelmusolejr/${project.link.name}/languages`
+        );
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+
+        const totalLines = Object.values(data).reduce(
+          (acc, value) => acc + value,
+          0
+        );
+
+        const languageArray = Object.entries(data).map(([language, lines]) => ({
+          language,
+          percentage: ((lines / totalLines) * 100).toFixed(2), // Calculate percentage and format to 2 decimal places
+        }));
+
+        // Sort the array by percentage in descending order and take the top 3
+        const topLanguages = languageArray
+          .sort((a, b) => b.percentage - a.percentage)
+          .slice(0, 3);
+
+        setLanguages(topLanguages);
+        console.log(topLanguages);
+      } catch (error) {
+        console.error(
+          "There has been a problem with your fetch operation:",
+          error
+        );
+      }
+    };
+
+    fetchLanguages();
+  }, []); // Add project.link.name as a dependency to fetch languages when the project changes
 
   return (
     <>
@@ -111,18 +152,27 @@ export default function Project() {
               <p className="fs-1 font text-light">Poppins</p>
               <div className="w-100">
                 <div className="d-flex flex-row gap-1">
-                  <div className="frac"></div>
-                  <div className="frac"></div>
+                  {languages &&
+                    languages.map((language, index) => (
+                      <ProjectStructure
+                        key={index}
+                        width={`${language.percentage}%`}
+                      />
+                    ))}
                 </div>
-                <ul className="d-flex flex-wrap gap-3 list-unstyled ps-2 pt-2">
-                  <li className=" d-flex align-items-center gap-2">
-                    <div className="circle rounded-circle"></div>
-                    <p>Javascript</p>
-                  </li>
-                  <li className=" d-flex align-items-center gap-2">
-                    <div className="circle rounded-circle"></div>
-                    <p>html</p>
-                  </li>
+                <ul className="d-flex languages-text flex-wrap gap-3 list-unstyled ps-2 pt-2">
+                  {languages &&
+                    languages.map((language, index) => (
+                      <li
+                        key={index}
+                        className="d-flex align-items-center gap-2"
+                      >
+                        <div className="circle color rounded-circle"></div>
+                        <p>
+                          {language.language} {language.percentage}
+                        </p>
+                      </li>
+                    ))}
                 </ul>
               </div>
             </div>
@@ -130,7 +180,7 @@ export default function Project() {
             <div className="right colors d-flex flex-column gap-2">
               {project.design &&
                 project.design.color.map((color, index) => (
-                  <ColorBox color={color} />
+                  <ColorBox key={index} color={color} />
                 ))}
             </div>
           </div>

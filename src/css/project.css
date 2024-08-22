@@ -59,26 +59,65 @@ section.container-fluid.project-design {
 }
 
 .project-design .frac {
-  height: 3px;
+  height: 5px;
 }
-
-.project-design .frac:nth-child(1) {
+.project-design .frac:first-of-type {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  width: 80%;
-  background: blue;
 }
-.project-design .frac:nth-child(2) {
+.project-design .frac:last-of-type {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  width: 20%;
-  background: violet;
+}
+
+.project-design .frac:nth-child(1),
+.project-design li:nth-child(1) .circle {
+  background: #8a2be2; /* Violet */
+}
+.project-design .frac:nth-child(2),
+.project-design li:nth-child(2) .circle {
+  background: #40e0d0; /* Turquoise */
+}
+.project-design .frac:nth-child(3),
+.project-design li:nth-child(3) .circle {
+  background: #ff7f50; /* Coral */
+}
+.project-design .frac:nth-child(4),
+.project-design li:nth-child(4) .circle {
+  background: #4169e1; /* Royal Blue */
+}
+.project-design .frac:nth-child(5),
+.project-design li:nth-child(5) .circle {
+  background: #ff6347; /* Tomato */
+}
+.project-design .frac:nth-child(6),
+.project-design li:nth-child(6) .circle {
+  background: #ffd700; /* Gold */
+}
+.project-design .frac:nth-child(7),
+.project-design li:nth-child(7) .circle {
+  background: #fa8072; /* Salmon */
+}
+.project-design .frac:nth-child(8),
+.project-design li:nth-child(8) .circle {
+  background: #6a5acd; /* Slate Blue */
+}
+.project-design .frac:nth-child(9),
+.project-design li:nth-child(9) .circle {
+  background: #3cb371; /* Medium Sea Green */
+}
+.project-design .frac:nth-child(10),
+.project-design li:nth-child(10) .circle {
+  background: #dc143c; /* Crimson */
 }
 
 .project-design .circle {
   width: 10px;
   height: 10px;
-  background: blue;
+}
+
+.product-design .languages-text p {
+  font-size: 14px;
 }
 
 .project-external {
