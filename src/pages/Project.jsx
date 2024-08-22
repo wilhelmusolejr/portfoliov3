@@ -7,8 +7,11 @@ import { getProject } from "../ProjectData";
 import gcash_bot from "../assets/projects/Portfolio/gcash_bot.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeftLong } from "@fortawesome/free-solid-svg-icons";
-import { faLaravel, faPython } from "@fortawesome/free-brands-svg-icons";
+import {
+  faArrowLeftLong,
+  faEarthAmerica,
+} from "@fortawesome/free-solid-svg-icons";
+import { faLaravel, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import "../css/project.css";
 import Footer from "../components/Footer";
@@ -36,7 +39,7 @@ export default function Project() {
         <div className="container">
           <a
             href="/projects"
-            className=" d-flex gap-2 align-items-center text-decoration-none text-light-white"
+            className="d-flex gap-2 align-items-center text-decoration-none text-light-white"
           >
             <FontAwesomeIcon icon={faArrowLeftLong} />
             <p>Back</p>
@@ -89,7 +92,7 @@ export default function Project() {
                   key={index}
                   href={`https://www.google.com/search?q=${tag}`}
                   target="_blank"
-                  className="child flex-center p-2 text-decoration-none"
+                  className="child flex-center p-2 text-decoration-none text-light-white"
                 >
                   {tag}
                 </a>
@@ -130,6 +133,30 @@ export default function Project() {
           </div>
         </div>
       </section>
+
+      <div className="project-external d-flex flex-column">
+        {project.link.github && (
+          <a
+            href={project.link.github}
+            className=""
+            target="_blank
+        "
+          >
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+        )}
+
+        {project.link.external && (
+          <a
+            href={project.link.external}
+            className=""
+            target="_blank
+        "
+          >
+            <FontAwesomeIcon icon={faEarthAmerica} />
+          </a>
+        )}
+      </div>
 
       <Footer />
     </>

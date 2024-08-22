@@ -44,11 +44,11 @@ export default function Project() {
                     enim itaque ut! Provident?
                   </p>
 
-                  <div className="d-flex gap-2">
-                    {project.information.tags.technology.map((tag, index) => (
+                  <div className="d-flex flex-wrap gap-2 mt-3">
+                    {project.information.tags.project.map((tag, index) => (
                       <span
                         key={index}
-                        className="badge bg-primary my-3 text-lowercase"
+                        className="badge bg-primary text-lowercase"
                       >
                         {tag}
                       </span>

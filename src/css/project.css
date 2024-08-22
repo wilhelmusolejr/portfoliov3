@@ -14,7 +14,7 @@
   min-width: 50px !important;
   border-radius: 10px;
 
-  font-size: 22px;
+  font-size: 12px;
 }
 
 section.container-fluid.project-design {
@@ -79,4 +79,12 @@ section.container-fluid.project-design {
   width: 10px;
   height: 10px;
   background: blue;
+}
+
+.project-external {
+  font-size: 50px;
+
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
 }
