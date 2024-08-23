@@ -109,16 +109,18 @@ export default function Project() {
             ))}
           </div>
 
-          <div className="project-features mt-5">
-            <h2 className="mb-4 text-light">Features</h2>
-            <ul className=" d-flex flex-column gap-2">
-              {project.information.features.map((feature, index) => (
-                <li key={index}>
-                  <p>{feature}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {project.information.features && (
+            <div className="project-features mt-5">
+              <h2 className="mb-4 text-light">Features</h2>
+              <ul className=" d-flex flex-column gap-2">
+                {project.information.features.map((feature, index) => (
+                  <li key={index}>
+                    <p>{feature}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           <div className="project-contact mt-5 pb-5">
             <h2 className="mb-4 text-light">Contact</h2>
@@ -179,8 +181,8 @@ export default function Project() {
               }
             }}
           >
-            <div className="child image-parent flex-center">
-              <img src={screenshot} alt="" />
+            <div className="child image-parent flex-center ">
+              <img src={screenshot} alt="" className="border" />
             </div>
           </div>
         )}

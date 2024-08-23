@@ -20,8 +20,60 @@ import intro_pennywise from "./assets/projects/Intro/pennywise.webp";
 import intro_shopeeling from "./assets/projects/Intro/shopeeling.webp";
 
 import banner_jollymax from "./assets/projects/Info/j0llym4x-ph/banner.png";
-import banner_gcash from "./assets/projects/Info/gc4sh-ph/banner.jpg";
 import banner_microsoft from "./assets/projects/Info/microsoft-reward-bot/banner.jpg";
+
+// nft
+import nft_banner from "./assets/projects/Info/nft-marketplace/banner.webp";
+import nft_screenshot_1 from "./assets/projects/Info/nft-marketplace/screenshot1.png";
+import nft_screenshot_2 from "./assets/projects/Info/nft-marketplace/screenshot2.png";
+
+// ecommerce
+import ecommerce_banner from "./assets/projects/Info/e-commerce/banner.webp";
+import ecommerce_screenshot_1 from "./assets/projects/Info/e-commerce/screenshot1.png";
+import ecommerce_screenshot_2 from "./assets/projects/Info/e-commerce/screenshot2.png";
+import ecommerce_screenshot_3 from "./assets/projects/Info/e-commerce/screenshot3.png";
+
+// Shopeeling
+import shopeeling_banner from "./assets/projects/Info/shopeeling/banner.webp";
+import shopeeling_screenshot_1 from "./assets/projects/Info/shopeeling/screenshot1.png";
+import shopeeling_screenshot_2 from "./assets/projects/Info/shopeeling/screenshot2.png";
+import shopeeling_screenshot_3 from "./assets/projects/Info/shopeeling/screenshot3.png";
+import shopeeling_screenshot_4 from "./assets/projects/Info/shopeeling/screenshot4.png";
+
+// money-tracker-v1
+import money_tracker_banner from "./assets/projects/Info/money-tracker-v1/banner.webp";
+import money_tracker_screenshot1 from "./assets/projects/Info/money-tracker-v1/screenshot1.png";
+
+// netflakes
+import netflakes_banner from "./assets/projects/Info/netflakes/banner.webp";
+import netflakes_screenshot_1 from "./assets/projects/Info/netflakes/screenshot1.png";
+import netflakes_screenshot_2 from "./assets/projects/Info/netflakes/screenshot2.png";
+
+// microsoft
+import microsoft_banner from "./assets/projects/Info/microsoft-reward-bot/banner.webp";
+
+// gcash
+import gcash_banner from "./assets/projects/Info/gc4sh-ph/banner.webp";
+
+// jollymax
+import jollymax_banner from "./assets/projects/Info/j0llym4x-ph/banner.webp";
+
+// PennyWise
+import pennywise_banner from "./assets/projects/Info/pennywise/banner.webp";
+import pennywise_screenshot_1 from "./assets/projects/Info/pennywise/screenshot1.png";
+import pennywise_screenshot_2 from "./assets/projects/Info/pennywise/screenshot2.png";
+import pennywise_screenshot_3 from "./assets/projects/Info/pennywise/screenshot3.png";
+import pennywise_screenshot_4 from "./assets/projects/Info/pennywise/screenshot4.png";
+import pennywise_screenshot_5 from "./assets/projects/Info/pennywise/screenshot5.png";
+
+// Depression
+import dass_showcase from "./assets/projects/Info/dass-depression-level-predictor/banner.webp";
+
+// Philippine Currency
+import philippinecurrency_showcase from "./assets/projects/Info/philippine-currency-identifier/showcase.webp";
+import philippinecurrency_screenshot_1 from "./assets/projects/Info/philippine-currency-identifier/screenshot1.png";
+import philippinecurrency_screenshot_2 from "./assets/projects/Info/philippine-currency-identifier/screenshot2.png";
+import philippinecurrency_screenshot_3 from "./assets/projects/Info/philippine-currency-identifier/screenshot3.png";
 
 // Clinic
 import banner_clinic from "./assets/projects/Info/online-appointment-and-consultation-clinic/banner.png";
@@ -41,16 +93,14 @@ import mobhie_screenshot_2 from "./assets/projects/Info/mobhie/screenshot1.png";
 import mobhie_screenshot_3 from "./assets/projects/Info/mobhie/screenshot2.png";
 import mobhie_screenshot_4 from "./assets/projects/Info/mobhie/screenshot3.png";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeftLong } from "@fortawesome/free-solid-svg-icons";
-import { faLaravel, faPython } from "@fortawesome/free-brands-svg-icons";
-
 let project_url = "/project/";
 let github_url = "https://github.com/wilhelmusolejr/";
 
 function updateProjectLink(projects) {
   projects.forEach((project) => {
-    project.link.github = `${github_url}${project.link.name}`;
+    if (project.link.github === undefined) {
+      project.link.github = `${github_url}${project.link.name}`;
+    }
     project.link.project = `${project_url}${project.link.name}`;
   });
 
@@ -116,11 +166,16 @@ function getAllProjects() {
         },
         is_pinned: {
           order: 1,
-          image: philippinecurrency,
+          image: philippinecurrency_showcase,
         },
         is_other: null,
         project: {
-          banner_image: banner_clinic,
+          banner_image: philippinecurrency_showcase,
+          screenshot: [
+            philippinecurrency_screenshot_1,
+            philippinecurrency_screenshot_2,
+            philippinecurrency_screenshot_3,
+          ],
         },
       },
       link: {
@@ -256,11 +311,11 @@ function getAllProjects() {
         is_intro: null,
         is_pinned: {
           order: 4,
-          image: depression,
+          image: dass_showcase,
         },
         is_other: null,
         project: {
-          banner_image: banner_clinic,
+          banner_image: dass_showcase,
         },
       },
       link: {
@@ -271,7 +326,7 @@ function getAllProjects() {
       },
       design: {
         font: ["poppins"],
-        color: ["#000000", "#ffffff"],
+        color: ["#39546d", "#13273e"],
       },
     },
 
@@ -327,7 +382,7 @@ function getAllProjects() {
         is_pinned: null,
         is_other: {
           orderr: 2,
-          image: mobhie,
+          image: banner_mobhie,
         },
         project: {
           banner_image: banner_mobhie,
@@ -376,6 +431,7 @@ function getAllProjects() {
             "HTML",
             "CSS",
             "JavasScript",
+            "PHP",
             "Font Awesome",
             "Laravel",
             "Bootstrap",
@@ -400,10 +456,17 @@ function getAllProjects() {
         is_pinned: null,
         is_other: {
           orderr: 1,
-          image: pennywise,
+          image: pennywise_banner,
         },
         project: {
-          banner_image: banner_clinic,
+          banner_image: pennywise_banner,
+          screenshot: [
+            pennywise_screenshot_1,
+            pennywise_screenshot_2,
+            pennywise_screenshot_3,
+            pennywise_screenshot_4,
+            pennywise_screenshot_5,
+          ],
         },
       },
       link: {
@@ -451,10 +514,11 @@ function getAllProjects() {
         is_pinned: null,
         is_other: {
           orderr: 3,
-          image: jollymax_bot,
+          image: jollymax_banner,
         },
         project: {
-          banner_image: banner_jollymax,
+          banner_image: jollymax_banner,
+          screenshot: [banner_jollymax],
         },
       },
       link: {
@@ -516,11 +580,10 @@ function getAllProjects() {
       name: "Shopeeling",
       information: {
         short_description: "E-commerce platform",
-        description: ["test", "test"],
-        features: ["test"],
+        description: ["Old project, for practice purposes only."],
         type: ["automate"],
         tags: {
-          technology: ["test"],
+          technology: ["HTML", "CSS"],
           project: ["test"],
         },
       },
@@ -532,28 +595,27 @@ function getAllProjects() {
         is_pinned: null,
         is_other: {
           order: 4,
-          image: shopeeling,
+          image: shopeeling_banner,
+        },
+        project: {
+          banner_image: shopeeling_banner,
+          screenshot: [
+            shopeeling_screenshot_1,
+            shopeeling_screenshot_2,
+            shopeeling_screenshot_3,
+            shopeeling_screenshot_4,
+          ],
         },
       },
       link: {
         name: "shopeeling",
-        github: undefined,
+        github: null,
         project: undefined,
         external: null,
       },
       design: {
         font: ["poppins"],
-        color: ["#000000", "#ffffff"],
-        structure: [
-          {
-            name: "html",
-            percent: "80",
-          },
-          {
-            name: "css",
-            percent: "20",
-          },
-        ],
+        color: ["#fff0db", "#E6E6FA", "#f5f5f5", "#111"],
       },
     },
 
@@ -565,11 +627,10 @@ function getAllProjects() {
       name: "Money Tracker v1",
       information: {
         short_description: "Money Tracker Version 1",
-        description: ["test", "test"],
-        features: ["test"],
+        description: ["Old project, for practice purposes only."],
         type: ["design", "develop"],
         tags: {
-          technology: ["test"],
+          technology: ["HTML", "CSS"],
           project: ["test"],
         },
       },
@@ -578,28 +639,22 @@ function getAllProjects() {
         is_pinned: null,
         is_other: {
           order: 8,
-          image: money_tracker_v1,
+          image: money_tracker_banner,
+        },
+        project: {
+          banner_image: money_tracker_banner,
+          screenshot: [money_tracker_v1, money_tracker_screenshot1],
         },
       },
       link: {
         name: "money-tracker-v1",
-        github: undefined,
+        github: null,
         project: undefined,
         external: null,
       },
       design: {
         font: ["poppins"],
-        color: ["#000000", "#ffffff"],
-        structure: [
-          {
-            name: "html",
-            percent: "80",
-          },
-          {
-            name: "css",
-            percent: "20",
-          },
-        ],
+        color: ["#81ee81", "#f84c4c"],
       },
     },
 
@@ -633,10 +688,10 @@ function getAllProjects() {
         is_pinned: null,
         is_other: {
           orderr: 9,
-          image: gcash_bot,
+          image: gcash_banner,
         },
         project: {
-          banner_image: banner_gcash,
+          banner_image: gcash_banner,
         },
       },
       link: {
@@ -654,8 +709,7 @@ function getAllProjects() {
       name: "NFT marketplace",
       information: {
         short_description: "NFT marketplace platform",
-        description: [],
-        features: [],
+        description: ["Old project, for practice purposes only."],
         type: ["design"],
         tags: {
           technology: [],
@@ -669,29 +723,23 @@ function getAllProjects() {
         },
         is_pinned: null,
         is_other: {
-          order: 6,
-          image: nft,
+          order: 4,
+          image: nft_banner,
+        },
+        project: {
+          banner_image: nft_banner,
+          screenshot: [nft_screenshot_1, nft_screenshot_2],
         },
       },
       link: {
         name: "nft-marketplace",
-        github: undefined,
+        github: null,
         project: undefined,
         external: null,
       },
       design: {
         font: ["poppins"],
-        color: ["#000000", "#ffffff"],
-        structure: [
-          {
-            name: "html",
-            percent: "80",
-          },
-          {
-            name: "css",
-            percent: "20",
-          },
-        ],
+        color: ["#FCA470", "#111", "#f5f5f5"],
       },
     },
 
@@ -727,7 +775,7 @@ function getAllProjects() {
         is_pinned: null,
         is_other: {
           orderr: 5,
-          image: microsoft_bot,
+          image: microsoft_banner,
         },
         project: {
           banner_image: banner_microsoft,
@@ -748,12 +796,15 @@ function getAllProjects() {
       name: "Netflakes",
       information: {
         short_description: "Online movie platform",
-        description: ["test", "test"],
-        features: ["test"],
+        description: [
+          "Old project, for practice purposes only.",
+          "https://www.themoviedb.org/",
+        ],
+
         type: ["Design", "Develop"],
         tags: {
-          technology: ["test"],
-          project: ["test"],
+          technology: ["HTML", "CSS", "API"],
+          project: ["movie", "api"],
         },
       },
       project_showcase: {
@@ -761,28 +812,22 @@ function getAllProjects() {
         is_pinned: null,
         is_other: {
           order: 10,
-          image: netflakes,
+          image: netflakes_banner,
+        },
+        project: {
+          banner_image: netflakes_banner,
+          screenshot: [netflakes_screenshot_1, netflakes_screenshot_2],
         },
       },
       link: {
         name: "netflakes",
-        github: undefined,
+        github: null,
         project: undefined,
         external: null,
       },
       design: {
         font: ["poppins"],
-        color: ["#000000", "#ffffff"],
-        structure: [
-          {
-            name: "html",
-            percent: "80",
-          },
-          {
-            name: "css",
-            percent: "20",
-          },
-        ],
+        color: ["#e2d40a", "#111"],
       },
     },
 
@@ -792,9 +837,8 @@ function getAllProjects() {
       name: "E-commerce",
       information: {
         short_description: "",
-        description: [],
-        features: [],
-        type: [],
+        description: ["Old project, for practice purposes only."],
+        type: ["design", "develop"],
         tags: {
           technology: [],
           project: [],
@@ -805,28 +849,27 @@ function getAllProjects() {
         is_pinned: null,
         is_other: {
           order: 11,
-          image: ecommerce,
+          image: ecommerce_banner,
+        },
+
+        project: {
+          banner_image: ecommerce_banner,
+          screenshot: [
+            ecommerce_screenshot_1,
+            ecommerce_screenshot_2,
+            ecommerce_screenshot_3,
+          ],
         },
       },
       link: {
-        name: "",
-        github: undefined,
+        name: "e-commerce",
+        github: null,
         project: undefined,
         external: null,
       },
       design: {
         font: ["poppins"],
-        color: ["#000000", "#ffffff"],
-        structure: [
-          {
-            name: "html",
-            percent: "80",
-          },
-          {
-            name: "css",
-            percent: "20",
-          },
-        ],
+        color: ["#ffa31a", "#202020", "#f4f4f4"],
       },
     },
   ];

@@ -29,7 +29,7 @@ function Home() {
           {projects.map((project, index) => (
             <div key={index} className="child">
               <div className="image-parent">
-                <a href="#">
+                <a href={project.link.project}>
                   <img src={project.project_showcase.is_intro.image} alt="" />
                 </a>
               </div>
