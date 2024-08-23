@@ -21,9 +21,21 @@ export default function Project() {
   const [languages, setLanguages] = useState(null);
   const [screenshot, setScreenshot] = useState(null);
 
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+
   const location = useLocation();
   const project_name = location.pathname.split("/")[2];
   const project = getProject(project_name);
+
+  const handleLoad = () => {
+    setLoading(false);
+  };
+
+  const handleError = () => {
+    setLoading(false);
+    setError(true);
+  };
 
   useEffect(() => {
     const fetchLanguages = async () => {
@@ -91,8 +103,23 @@ export default function Project() {
 
       <section className="project-intro">
         <div className="container ">
-          <div className="image-parent my-5 flex-center">
-            <img src={project.project_showcase.project.banner_image} alt="" />
+          <div className="image-parent project-banner my-5 flex-center">
+            {loading && !error && (
+              <div className="d-flex justify-content-center">
+                <div className="spinner-border" role="status">
+                  <span className="sr-only">Loading...</span>
+                </div>
+              </div>
+            )}
+
+            {!error && (
+              <img
+                src={project.project_showcase.project.banner_image}
+                alt=""
+                onLoad={handleLoad}
+                onError={handleError}
+              />
+            )}
           </div>
 
           <div className="project-info">
