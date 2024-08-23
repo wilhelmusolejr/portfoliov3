@@ -1,6 +1,7 @@
 import React from "react";
 
 import { other_projects, pin_projects } from "../ProjectData";
+import LazyLoad from "react-lazyload";
 
 // asset
 import "../css/projects.css";
