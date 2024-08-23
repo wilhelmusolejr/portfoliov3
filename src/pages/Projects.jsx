@@ -69,7 +69,7 @@ export default function Project() {
           <div className="d-flex parent flex-wrap justify-content-center">
             {projects.map((project) => (
               <div key={project.id} className="child">
-                <div className="image-parent rounded border">
+                <div className="image-parent rounded ">
                   <img
                     src={project.project_showcase.is_other.image}
                     alt={project.title}

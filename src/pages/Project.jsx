@@ -6,6 +6,10 @@ import { getProject } from "../ProjectData";
 
 // asset
 import gcash_bot from "../assets/projects/Portfolio/gcash_bot.jpg";
+import banner_clinic from "../assets/projects/Info/online-appointment-and-consultation-clinic/banner.png";
+import banner_jollymax from "../assets/projects/Info/j0llym4x-ph/banner.png";
+import banner_gcash from "../assets/projects/Info/gc4sh-ph/banner.jpg";
+import banner_microsoft from "../assets/projects/Info/microsoft-reward-bot/banner.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -21,6 +25,7 @@ import ProjectStructure from "../components/ProjectStructure";
 
 export default function Project() {
   const [languages, setLanguages] = useState(null);
+  const [screenshot, setScreenshot] = useState(null);
 
   const location = useLocation();
   const project_name = location.pathname.split("/")[2];
@@ -44,7 +49,7 @@ export default function Project() {
 
         const languageArray = Object.entries(data).map(([language, lines]) => ({
           language,
-          percentage: ((lines / totalLines) * 100).toFixed(2), // Calculate percentage and format to 2 decimal places
+          percentage: ((lines / totalLines) * 100).toFixed(0), // Calculate percentage and format to 2 decimal places
         }));
 
         // Sort the array by percentage in descending order and take the top 3
@@ -53,7 +58,6 @@ export default function Project() {
           .slice(0, 3);
 
         setLanguages(topLanguages);
-        console.log(topLanguages);
       } catch (error) {
         console.error(
           "There has been a problem with your fetch operation:",
@@ -87,7 +91,7 @@ export default function Project() {
             <p>Back</p>
           </a>
           <h1 className="text-light">{project.name}</h1>
-          <p>{project.information.short_description}</p>
+          <p>{project.information.short_description}.</p>
         </div>
       </section>
 
@@ -147,15 +151,67 @@ export default function Project() {
               ))}
             </div>
           </div>
+
+          <div className="project-screenshot d-flex flex-wrap justify-content-lg-start justify-content-center gap-3">
+            <div
+              className="child image-parent cursor-pointer"
+              onClick={() => {
+                setScreenshot(banner_clinic);
+              }}
+            >
+              <img src={banner_clinic} alt="" />
+            </div>
+            <div
+              className="child image-parent cursor-pointer"
+              onClick={() => {
+                setScreenshot(banner_jollymax);
+              }}
+            >
+              <img src={banner_jollymax} alt="" />
+            </div>
+            <div className="child image-parent">
+              <img src={banner_gcash} alt="" />
+            </div>
+            <div className="child image-parent">
+              <img src={banner_microsoft} alt="" />
+            </div>
+          </div>
         </div>
+
+        {screenshot && (
+          <div
+            className="screenshot-full cursor-pointer"
+            onClick={(e) => {
+              if (e.target.className.includes("screenshot-full")) {
+                setScreenshot(null);
+              }
+            }}
+          >
+            <div className="child image-parent flex-center">
+              <img src={screenshot} alt="" />
+            </div>
+          </div>
+        )}
       </section>
 
       <section className="container-fluid project-design py-5">
         <div className="container flex-center">
           <div className="box d-flex border p-3">
             {/* left */}
-            <div className="left d-flex flex-column justify-content-between">
-              <p className="fs-1 font text-light">Poppins</p>
+            <div
+              className={`left d-flex flex-column justify-content-${
+                project.design ? "between" : "end"
+              }`}
+            >
+              {project.design &&
+                project.design.font.map((language, index) => (
+                  <p
+                    key={index}
+                    className="fs-1 font text-capitalize text-light"
+                  >
+                    {language}
+                  </p>
+                ))}
               <div className="w-100">
                 <div className="d-flex flex-row gap-1">
                   {languages &&
@@ -175,7 +231,7 @@ export default function Project() {
                       >
                         <div className="circle color rounded-circle"></div>
                         <p>
-                          {language.language} {language.percentage}
+                          {language.language} {language.percentage}%
                         </p>
                       </li>
                     ))}

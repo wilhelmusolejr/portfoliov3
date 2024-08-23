@@ -20,6 +20,9 @@ import intro_pennywise from "./assets/projects/Intro/pennywise.webp";
 import intro_shopeeling from "./assets/projects/Intro/shopeeling.webp";
 
 import banner_clinic from "./assets/projects/Info/online-appointment-and-consultation-clinic/banner.png";
+import banner_jollymax from "./assets/projects/Info/j0llym4x-ph/banner.png";
+import banner_gcash from "./assets/projects/Info/gc4sh-ph/banner.jpg";
+import banner_microsoft from "./assets/projects/Info/microsoft-reward-bot/banner.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeftLong } from "@fortawesome/free-solid-svg-icons";
@@ -37,6 +40,17 @@ function updateProjectLink(projects) {
   return projects;
 }
 
+// HTML, CSS, JavaScript
+// "TensorFLOW",
+// "Kotlin",
+// "Python",
+// "Goole Colab",
+// "Adobe XD",
+// "Adobe PS",
+// "Text-To-Speech API",
+// "Label Img",
+// "Video to Image",
+
 function getAllProjects() {
   return [
     // 1 Philippine Currency Identifier
@@ -44,7 +58,7 @@ function getAllProjects() {
       id: 1,
       name: "Philippine Currency Identifier",
       information: {
-        short_description: "Currency Recognition.",
+        short_description: "Currency Recognition",
         description: [
           "Philippine Currency Identifier is a thesis-developed app that helps visually impaired people in the Philippines identify currency denominations using a convolutional neural network. It offers vocal denomination recognition and a user-friendly interface for easy accessibility, enabling independent financial transactions through a quick smartphone scan. This app represents a significant advancement in assistive technology and inclusivity",
         ],
@@ -110,7 +124,7 @@ function getAllProjects() {
       id: 3,
       name: "Consultation Clinic",
       information: {
-        short_description: "Online Consultation Clinic.",
+        short_description: "Online Consultation Clinic",
         description: [
           "Online Appointment and Consultation Clinic is an innovative service provided by the Department of Nutrition and Dietetics at Western Mindanao State University. This platform is designed to offer convenient and accessible health nutrition consultations to individuals, particularly students of the university. It leverages advanced technology to deliver expert advice from experienced professors, ensuring high-quality and professional guidance.",
           "The clinic features a user-friendly online interface, a live chatting system for real-time communication, and an optional food monitoring system for comprehensive dietary management. This initiative aims to enhance the accessibility of nutritional support and promote healthy living among the university community and beyond.",
@@ -175,7 +189,7 @@ function getAllProjects() {
       id: 2,
       name: "Depression Level Predictor (DASS)",
       information: {
-        short_description: "Predicts person's depression level.",
+        short_description: "Predicts person's depression level",
         description: [
           "Depression is a mood disorder that causes a persistent feeling of sadness and loss of interest. It is also called as major depressive disorder or clinical depression, it affects how you feel, think and behave, and can lead to a variety of emotional and physical problems.",
           "Depression Anxiety Stress Scales Responses is a dataset that was collected online from the various countries during the year of 2017 to 2019 by Openpsychometrics.org on Psychology Foundation of Australia | DASS in effort to educate the public about psychology. This dataset contains some background information of the respondents such as their race, education, religion, gender, etc. Furthermore, this dataset includes their responses from the 42 related negative emotional questions which is answerable from the scale of 1 to 4, and the 10-item personality test which is answerable from the scale of 1 to 7. Lastly, this dataset also contains the technical information of the respondent such as, what device they used while taking the test, where they found the test, etc.",
@@ -190,10 +204,18 @@ function getAllProjects() {
         type: ["develop"],
         tags: {
           technology: [
+            "HTML",
+            "CSS",
             "Python",
             "Machine Learning",
             "Project Jupyter",
             "Kaggle",
+            "Flask",
+            "Scikit-Learn",
+            "Pandas",
+            "NumPy",
+            "Seaborn",
+            "Matplotlib",
           ],
           project: [
             "Depression-Prediction",
@@ -235,12 +257,39 @@ function getAllProjects() {
       name: "Mobhie",
       information: {
         short_description: "Online movie platform",
-        description: ["test", "test"],
-        features: ["test"],
+        description: [
+          "MOBHIE is a comprehensive movie box application that allows users to explore hundreds of movies across various categories, including Popular movies, trending movies, and more.",
+          "This application provides a rich and engaging platform for movie enthusiasts to discover, search, and enjoy a wide array of films. Users can access detailed information about each movie, including ratings, descriptions, budgets, and more. With features such as search functionality and a randomizer for movie recommendations, MOBHIE ensures an enjoyable and seamless movie-browsing experience. The application is designed to be user-friendly and responsive across all devices, providing a consistent and smooth experience whether on a desktop, tablet, or mobile device.",
+          "Powered by the 'The Movie Database' or TMDB API, MOBHIE delivers accurate and up-to-date movie data, offering users an extensive database of films to explore. The integration of this API ensures that users have access to a vast collection of movies with comprehensive details and the latest information.",
+        ],
+        features: [
+          "Movie Browsing: Explore hundreds of movies across various categories, including Popular and trending movies, ensuring there's always something interesting to watch.",
+          "Detailed Movie Information: Access in-depth details about each movie, including ratings, descriptions, budgets, and more, to make informed viewing choices.",
+          "Search Functionality: Quickly find specific movies using the search feature, making it easy to locate your favorite films or discover new ones.",
+          "Randomizer Feature: Get personalized movie recommendations with the randomizer feature, perfect for when you can't decide what to watch.",
+          "User-Friendly Interface: Designed with simplicity in mind, the app ensures an intuitive and straightforward user experience, making movie discovery enjoyable and accessible.",
+          "Responsive Design: Enjoy a seamless and consistent experience across all devices, from desktops to tablets and mobile phones.",
+        ],
         type: ["Design", "Develop"],
         tags: {
-          technology: ["test"],
-          project: ["test"],
+          technology: [
+            "HTML",
+            "CSS",
+            "JavasScript",
+            "Font Awesome",
+            "Laravel",
+            "Bootstrap",
+            "Adobe XD",
+            "Adobe PS",
+          ],
+          project: [
+            "Movie-Database",
+            "Entertainment",
+            "Responsive-Design",
+            "API-Integration",
+            "User-Interface",
+            "Web-Application",
+          ],
         },
       },
       project_showcase: {
@@ -253,6 +302,9 @@ function getAllProjects() {
           orderr: 2,
           image: mobhie,
         },
+        project: {
+          banner_image: banner_clinic,
+        },
       },
       link: {
         name: "mobhie",
@@ -262,7 +314,7 @@ function getAllProjects() {
       },
       design: {
         font: ["poppins"],
-        color: ["#000000", "#ffffff"],
+        color: ["#ff0000", "#f5f5f5", "#222222"],
       },
     },
 
@@ -272,12 +324,39 @@ function getAllProjects() {
       name: "PennyWISE PH",
       information: {
         short_description: "Online money tracker application",
-        description: ["test", "test"],
-        features: ["test"],
+        description: [
+          "PennyWISE is a user-friendly mobile money tracker designed to help individuals manage their finances effectively.",
+          "PennyWISE app is a comprehensive money tracker designed to help users manage their financial transactions effectively. It enables users to monitor their money inflow and outflow seamlessly, providing a clear computation of their financial activities. With PennyWISE, users can input detailed information for each transaction, including the transaction name, description, amount, and date. This application simplifies personal finance management by offering an intuitive interface for tracking and analyzing money transactions, empowering users to make informed financial decisions and maintain control over their finances.",
+          "PennyWISE features an integrated account system, allowing users to access their financial data securely over the internet from anywhere and at any time. This ensures that users can manage their finances conveniently, whether they are at home, at work, or on the go. With real-time updates and synchronization across devices, PennyWISE provides a reliable platform for users to stay organized and informed about their financial health.",
+        ],
+        features: [
+          "Transaction Tracking: Easily track and manage your money transactions, recording both income and expenses for a complete financial overview.",
+          "Detailed Entry Fields: Input detailed information for each transaction, such as the transaction name, description, amount, and date, ensuring accurate and organized records.",
+          "Inflow and Outflow Management: Monitor your financial inflows and outflows with ease, helping you understand and manage your cash flow effectively.",
+          "Real-Time Computation: Instantly calculate the total balance based on recorded transactions, providing a clear picture of your financial status at any given time.",
+          "Cross-Device Access: Access your financial data securely over the internet from anywhere and at any time, ensuring seamless management of your finances across devices.",
+          "User-Friendly Interface: Designed with simplicity in mind, the app ensures an intuitive and straightforward user experience, making financial management accessible to everyone.",
+        ],
         type: ["Design", "Develop"],
         tags: {
-          technology: ["test"],
-          project: ["test"],
+          technology: [
+            "HTML",
+            "CSS",
+            "JavasScript",
+            "Font Awesome",
+            "Laravel",
+            "Bootstrap",
+            "Adobe XD",
+            "Adobe PS",
+          ],
+          project: [
+            "Finance-Management",
+            "Mobile-Application",
+            "Responsive-Design",
+            "Cross-Device-Access",
+            "User-Interface",
+            "Web-Application",
+          ],
         },
       },
       project_showcase: {
@@ -290,6 +369,9 @@ function getAllProjects() {
           orderr: 1,
           image: pennywise,
         },
+        project: {
+          banner_image: banner_clinic,
+        },
       },
       link: {
         name: "pennywise",
@@ -299,17 +381,7 @@ function getAllProjects() {
       },
       design: {
         font: ["poppins"],
-        color: ["#000000", "#ffffff"],
-        structure: [
-          {
-            name: "html",
-            percent: "80",
-          },
-          {
-            name: "css",
-            percent: "20",
-          },
-        ],
+        color: ["#60c16d", "#151515", "#ff4a4a"],
       },
     },
 
@@ -318,13 +390,27 @@ function getAllProjects() {
       id: 7,
       name: "J077YM4X PH",
       information: {
-        short_description: "Bot for auto buy digital items.",
-        description: ["test", "test"],
-        features: ["test"],
+        short_description: "Bot for auto buy digital items",
+        description: [
+          "J0LLYM4X is a bot that automates the process of purchasing Razer Gold Pins. It efficiently handles login, buying, and connecting payment methods to the website. The bot is designed to bypass detection mechanisms, ensuring a smooth and successful purchase process.",
+        ],
+        features: [
+          "Automatically logs in and performs the buying process for Razer Gold Pins.",
+          "Connects payment methods to the website.",
+          "Dynamically saves all purchased pins to a notepad based on the phone number used.",
+          "Creates separate folders for organizing pins.",
+          "Bypasses detection mechanisms to ensure uninterrupted operation.",
+        ],
         type: ["automate"],
         tags: {
-          technology: ["test"],
-          project: ["test"],
+          technology: ["Python", "Selenium"],
+          project: [
+            "Automation",
+            "Bot-Development",
+            "E-commerce",
+            "Digital-Goods",
+            "Payment-Integration",
+          ],
         },
       },
       project_showcase: {
@@ -334,9 +420,12 @@ function getAllProjects() {
           orderr: 3,
           image: jollymax_bot,
         },
+        project: {
+          banner_image: banner_jollymax,
+        },
       },
       link: {
-        name: "jollymax",
+        name: "J0LLYM4X-PH",
         github: undefined,
         project: undefined,
         external: null,
@@ -487,12 +576,23 @@ function getAllProjects() {
       name: "GC4SH PH",
       information: {
         short_description: "Bot for account auto create",
-        description: ["test", "test"],
-        features: ["test"],
+        description: [
+          "GC4SH bot automates the process of creating GC4SH accounts. It streamlines the account creation by automatically filling in personal information and handling OTP verification. The bot is designed to bypass detection mechanisms to ensure smooth operation.",
+        ],
+        features: [
+          "Automatically fills in personal information such as first name, last name, etc.",
+          "Automates the OTP verification process.",
+          "Bypasses detection mechanisms to ensure successful account creation.",
+        ],
         type: ["automate"],
         tags: {
-          technology: ["test"],
-          project: ["test"],
+          technology: ["Python", "Selenium"],
+          project: [
+            "Bot-Development",
+            "Account-Creation",
+            "Form-Automation",
+            "Security-Bypass",
+          ],
         },
       },
       project_showcase: {
@@ -502,9 +602,12 @@ function getAllProjects() {
           orderr: 9,
           image: gcash_bot,
         },
+        project: {
+          banner_image: banner_gcash,
+        },
       },
       link: {
-        name: "gc4sh",
+        name: "GC4SH-PH",
         github: undefined,
         project: undefined,
         external: null,
@@ -564,13 +667,26 @@ function getAllProjects() {
       id: 10,
       name: "M1cros0ft R3w4rd BOT",
       information: {
-        short_description: "Bot for auto grind points",
-        description: ["test", "test"],
-        features: ["test"],
-        type: ["automate"],
+        short_description: "Bot for auto grind points.",
+        description: [
+          "This is an automated software designed to independently perform tasks and accumulate points within the Microsoft Rewards program.",
+        ],
+        features: [
+          "Automated Task Execution: Automatically performs tasks within the Microsoft Rewards program to earn points.",
+          "Points Accumulation: Efficiently grinds and accumulates points, helping users maximize their rewards.",
+          "Task Scheduling: Set schedules for when the bot should perform tasks, allowing for consistent point grinding.",
+          "Customizable Actions: Configure specific actions for the bot to take based on the user's preferences.",
+          "Detection Bypass: Implements methods to avoid detection and maintain consistent operation.",
+        ],
+        type: ["Automate"],
         tags: {
-          technology: ["test"],
-          project: ["test"],
+          technology: ["Python", "JavaScript", "Playwright", "Automation"],
+          project: [
+            "Bot Development",
+            "Task Automation",
+            "Point Accumulation",
+            "Microsoft Rewards",
+          ],
         },
       },
       project_showcase: {
@@ -580,9 +696,12 @@ function getAllProjects() {
           orderr: 5,
           image: microsoft_bot,
         },
+        project: {
+          banner_image: banner_microsoft,
+        },
       },
       link: {
-        name: "microsoft-reward",
+        name: "Microsoft-Rewards-Bot",
         github: undefined,
         project: undefined,
         external: null,
