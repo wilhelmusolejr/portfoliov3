@@ -37,7 +37,12 @@ export default function Project() {
                 </div>
                 {/* right */}
                 <div className="right border w-100">
-                  <h2 className="text-light mt-3">{project.name}</h2>
+                  <a
+                    href={`${project.link.project}`}
+                    className="text-decoration-none"
+                  >
+                    <h2 className="text-light mt-3">{project.name}</h2>
+                  </a>
                   <p>{project.information.short_description}</p>
                   <p className="mt-3">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.

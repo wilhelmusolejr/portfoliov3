@@ -131,6 +131,7 @@ section.container-fluid.project-design {
 .project-screenshot .child {
   width: 100%;
   max-width: 300px;
+  max-height: 200px;
 }
 
 .screenshot-full {
@@ -149,6 +150,7 @@ section.container-fluid.project-design {
   transform: translate(-50%, -50%);
 
   width: 90%;
-  max-width: 800px;
+  max-width: 1000px;
   height: auto;
+  max-height: 90vh;
 }

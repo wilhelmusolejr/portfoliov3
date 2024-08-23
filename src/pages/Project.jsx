@@ -153,28 +153,20 @@ export default function Project() {
           </div>
 
           <div className="project-screenshot d-flex flex-wrap justify-content-lg-start justify-content-center gap-3">
-            <div
-              className="child image-parent cursor-pointer"
-              onClick={() => {
-                setScreenshot(banner_clinic);
-              }}
-            >
-              <img src={banner_clinic} alt="" />
-            </div>
-            <div
-              className="child image-parent cursor-pointer"
-              onClick={() => {
-                setScreenshot(banner_jollymax);
-              }}
-            >
-              <img src={banner_jollymax} alt="" />
-            </div>
-            <div className="child image-parent">
-              <img src={banner_gcash} alt="" />
-            </div>
-            <div className="child image-parent">
-              <img src={banner_microsoft} alt="" />
-            </div>
+            {project.project_showcase.project.screenshot &&
+              project.project_showcase.project.screenshot.map(
+                (screenshot, index) => (
+                  <div
+                    key={index}
+                    className="child image-parent cursor-pointer"
+                    onClick={() => {
+                      setScreenshot(screenshot);
+                    }}
+                  >
+                    <img src={screenshot} alt={`Screenshot ${index + 1}`} />
+                  </div>
+                )
+              )}
           </div>
         </div>
 

@@ -19,10 +19,27 @@ import intro_nft from "./assets/projects/Intro/nft.webp";
 import intro_pennywise from "./assets/projects/Intro/pennywise.webp";
 import intro_shopeeling from "./assets/projects/Intro/shopeeling.webp";
 
-import banner_clinic from "./assets/projects/Info/online-appointment-and-consultation-clinic/banner.png";
 import banner_jollymax from "./assets/projects/Info/j0llym4x-ph/banner.png";
 import banner_gcash from "./assets/projects/Info/gc4sh-ph/banner.jpg";
 import banner_microsoft from "./assets/projects/Info/microsoft-reward-bot/banner.jpg";
+
+// Clinic
+import banner_clinic from "./assets/projects/Info/online-appointment-and-consultation-clinic/banner.png";
+import clinic_showcase from "./assets/projects/Info/online-appointment-and-consultation-clinic/showcase.webp";
+import clinic_screenshot_1 from "./assets/projects/Info/online-appointment-and-consultation-clinic/screenshot1.png";
+import clinic_screenshot_2 from "./assets/projects/Info/online-appointment-and-consultation-clinic/screenshot2.png";
+import clinic_screenshot_3 from "./assets/projects/Info/online-appointment-and-consultation-clinic/screenshot3.png";
+import clinic_screenshot_4 from "./assets/projects/Info/online-appointment-and-consultation-clinic/screenshot4.png";
+import clinic_screenshot_5 from "./assets/projects/Info/online-appointment-and-consultation-clinic/screenshot5.png";
+import clinic_screenshot_6 from "./assets/projects/Info/online-appointment-and-consultation-clinic/screenshot6.png";
+import clinic_screenshot_7 from "./assets/projects/Info/online-appointment-and-consultation-clinic/screenshot7.png";
+
+// MOBHIE
+import banner_mobhie from "./assets/projects/Info/mobhie/banner.webp";
+import mobhie_screenshot_1 from "./assets/projects/Info/mobhie/banner.png";
+import mobhie_screenshot_2 from "./assets/projects/Info/mobhie/screenshot1.png";
+import mobhie_screenshot_3 from "./assets/projects/Info/mobhie/screenshot2.png";
+import mobhie_screenshot_4 from "./assets/projects/Info/mobhie/screenshot3.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeftLong } from "@fortawesome/free-solid-svg-icons";
@@ -122,7 +139,7 @@ function getAllProjects() {
     // 3 Online Consultationn Clinic
     {
       id: 3,
-      name: "Consultation Clinic",
+      name: "WMSU Consultation Clinic",
       information: {
         short_description: "Online Consultation Clinic",
         description: [
@@ -165,11 +182,20 @@ function getAllProjects() {
         },
         is_pinned: {
           order: 3,
-          image: clinic,
+          image: clinic_showcase,
         },
         is_other: null,
         project: {
-          banner_image: banner_clinic,
+          banner_image: clinic_showcase,
+          screenshot: [
+            clinic_screenshot_1,
+            clinic_screenshot_2,
+            clinic_screenshot_3,
+            clinic_screenshot_4,
+            clinic_screenshot_5,
+            clinic_screenshot_6,
+            clinic_screenshot_7,
+          ],
         },
       },
       link: {
@@ -180,7 +206,7 @@ function getAllProjects() {
       },
       design: {
         font: ["poppins"],
-        color: ["#2E6a45", "#3ee57f", "#222222", "#f5f5f5"],
+        color: ["#2E6a45", "#3ee57f", "#e53e5b", "#222222", "#f5f5f5"],
       },
     },
 
@@ -258,9 +284,10 @@ function getAllProjects() {
       information: {
         short_description: "Online movie platform",
         description: [
-          "MOBHIE is a comprehensive movie box application that allows users to explore hundreds of movies across various categories, including Popular movies, trending movies, and more.",
+          "Mobhie is a comprehensive movie box application that allows users to explore hundreds of movies across various categories, including Popular movies, trending movies, and more.",
           "This application provides a rich and engaging platform for movie enthusiasts to discover, search, and enjoy a wide array of films. Users can access detailed information about each movie, including ratings, descriptions, budgets, and more. With features such as search functionality and a randomizer for movie recommendations, MOBHIE ensures an enjoyable and seamless movie-browsing experience. The application is designed to be user-friendly and responsive across all devices, providing a consistent and smooth experience whether on a desktop, tablet, or mobile device.",
           "Powered by the 'The Movie Database' or TMDB API, MOBHIE delivers accurate and up-to-date movie data, offering users an extensive database of films to explore. The integration of this API ensures that users have access to a vast collection of movies with comprehensive details and the latest information.",
+          "https://www.themoviedb.org/",
         ],
         features: [
           "Movie Browsing: Explore hundreds of movies across various categories, including Popular and trending movies, ensuring there's always something interesting to watch.",
@@ -303,7 +330,13 @@ function getAllProjects() {
           image: mobhie,
         },
         project: {
-          banner_image: banner_clinic,
+          banner_image: banner_mobhie,
+          screenshot: [
+            mobhie_screenshot_1,
+            mobhie_screenshot_2,
+            mobhie_screenshot_3,
+            mobhie_screenshot_4,
+          ],
         },
       },
       link: {
