@@ -5,18 +5,12 @@ import React, { useEffect, useState } from "react";
 import { getProject } from "../ProjectData";
 
 // asset
-import gcash_bot from "../assets/projects/Portfolio/gcash_bot.jpg";
-import banner_clinic from "../assets/projects/Info/online-appointment-and-consultation-clinic/banner.png";
-import banner_jollymax from "../assets/projects/Info/j0llym4x-ph/banner.png";
-import banner_gcash from "../assets/projects/Info/gc4sh-ph/banner.jpg";
-import banner_microsoft from "../assets/projects/Info/microsoft-reward-bot/banner.jpg";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowLeftLong,
   faEarthAmerica,
 } from "@fortawesome/free-solid-svg-icons";
-import { faLaravel, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import "../css/project.css";
 import Footer from "../components/Footer";
@@ -67,7 +61,7 @@ export default function Project() {
     };
 
     fetchLanguages();
-  }, []); // Add project.link.name as a dependency to fetch languages when the project changes
+  }, []);
 
   return (
     <>
@@ -190,7 +184,7 @@ export default function Project() {
 
       <section className="container-fluid project-design py-5">
         <div className="container flex-center">
-          <div className="box d-flex border p-3">
+          <div className="box d-flex gap-2 border p-3">
             {/* left */}
             <div
               className={`left d-flex flex-column justify-content-${

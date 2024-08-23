@@ -12,9 +12,6 @@ export default function Project() {
   const projects = other_projects();
   const pin_projects_data = pin_projects();
 
-  console.log(projects);
-  console.log(pin_projects_data);
-
   return (
     <>
       <Navigator />

@@ -9,8 +9,6 @@ import Footer from "../components/Footer";
 function Home() {
   let projects = intro_projects();
 
-  console.log(projects);
-
   return (
     <>
       <Navigator />
