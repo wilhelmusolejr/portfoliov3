@@ -712,7 +712,7 @@ function getAllProjects() {
         description: ["Old project, for practice purposes only."],
         type: ["design"],
         tags: {
-          technology: [],
+          technology: ["Adobe XD"],
           project: [],
         },
       },
@@ -1124,7 +1124,21 @@ export function pin_projects() {
 
   projects.forEach((project) => {
     if (project.project_showcase.is_pinned != null) {
-      temp_projects.push(project);
+      let object = {
+        id: project.id,
+        information: {
+          short_description: project.information.short_description,
+          description: project.information.description[0],
+          tags: project.information.tags,
+          type: project.information.type,
+        },
+        link: project.link,
+        project_showcase: {
+          is_other: project.project_showcase.is_other,
+          is_pinned: project.project_showcase.is_pinned,
+        },
+      };
+      temp_projects.push(object);
     }
   });
 
@@ -1137,7 +1151,21 @@ export function other_projects() {
 
   projects.forEach((project) => {
     if (project.project_showcase.is_other != null) {
-      temp_projects.push(project);
+      let object = {
+        id: project.id,
+        information: {
+          short_description: project.information.short_description,
+          description: project.information.description[0],
+          tags: project.information.tags,
+          type: project.information.type,
+        },
+        link: project.link,
+        project_showcase: {
+          is_other: project.project_showcase.is_other,
+          is_pinned: project.project_showcase.is_pinned,
+        },
+      };
+      temp_projects.push(object);
     }
   });
 
@@ -1157,5 +1185,5 @@ export function getProject(target) {
     }
   }
 
-  return null; // Return null if no project is found
+  return null;
 }
