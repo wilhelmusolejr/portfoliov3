@@ -34,7 +34,7 @@ export default function Project() {
                   <a href={`${project.link.project}`} className="image-parent">
                     <img
                       src={project.project_showcase.is_pinned.image}
-                      alt=""
+                      alt={project.name}
                     />
                   </a>
                 </div>
