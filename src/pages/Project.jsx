@@ -28,6 +28,8 @@ export default function Project() {
   const project_name = location.pathname.split("/")[2];
   const project = getProject(project_name);
 
+  let img_url = "https://i.ibb.co/";
+
   const handleLoad = () => {
     setLoading(false);
   };
@@ -114,7 +116,7 @@ export default function Project() {
 
             {!error && (
               <img
-                src={project.project_showcase.project.banner_image}
+                src={`${img_url}${project.project_showcase.project.banner_image}`}
                 alt=""
                 onLoad={handleLoad}
                 onError={handleError}
@@ -186,7 +188,10 @@ export default function Project() {
                       setScreenshot(screenshot);
                     }}
                   >
-                    <img src={screenshot} alt={`Screenshot ${index + 1}`} />
+                    <img
+                      src={`${img_url}${screenshot}`}
+                      alt={`Screenshot ${index + 1}`}
+                    />
                   </div>
                 )
               )}
@@ -203,7 +208,7 @@ export default function Project() {
             }}
           >
             <div className="child image-parent flex-center ">
-              <img src={screenshot} alt="" className="border" />
+              <img src={`${img_url}${screenshot}`} alt="" className="border" />
             </div>
           </div>
         )}

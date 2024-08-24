@@ -1,6 +1,6 @@
 import React from "react";
 
-import { other_projects, pin_projects } from "../ProjectData";
+import { projects } from "../ProjectData";
 import LazyLoad from "react-lazyload";
 
 // asset
@@ -10,8 +10,14 @@ import Navigator from "../components/Navigator";
 
 // ASSET
 export default function Project() {
-  const projects = other_projects();
-  const pin_projects_data = pin_projects();
+  const allProjects = projects();
+
+  const projects_data = allProjects[0];
+  const pin_projects_data = allProjects[1];
+
+  console.log(allProjects);
+
+  let img_url = "https://i.ibb.co/";
 
   return (
     <>
@@ -31,8 +37,9 @@ export default function Project() {
                 <div className="left flex-center">
                   <a href={`${project.link.project}`} className="image-parent">
                     <img
-                      src={project.project_showcase.is_pinned.image}
+                      src={`${img_url}${project.project_showcase.is_pinned.image}`}
                       alt={project.name}
+                      loading="lazy"
                     />
                   </a>
                 </div>
@@ -73,13 +80,14 @@ export default function Project() {
           <h2 className="text-center mb-5 text-light">Other projects</h2>
 
           <div className="d-flex parent flex-wrap justify-content-center">
-            {projects.map((project) => (
+            {projects_data.map((project) => (
               <div key={project.id} className="child">
                 <div className="image-parent rounded ">
                   <img
-                    src={project.project_showcase.is_other.image}
+                    src={`${img_url}${project.project_showcase.is_other.image}`}
                     alt={project.title}
                     className="rounded"
+                    loading="lazy"
                   />
                   <a
                     href={project.link.project}

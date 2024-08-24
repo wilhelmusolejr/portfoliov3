@@ -8,6 +8,9 @@ import Footer from "../components/Footer";
 
 function Home() {
   let projects = intro_projects();
+  let img_url = "https://i.ibb.co/";
+
+  console.log(projects);
 
   return (
     <>
@@ -28,7 +31,10 @@ function Home() {
             <div key={index} className="child">
               <div className="image-parent">
                 <a href={project.link.project}>
-                  <img src={project.project_showcase.is_intro.image} alt="" />
+                  <img
+                    src={`${img_url}${project.project_showcase.is_intro.image}`}
+                    alt=""
+                  />
                 </a>
               </div>
               <div className="text-capitalize text-center py-4">
