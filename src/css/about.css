@@ -159,59 +159,6 @@ section.about .container {
 }
 
 /* ------------------------ */
-/* Projects */
-.project .container {
-  padding: 10vh 0 20vh 0;
-}
-
-.project .child {
-  width: 90%;
-  max-width: 300px;
-}
-
-.project .image-parent {
-  width: 100%;
-  height: 300px;
-
-  position: relative;
-}
-
-.project .image-design {
-  width: 100%;
-  height: 100%;
-
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.5) 50%,
-    rgba(0, 0, 0, 0.75) 75%,
-    rgba(0, 0, 0, 0.9) 100%
-  );
-}
-
-.project .child img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.project .parent {
-  gap: 3vw;
-}
-
-.project .image-parent:hover .image-design {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0) 50%,
-    rgba(0, 0, 0, 0) 75%,
-    rgba(0, 0, 0, 0) 100%
-  );
-}
-
-/* ------------------------ */
 /* Positive */
 .positive .layout-space {
   padding-top: 10vh !important;
@@ -297,10 +244,6 @@ section.about .container {
   .work-experience .right.border {
     border-top: 1px solid var(--clr-border) !important;
     border-left: none !important;
-  }
-
-  .project .parent {
-    gap: 3vw;
   }
 
   .positive .parent .child {

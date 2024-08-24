@@ -9,7 +9,11 @@ section.container-fluid.project-page {
 
 .project-page img {
   width: initial;
-  height: initial;
+  height: initial !important;
+}
+
+.project-page .child .image-parent {
+  height: initial !important;
 }
 
 .project-page > div {
@@ -26,7 +30,7 @@ section.container-fluid.project-page {
 
 .project-page .child .left {
   width: 100%;
-  height: 300px;
+  height: auto;
 }
 
 .project-page .child .right {
@@ -60,6 +64,29 @@ section.container-fluid.project-page {
   color: #adb5bd;
 }
 
+/* ------------------------ */
+/* Projects */
+.project .container {
+  padding: 10vh 0 20vh 0;
+}
+
+.project .child {
+  width: 90%;
+  max-width: 350px;
+
+  margin-bottom: 100px;
+}
+
+.project .child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project .parent {
+  gap: 3vw;
+}
+
 @media only screen and (min-width: 768px) {
   .project-page .child .left {
     /* min-width: 350px; */
@@ -69,6 +96,11 @@ section.container-fluid.project-page {
   .project-page img {
     border-top-right-radius: 0;
     border-bottom-left-radius: 24px;
+    height: 100% !important;
+  }
+
+  .project-page .child .image-parent {
+    height: 100% !important;
   }
 
   .project-page .child .right {
@@ -79,5 +111,13 @@ section.container-fluid.project-page {
 
   .project-page > div {
     width: 90%;
+  }
+
+  .project .parent {
+    gap: 3vw;
+  }
+
+  .project .child {
+    margin-bottom: 50px;
   }
 }

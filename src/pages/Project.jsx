@@ -1,6 +1,8 @@
+import React, { useEffect, useState } from "react";
+import LazyLoad from "react-lazyload";
+
 import Navigator from "../components/Navigator";
 import { useLocation } from "react-router-dom";
-import React, { useEffect, useState } from "react";
 
 import { getProject } from "../ProjectData";
 
@@ -115,12 +117,14 @@ export default function Project() {
             )}
 
             {!error && (
-              <img
-                src={`${img_url}${project.project_showcase.project.banner_image}`}
-                alt=""
-                onLoad={handleLoad}
-                onError={handleError}
-              />
+              <LazyLoad height={200} offset={100}>
+                <img
+                  src={`${img_url}${project.project_showcase.project.banner_image}`}
+                  alt=""
+                  onLoad={handleLoad}
+                  onError={handleError}
+                />
+              </LazyLoad>
             )}
           </div>
 
@@ -188,10 +192,13 @@ export default function Project() {
                       setScreenshot(screenshot);
                     }}
                   >
-                    <img
-                      src={`${img_url}${screenshot}`}
-                      alt={`Screenshot ${index + 1}`}
-                    />
+                    <LazyLoad height={200} offset={100}>
+                      <img
+                        src={`${img_url}${screenshot}`}
+                        alt={`Screenshot ${index + 1}`}
+                        loading="lazy"
+                      />
+                    </LazyLoad>
                   </div>
                 )
               )}
@@ -208,7 +215,12 @@ export default function Project() {
             }}
           >
             <div className="child image-parent flex-center ">
-              <img src={`${img_url}${screenshot}`} alt="" className="border" />
+              <img
+                src={`${img_url}${screenshot}`}
+                alt=""
+                className="border"
+                loading="lazy"
+              />
             </div>
           </div>
         )}

@@ -696,7 +696,7 @@ function getAllProjects() {
       id: 15,
       name: "E-commerce",
       information: {
-        short_description: "",
+        short_description: "E-commerce Platform",
         description: ["Old project, for practice purposes only."],
         type: ["design", "develop"],
         tags: {
@@ -739,7 +739,7 @@ export function intro_projects() {
   const intro_projects = all_projects();
 
   const projects = intro_projects.reduce(
-    (dump, { id, information, project_showcase, link }) => {
+    (dump, { id, name, information, project_showcase, link }) => {
       if (project_showcase.is_intro) {
         if (link.github) {
           link.github = `${github_url}${link.name}`;
@@ -748,6 +748,7 @@ export function intro_projects() {
 
         dump.push({
           id,
+          name,
           information: {
             short_description: information.short_description,
           },
@@ -772,9 +773,10 @@ export function projects() {
     pinnedProjects: [],
   };
 
-  projects.forEach(({ id, information, link, project_showcase }) => {
+  projects.forEach(({ id, name, information, link, project_showcase }) => {
     const projectObject = {
       id,
+      name,
       information: {
         short_description: information.short_description,
         description: information.description[0],

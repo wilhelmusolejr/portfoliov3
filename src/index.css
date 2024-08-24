@@ -58,6 +58,10 @@ a {
   color: var(--clr-light-black) !important;
   font-weight: 500 !important;
 }
+
+.lazyload-wrapper {
+  height: 100%;
+}
 /* ------------------ */
 
 body {
