@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import LazyLoad from "react-lazyload";
 
 // Asset imports
@@ -9,11 +9,10 @@ import { projects } from "../ProjectData";
 import Image from "../components/Image";
 
 export default function Project() {
-  const allProjects = projects();
+  // const allProjects = projects();
+  const allProjects = useMemo(() => projects(), []);
   const projects_data = allProjects[0];
   const pin_projects_data = allProjects[1];
-
-  const img_url = "https://i.ibb.co/";
 
   return (
     <>
