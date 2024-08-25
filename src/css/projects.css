@@ -73,8 +73,10 @@ section.container-fluid.project-page {
 .project .child {
   width: 90%;
   max-width: 350px;
+  min-height: 250px;
 
   margin-bottom: 100px;
+  transition: all 0.8s cubic-bezier(0.2, 0.6, 0.2, 1);
 }
 
 .project .child img {
@@ -83,6 +85,19 @@ section.container-fluid.project-page {
   object-fit: cover;
 
   border-radius: 24px !important;
+}
+
+.project .image-design {
+  border-radius: 24px !important;
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  z-index: 100;
+  transition: all 0.8s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+.project .child:hover .image-design {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  transition: all 0.8s cubic-bezier(0.2, 0.6, 0.2, 1);
 }
 
 .project .parent {
