@@ -29,9 +29,11 @@ import "../css/about.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faEarthEurope,
+  faCode,
   faMicrochip,
+  faPaintBrush,
   faPalette,
+  faRobot,
   faWindowMaximize,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -414,49 +416,50 @@ export default function About() {
         <div className="container layout-space border"></div>
 
         <div className="container border">
-          <div className="parent d-flex flex-wrap justify-content-center align-items-center">
-            {/* child */}
+          <div className="parent d-flex flex-wrap justify-content-center ">
+            {/* Web Design */}
             <div className="child border">
-              <div className="d-flex align-items-center gap-2">
-                <FontAwesomeIcon icon={faEarthEurope} />
-                <p>Global Performance</p>
+              <div className="d-flex align-items-center gap-2 mb-2">
+                <FontAwesomeIcon icon={faPaintBrush} />
+                <p>Web Design</p>
               </div>
               <div className="body text-light">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Doloribus soluta repudiandae cumque odit quam vero alias
-                  ducimus, esse fuga vitae id dignissimos delectus unde officia
-                  maxime. Vero dolor autem debitis?
+                  I create visually appealing and user-friendly web designs
+                  tailored to your brand's identity. My designs focus on both
+                  aesthetics and functionality, ensuring that your website
+                  stands out and provides a seamless user experience.
                 </p>
               </div>
             </div>
-            {/* child */}
+            {/* Web Development */}
             <div className="child border">
-              <div className="d-flex align-items-center gap-2">
-                <FontAwesomeIcon icon={faEarthEurope} />
-                <p>Global Performance</p>
+              <div className="d-flex align-items-center gap-2 mb-2">
+                <FontAwesomeIcon icon={faCode} />
+                <p>Web Development</p>
               </div>
               <div className="body text-light">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Doloribus soluta repudiandae cumque odit quam vero alias
-                  ducimus, esse fuga vitae id dignissimos delectus unde officia
-                  maxime. Vero dolor autem debitis?
+                  I develop robust and scalable websites using modern
+                  technologies like React, Laravel, and Node.js. Whether it's a
+                  simple landing page or a complex web application, I build
+                  solutions that meet your business needs and are optimized for
+                  performance.
                 </p>
               </div>
             </div>
-            {/* child */}
+            {/* Web Automation */}
             <div className="child border">
-              <div className="d-flex align-items-center gap-2">
-                <FontAwesomeIcon icon={faEarthEurope} />
-                <p>Global Performance</p>
+              <div className="d-flex align-items-center gap-2 mb-2">
+                <FontAwesomeIcon icon={faRobot} />
+                <p>Web Automation</p>
               </div>
               <div className="body text-light">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Doloribus soluta repudiandae cumque odit quam vero alias
-                  ducimus, esse fuga vitae id dignissimos delectus unde officia
-                  maxime. Vero dolor autem debitis?
+                  I specialize in web automation, creating scripts and bots to
+                  automate repetitive tasks, data scraping, and more. My
+                  automation solutions save you time and enhance productivity,
+                  allowing you to focus on what matters most.
                 </p>
               </div>
             </div>

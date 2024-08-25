@@ -34,6 +34,13 @@ section.about .container {
 
 .skill-parent .child {
   padding: 5px 10px;
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.skill-parent .child:not(.active):hover {
+  background: var(--clr-border);
+  transition: all 0.3s cubic-bezier(0.2, 0.6, 0.2, 1);
 }
 
 .border {
@@ -42,8 +49,6 @@ section.about .container {
 
 .active {
   background-color: var(--clr-white);
-  border-radius: 10px;
-
   color: black;
 }
 .active p {

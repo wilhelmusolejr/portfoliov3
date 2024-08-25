@@ -82,6 +82,7 @@ export default function Project() {
                     url={project.project_showcase.is_other.image}
                     alt={project.name}
                   />
+                  <div className="image-design"></div>
                 </a>
                 <p className="text-center my-3 text-light text-capitalize">
                   {project.name}
