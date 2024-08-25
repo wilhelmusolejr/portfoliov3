@@ -235,17 +235,19 @@ export default function About() {
   };
 
   useEffect(() => {
-    skillOption.forEach((skill) => {
-      if (skill.isActive) {
-        listCategorized.forEach((category) => {
-          if (category.type === skill.name) {
-            setSkillList(category.programs);
-            setSkillParagraph(category.caption);
-          }
-        });
+    const activeSkill = skillOption.find((skill) => skill.isActive);
+
+    if (activeSkill) {
+      const category = listCategorized.find(
+        (category) => category.type === activeSkill.name
+      );
+
+      if (category) {
+        setSkillList(category.programs);
+        setSkillParagraph(category.caption);
       }
-    });
-  }, []);
+    }
+  }, [skillOption, listCategorized]);
 
   return (
     <>
