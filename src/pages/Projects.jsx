@@ -1,5 +1,4 @@
 import React, { useMemo } from "react";
-import LazyLoad from "react-lazyload";
 
 // Asset imports
 import "../css/projects.css";
