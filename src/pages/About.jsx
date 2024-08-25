@@ -213,25 +213,25 @@ export default function About() {
   const [skillList, setSkillList] = useState([]);
 
   const handleSkillActive = (target) => {
-    let temp = [];
+    // Update the skill options and set the active skill in one step
+    const updatedSkills = skillOption.map((skill) => ({
+      ...skill,
+      isActive: skill.name === target,
+    }));
 
-    skillOption.forEach((skill) => {
-      skill.isActive = false;
+    // Find the category matching the target skill type
+    const category = listCategorized.find(
+      (category) => category.type === target
+    );
 
-      if (skill.name === target) {
-        skill.isActive = true;
-      }
+    // Update the state with the new skill list and paragraph
+    if (category) {
+      setSkillList(category.programs);
+      setSkillParagraph(category.caption);
+    }
 
-      temp.push(skill);
-    });
-    listCategorized.forEach((category) => {
-      if (category.type === target) {
-        setSkillList(category.programs);
-        setSkillParagraph(category.caption);
-      }
-    });
-
-    setSkillOption(temp);
+    // Set the updated skill options
+    setSkillOption(updatedSkills);
   };
 
   useEffect(() => {
