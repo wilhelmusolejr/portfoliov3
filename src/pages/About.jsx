@@ -249,7 +249,7 @@ export default function About() {
         setSkillParagraph(category.caption);
       }
     }
-  }, [skillOption, listCategorized]);
+  }, []);
 
   return (
     <>
@@ -268,7 +268,9 @@ export default function About() {
             automation and quality assurance, as well as occasional web design.
           </p>
 
-          <Button className="btn-primary">Get in touch</Button>
+          <Button className="btn-primary" href="#contact">
+            Get in touch
+          </Button>
         </div>
       </header>
 
@@ -381,31 +383,11 @@ export default function About() {
               ))}
             </div>
 
-            <div className="d-flex flex-column gap-2 d-none">
-              {/* child */}
-              <div className="child d-flex justify-content-between align-items-center border p-2">
-                <p className="text-capitalize text-light">
-                  Philippine currency info
-                </p>
-                <div className="tab d-flex gap-2">
-                  <div className="circle"></div>
-                  <div className="circle"></div>
-                </div>
-              </div>
-              <div className="child d-flex justify-content-between align-items-center border p-2">
-                <p className="text-capitalize text-light">
-                  Philippine currency info
-                </p>
-                <div className="tab d-flex gap-2">
-                  <div className="circle"></div>
-                  <div className="circle"></div>
-                </div>
-              </div>
-            </div>
-
             <div className="text-center flex-center flex-wrap gap-2 pt-5">
               <p>Help me to add more?</p>
-              <Button className="btn-primary">Get in touch</Button>
+              <Button className="btn-primary" href="#contact">
+                Get in touch
+              </Button>
             </div>
           </div>
         </div>
@@ -470,19 +452,25 @@ export default function About() {
       </section>
 
       {/* CONTACT */}
-      <section className="container-fluid contact">
+      <section className="container-fluid contact" id="contact">
         <div className="container border">
-          <div className=" paragraph m-auto flex-center flex-column ">
-            <h2 className="text-center text-light mb-5">Get In Touch</h2>
+          <div className="paragraph m-auto flex-center flex-column">
+            <h2 className="text-light mb-5">Get In Touch</h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea,
-              eligendi consequatur delectus dolorum, quis reiciendis ullam eos
-              ex libero omnis rerum esse veritatis. Facilis amet, autem maiores
-              libero repudiandae repellat aliquam optio consectetur quibusdam,
-              architecto recusandae officiis alias tempora incidunt?
+              Whether you're interested in working together, have a question, or
+              just want to say hi, I'd love to hear from you! I'm always open to
+              discussing new projects, creative ideas, or opportunities to be
+              part of your vision. Feel free to reach out to me via email, and
+              I'll get back to you as soon as possible.
             </p>
 
-            <Button className="btn-primary mt-5">Email</Button>
+            <Button
+              className="btn-primary mt-5"
+              target="_blank"
+              href="https://mail.google.com/mail/u/0/?view=cm&amp;fs=1&amp;tf=1&amp;source=mailto&amp;to=wilhelmus.olejr@gmail.com"
+            >
+              Send Email
+            </Button>
           </div>
         </div>
       </section>
