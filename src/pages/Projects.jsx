@@ -6,6 +6,7 @@ import "../css/projects.css";
 import Footer from "../components/Footer";
 import Navigator from "../components/Navigator";
 import { projects } from "../ProjectData";
+import Image from "../components/Image";
 
 export default function Project() {
   const allProjects = projects();
@@ -13,8 +14,6 @@ export default function Project() {
   const pin_projects_data = allProjects[1];
 
   const img_url = "https://i.ibb.co/";
-
-  console.log("test");
 
   return (
     <>
@@ -33,16 +32,10 @@ export default function Project() {
                 {/* Left */}
                 <div className="left flex-center">
                   <a href={project.link.project} className="image-parent">
-                    <LazyLoad
-                      height={200}
-                      offset={100}
-                      placeholder={<div>Loading...</div>}
-                    >
-                      <img
-                        src={`${img_url}${project.project_showcase.is_pinned.image}`}
-                        alt={project.name}
-                      />
-                    </LazyLoad>
+                    <Image
+                      url={project.project_showcase.is_pinned.image}
+                      alt={project.name}
+                    />
                   </a>
                 </div>
                 {/* Right */}
@@ -83,19 +76,12 @@ export default function Project() {
 
           <div className="d-flex parent flex-wrap justify-content-center">
             {projects_data.map((project) => (
-              <div key={project.id} className="child">
+              <div key={project.id} className="child position-relative">
                 <a href={project.link.project} className="image-parent rounded">
-                  <LazyLoad
-                    height={200}
-                    offset={100}
-                    placeholder={<div>Loading...</div>}
-                  >
-                    <img
-                      src={`${img_url}${project.project_showcase.is_other.image}`}
-                      alt={project.name}
-                      className="rounded"
-                    />
-                  </LazyLoad>
+                  <Image
+                    url={project.project_showcase.is_other.image}
+                    alt={project.name}
+                  />
                 </a>
                 <p className="text-center my-3 text-light text-capitalize">
                   {project.name}

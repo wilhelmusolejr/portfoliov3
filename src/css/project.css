@@ -134,7 +134,8 @@ section.container-fluid.project-design {
 .project-screenshot .child {
   width: 100%;
   max-width: 300px;
-  max-height: 200px;
+  min-height: 200px;
+  max-height: 250px;
 }
 
 .screenshot-full {

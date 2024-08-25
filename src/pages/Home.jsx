@@ -5,12 +5,11 @@ import { intro_projects } from "../ProjectData";
 
 // asset
 import Footer from "../components/Footer";
+import Image from "../components/Image";
 
 function Home() {
   let projects = intro_projects();
   let img_url = "https://i.ibb.co/";
-
-  console.log(projects);
 
   return (
     <>
@@ -31,9 +30,9 @@ function Home() {
             <div key={index} className="child">
               <div className="image-parent">
                 <a href={project.link.project}>
-                  <img
-                    src={`${img_url}${project.project_showcase.is_intro.image}`}
-                    alt=""
+                  <Image
+                    url={project.project_showcase.is_intro.image}
+                    alt={project.name}
                   />
                 </a>
               </div>

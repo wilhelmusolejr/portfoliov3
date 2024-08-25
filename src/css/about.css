@@ -129,6 +129,10 @@ section.about .container {
   padding: 10px !important;
 }
 
+.accordion-button:focus {
+  box-shadow: none;
+}
+
 /* .accordion-button::after {
   flex-shrink: 0;
   width: 10px;

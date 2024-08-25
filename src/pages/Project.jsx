@@ -18,28 +18,17 @@ import "../css/project.css";
 import Footer from "../components/Footer";
 import ColorBox from "../components/ColorBox";
 import ProjectStructure from "../components/ProjectStructure";
+import Image from "../components/Image";
 
 export default function Project() {
   const [languages, setLanguages] = useState(null);
   const [screenshot, setScreenshot] = useState(null);
-
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
 
   const location = useLocation();
   const project_name = location.pathname.split("/")[2];
   const project = getProject(project_name);
 
   let img_url = "https://i.ibb.co/";
-
-  const handleLoad = () => {
-    setLoading(false);
-  };
-
-  const handleError = () => {
-    setLoading(false);
-    setError(true);
-  };
 
   useEffect(() => {
     const fetchLanguages = async () => {
@@ -107,25 +96,11 @@ export default function Project() {
 
       <section className="project-intro">
         <div className="container ">
-          <div className="image-parent project-banner my-5 flex-center">
-            {loading && !error && (
-              <div className="d-flex justify-content-center">
-                <div className="spinner-border" role="status">
-                  <span className="sr-only">Loading...</span>
-                </div>
-              </div>
-            )}
-
-            {!error && (
-              <LazyLoad height={200} offset={100}>
-                <img
-                  src={`${img_url}${project.project_showcase.project.banner_image}`}
-                  alt=""
-                  onLoad={handleLoad}
-                  onError={handleError}
-                />
-              </LazyLoad>
-            )}
+          <div className="image-parent project-banner my-5 flex-center position-relative">
+            <Image
+              url={project.project_showcase.project.banner_image}
+              alt={`${project.name} banner.`}
+            />
           </div>
 
           <div className="project-info">
@@ -187,18 +162,15 @@ export default function Project() {
                 (screenshot, index) => (
                   <div
                     key={index}
-                    className="child image-parent cursor-pointer"
+                    className="child image-parent cursor-pointer position-relative"
                     onClick={() => {
                       setScreenshot(screenshot);
                     }}
                   >
-                    <LazyLoad height={200} offset={100}>
-                      <img
-                        src={`${img_url}${screenshot}`}
-                        alt={`Screenshot ${index + 1}`}
-                        loading="lazy"
-                      />
-                    </LazyLoad>
+                    <Image
+                      url={screenshot}
+                      alt={`${project.name} screenshot ${index}`}
+                    />
                   </div>
                 )
               )}
@@ -215,12 +187,7 @@ export default function Project() {
             }}
           >
             <div className="child image-parent flex-center ">
-              <img
-                src={`${img_url}${screenshot}`}
-                alt=""
-                className="border"
-                loading="lazy"
-              />
+              <img src={`${img_url}${screenshot}`} alt="" className="border" />
             </div>
           </div>
         )}
