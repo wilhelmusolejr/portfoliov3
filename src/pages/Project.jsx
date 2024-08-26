@@ -20,8 +20,6 @@ import ProjectStructure from "../components/ProjectStructure";
 import Image from "../components/Image";
 import ProjectType from "../components/ProjectType";
 
-let img_url = "https://i.ibb.co/";
-
 export default function Project() {
   const [languages, setLanguages] = useState(null);
   const [screenshot, setScreenshot] = useState(null);
@@ -205,7 +203,11 @@ export default function Project() {
             }}
           >
             <div className="child image-parent flex-center ">
-              <img src={`${img_url}${screenshot}`} alt="" className="border" />
+              <img
+                src={`${project.project_showcase.url}${screenshot}`}
+                alt=""
+                className="border"
+              />
             </div>
           </div>
         )}
