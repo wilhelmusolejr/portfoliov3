@@ -4,11 +4,12 @@ import {
   faRobot,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import PropTypes from "prop-types";
 
 function ProjectType({ type }) {
   let icon;
 
-  switch (type) {
+  switch (type.toLowerCase()) {
     case "design":
       icon = faPaintBrush;
       break;
@@ -28,5 +29,9 @@ function ProjectType({ type }) {
     </>
   );
 }
+
+ProjectType.propTypes = {
+  type: PropTypes.string.isRequired, // Define 'color' prop as a string
+};
 
 export default ProjectType;
