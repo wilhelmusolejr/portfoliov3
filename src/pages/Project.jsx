@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import LazyLoad from "react-lazyload";
+import { useEffect, useState } from "react";
 
 import Navigator from "../components/Navigator";
 import { useLocation } from "react-router-dom";
@@ -19,6 +18,9 @@ import Footer from "../components/Footer";
 import ColorBox from "../components/ColorBox";
 import ProjectStructure from "../components/ProjectStructure";
 import Image from "../components/Image";
+import ProjectType from "../components/ProjectType";
+
+let img_url = "https://i.ibb.co/";
 
 export default function Project() {
   const [languages, setLanguages] = useState(null);
@@ -27,8 +29,6 @@ export default function Project() {
   const location = useLocation();
   const project_name = location.pathname.split("/")[2];
   const project = getProject(project_name);
-
-  let img_url = "https://i.ibb.co/";
 
   useEffect(() => {
     const fetchLanguages = async () => {
@@ -104,6 +104,12 @@ export default function Project() {
           </div>
 
           <div className="project-info">
+            <div className="my-5 flex-center gap-3">
+              {project.information.type.map((type, index) => (
+                <ProjectType key={index} type={type} />
+              ))}
+            </div>
+
             {project.information.description.map((description, index) => (
               <p key={index} className="mb-3">
                 {description}

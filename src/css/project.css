@@ -19,6 +19,10 @@
 
   font-size: 12px;
 }
+.project-technology .child:hover {
+  border: 1px solid var(--clr-white);
+  color: var(--clr-white) !important;
+}
 
 section.container-fluid.project-design {
   border-bottom: 1px solid var(--clr-border);
