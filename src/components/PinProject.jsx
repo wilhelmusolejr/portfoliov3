@@ -1,5 +1,9 @@
 import Image from "./Image";
 
+import philippinecurrency from "../assets/projects/philippine-currency-identifier/showcase.webp";
+import clinic from "../assets/projects/online-appointment-and-consultation-clinic/showcase.webp";
+import depression from "../assets/projects/dass-depression-level-predictor/showcase.jpg";
+
 function PinProject(prop) {
   const project = prop.project;
 
@@ -14,16 +18,27 @@ function PinProject(prop) {
     return firstTwentyWords.join(" ") + (words.length > 20 ? "..." : "");
   }
 
+  let image;
+
+  switch (project.link.name.toLowerCase()) {
+    case "philippine-currency-identifier":
+      image = philippinecurrency;
+      break;
+    case "online-appointment-and-consultation-clinic":
+      image = clinic;
+      break;
+    case "dass-depression-level-predictor":
+      image = depression;
+      break;
+  }
+
   return (
     <>
       <div key={project.id} className="child d-flex flex-md-nowrap flex-wrap">
         {/* Left */}
         <div className="left flex-center">
           <a href={project.link.project} className="image-parent">
-            <Image
-              url={`${project.project_showcase.url}${project.project_showcase.is_pinned.image}`}
-              alt={project.name}
-            />
+            <Image url={image} alt={project.name} />
           </a>
         </div>
         {/* Right */}
