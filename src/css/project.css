@@ -127,8 +127,8 @@ section.container-fluid.project-design {
   height: 10px;
 }
 
-.product-design .languages-text p {
-  font-size: 14px;
+.project-design .languages-text p {
+  font-size: 1em !important;
 }
 
 .project-external {
