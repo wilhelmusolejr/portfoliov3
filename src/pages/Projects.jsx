@@ -3,23 +3,13 @@ import "../css/projects.css";
 import Footer from "../components/Footer";
 import Navigator from "../components/Navigator";
 import { projects } from "../ProjectData";
-import Image from "../components/Image";
+import OtherProject from "../components/OtherProject";
+import PinProject from "../components/PinProject";
 
 export default function Project() {
   const allProjects = projects();
   const projects_data = allProjects[0];
   const pin_projects_data = allProjects[1];
-
-  function truncateToTwentyWords(text) {
-    // Split the text into an array of words
-    const words = text.split(" ");
-
-    // Slice the array to get the first 20 words
-    const firstTwentyWords = words.slice(0, 20);
-
-    // Join the words back into a string and add an ellipsis if truncated
-    return firstTwentyWords.join(" ") + (words.length > 20 ? "..." : "");
-  }
 
   return (
     <>
@@ -30,44 +20,8 @@ export default function Project() {
           <h2 className="py-5 text-light text-center">Projects</h2>
 
           <div className="parent d-flex flex-wrap gap-5">
-            {pin_projects_data.map((project) => (
-              <div
-                key={project.id}
-                className="child d-flex flex-md-nowrap flex-wrap"
-              >
-                {/* Left */}
-                <div className="left flex-center">
-                  <a href={project.link.project} className="image-parent">
-                    <Image
-                      url={project.project_showcase.is_pinned.image}
-                      alt={project.name}
-                    />
-                  </a>
-                </div>
-                {/* Right */}
-                <div className="right border w-100">
-                  <a
-                    href={project.link.project}
-                    className="text-decoration-none"
-                  >
-                    <h2 className="text-light mt-3">{project.name}</h2>
-                  </a>
-                  <p>{project.information.short_description}</p>
-                  <p className="mt-3">
-                    {truncateToTwentyWords(project.information.description)}
-                  </p>
-                  <div className="d-flex flex-wrap gap-2 mt-3">
-                    {project.information.tags.project.map((tag, index) => (
-                      <span
-                        key={index}
-                        className="badge bg-primary text-lowercase"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
+            {pin_projects_data.map((project, index) => (
+              <PinProject key={index} project={project} />
             ))}
           </div>
         </div>
@@ -79,19 +33,8 @@ export default function Project() {
           <h2 className="text-center mb-5 text-light">Other projects</h2>
 
           <div className="d-flex parent flex-wrap justify-content-center">
-            {projects_data.map((project) => (
-              <div key={project.id} className="child position-relative">
-                <a href={project.link.project} className="image-parent rounded">
-                  <Image
-                    url={project.project_showcase.is_other.image}
-                    alt={project.name}
-                  />
-                  <div className="image-design"></div>
-                </a>
-                <p className="text-center my-3 text-light text-capitalize">
-                  {project.name}
-                </p>
-              </div>
+            {projects_data.map((project, index) => (
+              <OtherProject key={index} project={project} />
             ))}
           </div>
         </div>
