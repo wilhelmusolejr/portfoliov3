@@ -1,5 +1,6 @@
-import React, { useState, useCallback, memo } from "react";
+import { useState, useCallback, memo } from "react";
 import LazyLoad from "react-lazyload";
+import PropTypes from "prop-types";
 
 let img_url = "https://i.ibb.co/";
 
@@ -28,5 +29,12 @@ const Image = memo(({ url, alt = "" }) => {
     </LazyLoad>
   );
 });
+
+Image.displayName = "Image"; // Setting the display name
+
+Image.propTypes = {
+  url: PropTypes.string.isRequired, // Define 'color' prop as a string
+  alt: PropTypes.string, // Define 'color' prop as a string
+};
 
 export default Image;
