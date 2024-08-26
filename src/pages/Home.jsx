@@ -1,5 +1,3 @@
-import React from "react";
-
 import Navigator from "../components/Navigator";
 import { intro_projects } from "../ProjectData";
 
@@ -9,7 +7,6 @@ import Image from "../components/Image";
 
 function Home() {
   let projects = intro_projects();
-  let img_url = "https://i.ibb.co/";
 
   return (
     <>

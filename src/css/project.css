@@ -65,6 +65,10 @@ section.container-fluid.project-design {
   border-radius: 10px;
 }
 
+.project-design .color-box:hover svg {
+  display: initial !important;
+}
+
 .project-design .frac {
   height: 5px;
 }

@@ -181,6 +181,14 @@ export default function Project() {
                 )
               )}
           </div>
+
+          <div className="project-tags-project my-5">
+            {project.information.tags.project.map((tag, index) => (
+              <p className="fs-6 text-lowercase" key={index}>
+                {tag}
+              </p>
+            ))}
+          </div>
         </div>
 
         {screenshot && (
@@ -243,6 +251,7 @@ export default function Project() {
                 </ul>
               </div>
             </div>
+
             {/* right */}
             <div className="right colors d-flex flex-column gap-2">
               {project.design &&
@@ -254,6 +263,7 @@ export default function Project() {
         </div>
       </section>
 
+      {/* floating link */}
       <div className="project-external d-flex flex-column">
         {project.link.github && (
           <a
