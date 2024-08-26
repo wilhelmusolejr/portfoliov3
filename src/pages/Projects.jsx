@@ -1,5 +1,3 @@
-import React, { useMemo } from "react";
-
 // Asset imports
 import "../css/projects.css";
 import Footer from "../components/Footer";
@@ -8,10 +6,20 @@ import { projects } from "../ProjectData";
 import Image from "../components/Image";
 
 export default function Project() {
-  // const allProjects = projects();
-  const allProjects = useMemo(() => projects(), []);
+  const allProjects = projects();
   const projects_data = allProjects[0];
   const pin_projects_data = allProjects[1];
+
+  function truncateToTwentyWords(text) {
+    // Split the text into an array of words
+    const words = text.split(" ");
+
+    // Slice the array to get the first 20 words
+    const firstTwentyWords = words.slice(0, 20);
+
+    // Join the words back into a string and add an ellipsis if truncated
+    return firstTwentyWords.join(" ") + (words.length > 20 ? "..." : "");
+  }
 
   return (
     <>
@@ -46,9 +54,7 @@ export default function Project() {
                   </a>
                   <p>{project.information.short_description}</p>
                   <p className="mt-3">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Porro molestias asperiores rem odit maiores, quae
-                    repudiandae maxime excepturi nulla perferendis?
+                    {truncateToTwentyWords(project.information.description)}
                   </p>
                   <div className="d-flex flex-wrap gap-2 mt-3">
                     {project.information.tags.project.map((tag, index) => (
