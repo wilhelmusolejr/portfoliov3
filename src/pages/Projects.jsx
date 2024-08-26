@@ -34,6 +34,7 @@ export default function Project() {
 
           <div className="d-flex parent flex-wrap justify-content-center">
             {projects_data.map((project, index) => (
+              // <img src={} alt="" />
               <OtherProject key={index} project={project} />
             ))}
           </div>

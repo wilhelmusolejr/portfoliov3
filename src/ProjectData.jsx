@@ -68,16 +68,16 @@ function getAllProjects() {
         is_intro: null,
         is_pinned: {
           order: 1,
-          image: "CJnX92B/showcase.webp",
+          image: "showcase.webp",
         },
         is_other: null,
         project: {
-          banner_image: "CJnX92B/showcase.webp",
+          banner_image: "showcase.webp",
           screenshot: [
-            "WyNgsSj/banner.jpg",
-            "FzHmYZh/screenshot1.png",
-            "y6B1qCt/screenshot2.png",
-            "jVMB1kz/screenshot3.png",
+            "banner.jpg",
+            "screenshot1.png",
+            "screenshot2.png",
+            "screenshot3.png",
           ],
         },
       },
@@ -136,24 +136,24 @@ function getAllProjects() {
       project_showcase: {
         is_intro: {
           order: 2,
-          image: "KL30vd5/clinic.webp",
+          image: "mockup.webp",
         },
         is_pinned: {
           order: 3,
-          image: "T88STVT/showcase.webp",
+          image: "showcase.webp",
         },
         is_other: null,
         project: {
-          banner_image: "T88STVT/showcase.webp",
+          banner_image: "showcase.webp",
           screenshot: [
-            "GM7QD2d/screenshot1.png",
-            "x1VwK8X/screenshot2.png",
-            "wCkd71Q/screenshot3.png",
-            "Fz0fNsQ/screenshot4.png",
-            "Wt2PSGS/screenshot5.png",
-            "nrddycj/screenshot6.png",
-            "yNYxcMh/screenshot7.png",
-            "wWG30pG/banner.png",
+            "screenshot1.png",
+            "screenshot2.png",
+            "screenshot3.png",
+            "screenshot4.png",
+            "screenshot5.png",
+            "screenshot6.png",
+            "screenshot7.png",
+            "banner.png",
           ],
         },
       },
@@ -215,11 +215,11 @@ function getAllProjects() {
         is_intro: null,
         is_pinned: {
           order: 4,
-          image: "9p719DH/banner.webp",
+          image: "banner.webp",
         },
         is_other: null,
         project: {
-          banner_image: "9p719DH/banner.webp",
+          banner_image: "banner.webp",
         },
       },
       link: {
@@ -281,20 +281,20 @@ function getAllProjects() {
       project_showcase: {
         is_intro: {
           order: 1,
-          image: "rtFzR8V/mobhie.webp",
+          image: "mockup.webp",
         },
         is_pinned: null,
         is_other: {
           orderr: 2,
-          image: "FVWNQ6f/banner.webp",
+          image: "banner.webp",
         },
         project: {
-          banner_image: "FVWNQ6f/banner.webp",
+          banner_image: "banner.webp",
           screenshot: [
-            "drZNSnJ/banner.png",
-            "ThxrJmN/screenshot1.png",
-            "R6yJQgX/screenshot2.png",
-            "qnPw8rJ/screenshot3.png",
+            "banner.png",
+            "screenshot1.png",
+            "screenshot2.png",
+            "screenshot3.png",
           ],
         },
       },
@@ -355,21 +355,21 @@ function getAllProjects() {
       project_showcase: {
         is_intro: {
           order: 4,
-          image: "JyWC2JF/pennywise.webp",
+          image: "mockup.webp",
         },
         is_pinned: null,
         is_other: {
           orderr: 1,
-          image: "r6g10gf/banner.webp",
+          image: "banner.webp",
         },
         project: {
-          banner_image: "r6g10gf/banner.webp",
+          banner_image: "banner.webp",
           screenshot: [
-            "MchKNx7/screenshot1.png",
-            "xFgNzkj/screenshot2.png",
-            "kgQR9dn/screenshot3.png",
-            "tp6rRvH/screenshot4.png",
-            "d6F3Pyf/screenshot5.png",
+            "screenshot1.png",
+            "screenshot2.png",
+            "screenshot3.png",
+            "screenshot4.png",
+            "screenshot5.png",
           ],
         },
       },
@@ -418,15 +418,15 @@ function getAllProjects() {
         is_pinned: null,
         is_other: {
           orderr: 3,
-          image: "X5LJMF0/banner.webp",
+          image: "banner.webp",
         },
         project: {
-          banner_image: "X5LJMF0/banner.webp",
-          screenshot: ["KKtMvbz/banner.png"],
+          banner_image: "banner.webp",
+          screenshot: ["banner.png"],
         },
       },
       link: {
-        name: "J0LLYM4X-PH",
+        name: "j0llym4x-ph",
         github: undefined,
         project: undefined,
         external: null,
@@ -450,20 +450,20 @@ function getAllProjects() {
       project_showcase: {
         is_intro: {
           order: 3,
-          image: "1dmCd4d/shopeeling.webp",
+          image: "mockup.webp",
         },
         is_pinned: null,
         is_other: {
           order: 4,
-          image: "64VnN5C/banner.webp",
+          image: "banner.webp",
         },
         project: {
-          banner_image: "64VnN5C/banner.webp",
+          banner_image: "banner.webp",
           screenshot: [
-            "gy68gHG/screenshot1.png",
-            "09tQgDD/screenshot2.png",
-            "LJqMv8j/screenshot3.png",
-            "jMH72Fh/screenshot4.png",
+            "screenshot1.png",
+            "screenshot2.png",
+            "screenshot3.png",
+            "screenshot4.png",
           ],
         },
       },
@@ -499,11 +499,11 @@ function getAllProjects() {
         is_pinned: null,
         is_other: {
           order: 8,
-          image: "JFPqMbD/banner.webp",
+          image: "banner.webp",
         },
         project: {
-          banner_image: "JFPqMbD/banner.webp",
-          screenshot: ["KWtSfCw/screenshot1.png"],
+          banner_image: "banner.webp",
+          screenshot: ["screenshot1.png"],
         },
       },
       link: {
@@ -548,14 +548,14 @@ function getAllProjects() {
         is_pinned: null,
         is_other: {
           orderr: 9,
-          image: "sv6Hq50/banner.webp",
+          image: "banner.webp",
         },
         project: {
-          banner_image: "sv6Hq50/banner.webp",
+          banner_image: "banner.webp",
         },
       },
       link: {
-        name: "GC4SH-PH",
+        name: "gc4sh-ph",
         github: undefined,
         project: undefined,
         external: null,
@@ -579,16 +579,16 @@ function getAllProjects() {
       project_showcase: {
         is_intro: {
           order: 5,
-          image: "Kq93CGV/nft.webp",
+          image: "mockup.webp",
         },
         is_pinned: null,
         is_other: {
           order: 4,
-          image: "XbgWfh1/banner.webp",
+          image: "banner.webp",
         },
         project: {
-          banner_image: "XbgWfh1/banner.webp",
-          screenshot: ["zRjXLXh/screenshot1.png", "qM7ZjZh/screenshot2.png"],
+          banner_image: "banner.webp",
+          screenshot: ["screenshot1.png", "screenshot2.png"],
         },
       },
       link: {
@@ -635,14 +635,14 @@ function getAllProjects() {
         is_pinned: null,
         is_other: {
           orderr: 5,
-          image: "DbsZK4m/banner.webp",
+          image: "banner.webp",
         },
         project: {
-          banner_image: "D4yJCCp/banner.jpg",
+          banner_image: "banner.jpg",
         },
       },
       link: {
-        name: "Microsoft-Rewards-Bot",
+        name: "microsoft-reward-bot",
         github: undefined,
         project: undefined,
         external: null,
@@ -672,11 +672,11 @@ function getAllProjects() {
         is_pinned: null,
         is_other: {
           order: 10,
-          image: "nm9JBCj/banner.webp",
+          image: "banner.webp",
         },
         project: {
-          banner_image: "nm9JBCj/banner.webp",
-          screenshot: ["PcCtS8J/screenshot1.png", "zHbCZCk/screenshot2.png"],
+          banner_image: "banner.webp",
+          screenshot: ["screenshot1.png", "screenshot2.png"],
         },
       },
       link: {
@@ -709,16 +709,12 @@ function getAllProjects() {
         is_pinned: null,
         is_other: {
           order: 11,
-          image: "wg6B7Z6/banner.webp",
+          image: "banner.webp",
         },
 
         project: {
-          banner_image: "wg6B7Z6/banner.webp",
-          screenshot: [
-            "WfqTq98/screenshot1.png",
-            "hVxkHqT/screenshot2.png",
-            "RYQ33xv/screenshot3.png",
-          ],
+          banner_image: "banner.webp",
+          screenshot: ["screenshot1.png", "screenshot2.png", "screenshot3.png"],
         },
       },
       link: {
@@ -754,6 +750,7 @@ export function intro_projects() {
           },
           link,
           project_showcase: {
+            url: `projects/${link.name}/`,
             is_intro: project_showcase.is_intro,
           },
         });
@@ -785,6 +782,7 @@ export function projects() {
       },
       link,
       project_showcase: {
+        url: `projects/${link.name}/`,
         is_other: project_showcase.is_other,
         is_pinned: project_showcase.is_pinned,
       },
@@ -812,6 +810,8 @@ export function getProject(target) {
 
   for (let project of projects) {
     if (project.link.name.includes(target)) {
+      project.project_showcase.url = `projects/${project.link.name}/`;
+
       return project;
     }
   }

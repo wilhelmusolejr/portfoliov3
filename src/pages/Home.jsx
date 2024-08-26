@@ -28,7 +28,7 @@ function Home() {
               <div className="image-parent">
                 <a href={project.link.project}>
                   <Image
-                    url={project.project_showcase.is_intro.image}
+                    url={`${project.project_showcase.url}${project.project_showcase.is_intro.image}`}
                     alt={project.name}
                   />
                 </a>

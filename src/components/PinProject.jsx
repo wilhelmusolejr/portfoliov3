@@ -21,7 +21,7 @@ function PinProject(prop) {
         <div className="left flex-center">
           <a href={project.link.project} className="image-parent">
             <Image
-              url={project.project_showcase.is_pinned.image}
+              url={`${project.project_showcase.url}${project.project_showcase.is_pinned.image}`}
               alt={project.name}
             />
           </a>

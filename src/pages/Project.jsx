@@ -70,6 +70,8 @@ export default function Project() {
     fetchLanguages();
   }, [project.link.name]);
 
+  project.project_showcase.url = `../${project.project_showcase.url}`;
+
   return (
     <>
       <Navigator />
@@ -100,7 +102,7 @@ export default function Project() {
         <div className="container ">
           <div className="image-parent project-banner my-5 flex-center position-relative">
             <Image
-              url={project.project_showcase.project.banner_image}
+              url={`${project.project_showcase.url}${project.project_showcase.project.banner_image}`}
               alt={`${project.name} banner.`}
             />
           </div>
@@ -176,7 +178,7 @@ export default function Project() {
                     }}
                   >
                     <Image
-                      url={screenshot}
+                      url={`${project.project_showcase.url}${screenshot}`}
                       alt={`${project.name} screenshot ${index}`}
                     />
                   </div>
