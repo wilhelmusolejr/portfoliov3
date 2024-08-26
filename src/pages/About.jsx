@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import Navigator from "../components/Navigator";
 import Button from "../components/Button";
@@ -37,163 +37,163 @@ import {
   faWindowMaximize,
 } from "@fortawesome/free-solid-svg-icons";
 
+let listCategorized = [
+  // web
+  {
+    type: "Web Dev",
+    programs: [
+      {
+        name: "html",
+        type: ["Web Dev"],
+        image: html,
+      },
+      {
+        name: "css",
+        type: ["Web Dev"],
+        image: css,
+      },
+      {
+        name: "js",
+        type: ["Web Dev"],
+        image: js,
+      },
+      {
+        name: "laravel",
+        type: ["Web Dev"],
+        image: laravel,
+      },
+      {
+        name: "react",
+        type: ["Web Dev"],
+        image: react,
+      },
+      {
+        name: "php",
+        type: ["Web Dev"],
+        image: php,
+      },
+      {
+        name: "python",
+        type: ["Web Dev"],
+        image: python,
+      },
+      {
+        name: "mysql",
+        type: ["Web Dev"],
+        image: mysql,
+      },
+      {
+        name: "",
+        type: ["Web Dev"],
+        image: postgres,
+      },
+    ],
+    caption:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, distinctio?",
+  },
+  // Ai
+  {
+    type: "Ai",
+    programs: [
+      {
+        name: "tensorflow",
+        type: ["Ai"],
+        image: tensorflow,
+      },
+      {
+        name: "openai",
+        type: ["Ai"],
+        image: openai,
+      },
+      {
+        name: "",
+        type: ["Ai"],
+        image: empty,
+      },
+      {
+        name: "",
+        type: ["Ai"],
+        image: empty,
+      },
+      {
+        name: "",
+        type: ["Ai"],
+        image: empty,
+      },
+      {
+        name: "",
+        type: ["Ai"],
+        image: empty,
+      },
+    ],
+    caption:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aperiam eaque molestias molestiae voluptates ducimus.",
+  },
+  // design
+  {
+    type: "Design",
+    programs: [
+      {
+        name: "Adobe Photoshop",
+        type: ["Web Dev"],
+        image: photoshop,
+      },
+      {
+        name: "Adobe XD",
+        type: ["Design"],
+        image: xd,
+      },
+      {
+        name: "Figma",
+        type: ["Design"],
+        image: figma,
+      },
+      {
+        name: "",
+        type: ["Design"],
+        image: empty,
+      },
+      {
+        name: "",
+        type: ["Design"],
+        image: empty,
+      },
+      {
+        name: "",
+        type: ["Design"],
+        image: empty,
+      },
+    ],
+    caption:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, optio! Repellendus, eligendi.",
+  },
+];
+
+let work_experience = [
+  {
+    name: "Freelancer PH",
+    date: "June 2022 - February 2023",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, sed.",
+    position: "Full-stack Developer",
+  },
+  {
+    name: "Accenture",
+    date: "June 2022 - February 2023",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, sed.",
+    position: "Full-stack Developer",
+  },
+  {
+    name: "Samsung",
+    date: "June 2022 - February 2023",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, sed.",
+    position: "Full-stack Developer",
+  },
+];
+
 export default function About() {
-  let listCategorized = [
-    // web
-    {
-      type: "Web Dev",
-      programs: [
-        {
-          name: "html",
-          type: ["Web Dev"],
-          image: html,
-        },
-        {
-          name: "css",
-          type: ["Web Dev"],
-          image: css,
-        },
-        {
-          name: "js",
-          type: ["Web Dev"],
-          image: js,
-        },
-        {
-          name: "laravel",
-          type: ["Web Dev"],
-          image: laravel,
-        },
-        {
-          name: "react",
-          type: ["Web Dev"],
-          image: react,
-        },
-        {
-          name: "php",
-          type: ["Web Dev"],
-          image: php,
-        },
-        {
-          name: "python",
-          type: ["Web Dev"],
-          image: python,
-        },
-        {
-          name: "mysql",
-          type: ["Web Dev"],
-          image: mysql,
-        },
-        {
-          name: "",
-          type: ["Web Dev"],
-          image: postgres,
-        },
-      ],
-      caption:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, distinctio?",
-    },
-    // Ai
-    {
-      type: "Ai",
-      programs: [
-        {
-          name: "tensorflow",
-          type: ["Ai"],
-          image: tensorflow,
-        },
-        {
-          name: "openai",
-          type: ["Ai"],
-          image: openai,
-        },
-        {
-          name: "",
-          type: ["Ai"],
-          image: empty,
-        },
-        {
-          name: "",
-          type: ["Ai"],
-          image: empty,
-        },
-        {
-          name: "",
-          type: ["Ai"],
-          image: empty,
-        },
-        {
-          name: "",
-          type: ["Ai"],
-          image: empty,
-        },
-      ],
-      caption:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aperiam eaque molestias molestiae voluptates ducimus.",
-    },
-    // design
-    {
-      type: "Design",
-      programs: [
-        {
-          name: "Adobe Photoshop",
-          type: ["Web Dev"],
-          image: photoshop,
-        },
-        {
-          name: "Adobe XD",
-          type: ["Design"],
-          image: xd,
-        },
-        {
-          name: "Figma",
-          type: ["Design"],
-          image: figma,
-        },
-        {
-          name: "",
-          type: ["Design"],
-          image: empty,
-        },
-        {
-          name: "",
-          type: ["Design"],
-          image: empty,
-        },
-        {
-          name: "",
-          type: ["Design"],
-          image: empty,
-        },
-      ],
-      caption:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, optio! Repellendus, eligendi.",
-    },
-  ];
-
-  let work_experience = [
-    {
-      name: "Freelancer PH",
-      date: "June 2022 - February 2023",
-      description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, sed.",
-      position: "Full-stack Developer",
-    },
-    {
-      name: "Accenture",
-      date: "June 2022 - February 2023",
-      description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, sed.",
-      position: "Full-stack Developer",
-    },
-    {
-      name: "Samsung",
-      date: "June 2022 - February 2023",
-      description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, sed.",
-      position: "Full-stack Developer",
-    },
-  ];
-
   const [skillOption, setSkillOption] = useState([
     {
       name: "Web Dev",
