@@ -48,12 +48,12 @@ function Home() {
       <section className="container short-about-me d-flex justify-content-center">
         <div className="paragraph ">
           <p className="mb-3">
-            I’m Wilhelmus Ole Jr, a Junior Full-Stack Web Developer and Computer
-            Science student. I specialize in creating visually appealing,
-            responsive, and user-friendly websites. While I have experience in
-            web automation and bot development, I’m currently focused on
-            building innovative and impactful digital experiences in web
-            development.
+            Hi, I’m Wilhelmus Ole Jr, a Junior Full-Stack Web Developer and
+            Computer Science student. I specialize in creating visually
+            appealing, responsive, and user-friendly websites. While I have
+            experience in web automation and bot development, I’m currently
+            focused on building innovative and impactful digital experiences in
+            web development.
           </p>
           <a href="/about" className="text-light">
             More about me
