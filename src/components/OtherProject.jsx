@@ -55,7 +55,6 @@ function OtherProject(prop) {
       <div key={project.id} className="child position-relative">
         <a href={project.link.project} className="image-parent rounded">
           <Image url={image} alt={project.name} />
-
           <div className="image-design"></div>
         </a>
         <p className="text-center my-3 text-light text-capitalize">

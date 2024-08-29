@@ -249,7 +249,7 @@ export default function About() {
         setSkillParagraph(category.caption);
       }
     }
-  }, []);
+  }, [skillOption]);
 
   return (
     <>
@@ -406,6 +406,9 @@ export default function About() {
                 <p>Web Design</p>
               </div>
               <div className="body text-light">
+                <div className="image-parent">
+                  <img src={profile} alt="" />
+                </div>
                 <p>
                   I create visually appealing and user-friendly web designs
                   tailored to your brand's identity. My designs focus on both
@@ -421,6 +424,9 @@ export default function About() {
                 <p>Web Development</p>
               </div>
               <div className="body text-light">
+                <div className="image-parent">
+                  <img src={profile} alt="" />
+                </div>
                 <p>
                   I develop robust and scalable websites using modern
                   technologies like React, Laravel, and Node.js. Whether it's a
@@ -437,6 +443,9 @@ export default function About() {
                 <p>Web Automation</p>
               </div>
               <div className="body text-light">
+                <div className="image-parent">
+                  <img src={profile} alt="" />
+                </div>
                 <p>
                   I specialize in web automation, creating scripts and bots to
                   automate repetitive tasks, data scraping, and more. My
