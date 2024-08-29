@@ -184,7 +184,7 @@ export default function Project() {
               )}
           </div>
 
-          <div className="project-tags-project my-5">
+          <div className="project-tags-project my-5 d-none">
             {project.information.tags.project.map((tag, index) => (
               <p className="fs-6 text-lowercase" key={index}>
                 {tag}
@@ -214,7 +214,8 @@ export default function Project() {
       </section>
 
       <section className="container-fluid project-design py-5">
-        <div className="container flex-center">
+        <div className="container project-design-parent flex-center flex-wrap gap-4 ">
+          {/* left */}
           <div className="box d-flex gap-2 border p-3">
             {/* left */}
             <div
@@ -264,6 +265,17 @@ export default function Project() {
                 project.design.color.map((color, index) => (
                   <ColorBox key={index} color={color} />
                 ))}
+            </div>
+          </div>
+
+          {/* right*/}
+          <div className="tags info">
+            <div className="project-tags-project my-5">
+              {project.information.tags.project.map((tag, index) => (
+                <p className="fs-6 text-lowercase" key={index}>
+                  {tag}
+                </p>
+              ))}
             </div>
           </div>
         </div>

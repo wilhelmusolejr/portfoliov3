@@ -54,6 +54,16 @@ section.container-fluid.project-design {
   flex: 1;
 }
 
+.project-design .box {
+  flex: 1;
+  max-width: 400px;
+}
+
+.project-design .tags {
+  width: 100%;
+  max-width: 350px;
+}
+
 .project-design .box .font {
   line-height: 1;
 }
@@ -165,4 +175,10 @@ section.container-fluid.project-design {
   max-width: 1200px;
   height: auto;
   max-height: 90vh;
+}
+
+@media only screen and (min-width: 768px) {
+  .project-design .tags {
+    width: 40%;
+  }
 }

@@ -176,7 +176,7 @@ section.about .container {
   border-bottom: none !important;
 }
 .positive .body p {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .positive .parent .child {
@@ -188,6 +188,18 @@ section.about .container {
 }
 .positive .parent {
   gap: 20px;
+}
+
+.positive .image-parent img {
+  border-radius: 10px;
+  margin-bottom: 20px;
+  /* filter: grayscale(1); */
+  transition: all 0.8s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.positive .image-parent:hover img {
+  /* filter: initial; */
+  transition: all 0.8s cubic-bezier(0.2, 0.6, 0.2, 1);
 }
 
 /* ------------------------ */
