@@ -3,6 +3,7 @@ import Image from "./Image";
 import philippinecurrency from "../assets/projects/philippine-currency-identifier/showcase.webp";
 import clinic from "../assets/projects/online-appointment-and-consultation-clinic/showcase.webp";
 import depression from "../assets/projects/dass-depression-level-predictor/showcase.jpg";
+import foodify from "../assets/projects/foodify/showcase.webp";
 
 function PinProject(prop) {
   const project = prop.project;
@@ -29,6 +30,9 @@ function PinProject(prop) {
       break;
     case "dass-depression-level-predictor":
       image = depression;
+      break;
+    case "foodify":
+      image = foodify;
       break;
   }
 

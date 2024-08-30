@@ -8,6 +8,7 @@ import j0llym4xph from "../assets/projects/j0llym4x-ph/banner.webp";
 import gc4shph from "../assets/projects/gc4sh-ph/banner.webp";
 import ecommerce from "../assets/projects/e-commerce/banner.webp";
 import nft from "../assets/projects/nft-marketplace/banner.webp";
+import louis from "../assets/projects/louis-tech-vuitton/banner.webp";
 
 import Image from "./Image";
 
@@ -40,13 +41,15 @@ function OtherProject(prop) {
       break;
     case "microsoft-reward-bot":
       image = microsoftrewardbot;
-
       break;
     case "netflakes":
       image = netflakes;
       break;
     case "e-commerce":
       image = ecommerce;
+      break;
+    case "louis-tech-vuitton":
+      image = louis;
       break;
   }
 

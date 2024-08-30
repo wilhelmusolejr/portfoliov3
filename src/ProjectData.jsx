@@ -93,6 +93,74 @@ function getAllProjects() {
       },
     },
     // 4 Foodify
+    {
+      id: 4,
+      name: "Foodify",
+      information: {
+        short_description: "Currency Recognition",
+        description: [
+          "Philippine Currency Identifier is a thesis-developed app that helps visually impaired people in the Philippines identify currency denominations using a convolutional neural network. It offers vocal denomination recognition and a user-friendly interface for easy accessibility, enabling independent financial transactions through a quick smartphone scan. This app represents a significant advancement in assistive technology and inclusivity",
+        ],
+        features: [
+          "Denomination Recognition: Instantly identifies and vocalizes the denomination of Philippine currency, aiding users in recognizing various banknotes and coins",
+          "Accessibility Optimized: Specifically designed to enhance usability for visually impaired individuals, ensuring that navigation and interaction are intuitive and straightforward",
+          "Real-Time Identification: Employs advanced convolutional neural network technology to deliver swift and precise currency identification, facilitating immediate feedback",
+          "Money Counter Tool: Includes an integrated money counter feature that assists users in calculating the total value of a batch of currency, simplifying financial transactions and money management",
+        ],
+        type: ["design", "develop"],
+        tags: {
+          technology: [
+            "TensorFLOW",
+            "Kotlin",
+            "Python",
+            "Goole Colab",
+            "Adobe XD",
+            "Adobe PS",
+            "Text-To-Speech API",
+            "Label Img",
+            "Video to Image",
+          ],
+          project: [
+            "Voice-Assistance",
+            "Currency-Identification",
+            "Machine-learning",
+            "Visually-Impaired-Assistance",
+            "Mobile-Application",
+            "Object-Detection",
+            "Image-Classification",
+          ],
+        },
+      },
+      project_showcase: {
+        is_intro: null,
+        is_pinned: {
+          order: 2,
+          image: "showcase.webp",
+        },
+        is_other: null,
+        project: {
+          banner_image: "showcase.webp",
+          screenshot: [
+            "showcase.webp",
+            "screenshot1.png",
+            "screenshot2.png",
+            "screenshot3.png",
+            "screenshot4.png",
+            "screenshot5.png",
+          ],
+        },
+      },
+      link: {
+        name: "foodify",
+        github: undefined,
+        project: undefined,
+        external: null,
+      },
+      design: {
+        font: ["poppins"],
+        color: ["#327b36", "#fbca01", "#f36969"],
+      },
+    },
 
     // 3 Online Consultationn Clinic
     {
@@ -711,7 +779,6 @@ function getAllProjects() {
           order: 11,
           image: "banner.webp",
         },
-
         project: {
           banner_image: "banner.webp",
           screenshot: ["screenshot1.png", "screenshot2.png", "screenshot3.png"],
@@ -728,6 +795,50 @@ function getAllProjects() {
         color: ["#ffa31a", "#202020", "#f4f4f4"],
       },
     },
+
+    // 16 Loustech = other 11
+    {
+      id: 16,
+      name: "Louis Tech Vuitton",
+      information: {
+        short_description: "When technology meets fashion.",
+        description: ["Old project, for practice purposes only."],
+        type: ["design"],
+        tags: {
+          technology: [],
+          project: [],
+        },
+      },
+      project_showcase: {
+        is_intro: null,
+        is_pinned: null,
+        is_other: {
+          order: 11,
+          image: "banner.webp",
+        },
+        project: {
+          banner_image: "banner.webp",
+          screenshot: [
+            "screenshot1.png",
+            "screenshot2.png",
+            "screenshot3.png",
+            "screenshot4.png",
+          ],
+        },
+      },
+      link: {
+        name: "louis-tech-vuitton",
+        github: null,
+        project: undefined,
+        external: null,
+      },
+      design: {
+        font: ["poppins"],
+        color: ["#ffa31a", "#202020", "#f4f4f4"],
+      },
+    },
+
+    // 16 Loustech = other 11
   ];
 }
 
