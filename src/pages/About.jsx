@@ -36,6 +36,7 @@ import {
   faRobot,
   faWindowMaximize,
 } from "@fortawesome/free-solid-svg-icons";
+import Service from "../components/Service";
 
 let listCategorized = [
   // web
@@ -190,6 +191,33 @@ let work_experience = [
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, sed.",
     position: "Full-stack Developer",
+  },
+];
+
+const services = [
+  {
+    name: "Web Designer",
+    icon: faPaintBrush,
+    gif_src: "https://giphy.com/embed/SvRmX9NAeUeiyLcMtw",
+    description:
+      "I create visually stunning and user-centric web designs that reflect your brand's identity, ensuring a seamless experience across all devices with a focus on aesthetics and functionality.",
+    list: ["Responsive layouts", "Brand identity", "User-centered design"],
+  },
+  {
+    name: "Web Development",
+    icon: faCode,
+    gif_src: "https://giphy.com/embed/zOvBKUUEERdNm",
+    description:
+      "I build robust, scalable, and fast websites using the latest technologies. My focus is on creating clean, maintainable code that ensures your site performs well and is easy to manage.",
+    list: ["Fast performance", "Scalability", "Maintainable code"],
+  },
+  {
+    name: "Web Automation",
+    icon: faRobot,
+    gif_src: "https://giphy.com/embed/PDsgxQoXvUZGg",
+    description:
+      "I develop custom automation tools and bots to streamline your workflows, save time, and increase productivity, tailored specifically to your unique business needs.",
+    list: ["Task automation", "Efficiency tools", "Custom bots"],
   },
 ];
 
@@ -399,61 +427,16 @@ export default function About() {
 
         <div className="container border">
           <div className="parent d-flex flex-wrap justify-content-center ">
-            {/* Web Design */}
-            <div className="child border">
-              <div className="d-flex align-items-center gap-2 mb-2">
-                <FontAwesomeIcon icon={faPaintBrush} />
-                <p>Web Design</p>
-              </div>
-              <div className="body text-light">
-                <div className="image-parent">
-                  <img src={profile} alt="" />
-                </div>
-                <p>
-                  I create visually appealing and user-friendly web designs
-                  tailored to your brand's identity. My designs focus on both
-                  aesthetics and functionality, ensuring that your website
-                  stands out and provides a seamless user experience.
-                </p>
-              </div>
-            </div>
-            {/* Web Development */}
-            <div className="child border">
-              <div className="d-flex align-items-center gap-2 mb-2">
-                <FontAwesomeIcon icon={faCode} />
-                <p>Web Development</p>
-              </div>
-              <div className="body text-light">
-                <div className="image-parent">
-                  <img src={profile} alt="" />
-                </div>
-                <p>
-                  I develop robust and scalable websites using modern
-                  technologies like React, Laravel, and Node.js. Whether it's a
-                  simple landing page or a complex web application, I build
-                  solutions that meet your business needs and are optimized for
-                  performance.
-                </p>
-              </div>
-            </div>
-            {/* Web Automation */}
-            <div className="child border">
-              <div className="d-flex align-items-center gap-2 mb-2">
-                <FontAwesomeIcon icon={faRobot} />
-                <p>Web Automation</p>
-              </div>
-              <div className="body text-light">
-                <div className="image-parent">
-                  <img src={profile} alt="" />
-                </div>
-                <p>
-                  I specialize in web automation, creating scripts and bots to
-                  automate repetitive tasks, data scraping, and more. My
-                  automation solutions save you time and enhance productivity,
-                  allowing you to focus on what matters most.
-                </p>
-              </div>
-            </div>
+            {services.map((service, index) => (
+              <Service
+                key={index}
+                icon={service.icon}
+                title={service.name}
+                description={service.description}
+                list={service.list}
+                iframesSrc={service.gif_src}
+              />
+            ))}
           </div>
         </div>
 

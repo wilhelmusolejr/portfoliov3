@@ -181,8 +181,14 @@ section.about .container {
 
 .positive .parent .child {
   width: 100%;
+  /* padding: 20px; */
+  /* padding: 0 20px 20px 20px; */
+}
+
+.positive .parent .body {
   padding: 20px;
 }
+
 .positive .container {
   padding: 20px;
 }
@@ -200,6 +206,31 @@ section.about .container {
 .positive .image-parent:hover img {
   /* filter: initial; */
   transition: all 0.8s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.giphy-parent {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  padding-bottom: 50%;
+}
+
+.giphy-parent iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 100%;
+}
+.positive .child ul p {
+  /* color: #1dc523; */
+}
+
+.positive .child ul svg {
+  font-size: 14px;
+  color: #1dc523;
 }
 
 /* ------------------------ */
