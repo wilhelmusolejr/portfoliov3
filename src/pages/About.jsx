@@ -301,18 +301,19 @@ export default function About() {
           </Button>
         </div>
       </header>
-
       {/* ABOUT */}
       <section className="container-fluid about">
         <div className="container">
           {/* Info */}
-          <div className="">
-            <h2 className="text-light mb-5">About</h2>
-            <p>
-              Halo! My name is Wilhelmus Ole Jr. I am a Junior Full-Stack Web
+          <div className="info">
+            <h2 className="text-light mb-5 d-nones">About</h2>
+
+            <p className="mt-5 position-relative">
+              My name is Wilhelmus Ole Jr. I am a Junior Full-Stack Web
               Developer and Computer Science Student specializing in creating
               visually appealing, responsive, and user-friendly websites.
             </p>
+
             <p className="mt-3">
               While I enjoy designing and developing both simple to complex
               websites, I also delved into web automation and bot development.
@@ -368,7 +369,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* WORK EXPERIENCE */}
       <section className="container-fluid work-experience">
         <div className="container p-0 d-flex flex-sm-row flex-column">
@@ -420,7 +420,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* POSITIVE */}
       <section className="container-fluid positive">
         <div className="container layout-space border"></div>
@@ -442,7 +441,6 @@ export default function About() {
 
         <div className="container layout-space border"></div>
       </section>
-
       {/* CONTACT */}
       <section className="container-fluid contact" id="contact">
         <div className="container border">
@@ -466,7 +464,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       <section className="email">
         <div className="container paragraph">
           <p>Get in touch (Click to copy)</p>
@@ -485,7 +482,6 @@ export default function About() {
           </p>
         </div>
       </section>
-
       <Footer />
     </>
   );

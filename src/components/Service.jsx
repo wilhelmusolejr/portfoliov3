@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Service({ icon, title, description, iframesSrc, list }) {
   return (
     <div className="child border rounded">
-      <div className="d-flex align-items-center justify-content-center gap-2 mt-4 mb-2">
+      <div className="d-flex align-items-center justify-content-center gap-2 mt-5 mb-4 text-light">
         <FontAwesomeIcon icon={icon} />
         <p>{title}</p>
       </div>

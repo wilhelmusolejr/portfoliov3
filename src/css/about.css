@@ -19,6 +19,7 @@ section.container-fluid {
 .about {
   padding-top: 10vh !important;
 }
+
 section.about .container {
   border-top: 1px solid var(--clr-border);
   border-left: 1px solid var(--clr-border);
