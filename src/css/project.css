@@ -147,6 +147,14 @@ section.container-fluid.project-design {
   position: fixed;
   right: 5%;
   bottom: 5%;
+  transition: all 0.3s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.project-external svg:hover {
+  background: var(--clr-white);
+  color: var(--clr-light-black) !important;
+  border-radius: 100% !important;
+  transition: all 0.3s cubic-bezier(0.2, 0.6, 0.2, 1);
 }
 
 .project-screenshot .child {
