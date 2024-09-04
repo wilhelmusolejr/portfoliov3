@@ -370,7 +370,7 @@ function getAllProjects() {
         name: "mobhie",
         github: undefined,
         project: undefined,
-        external: null,
+        external: "https://mobhie.vercel.app/",
       },
       design: {
         font: ["poppins"],
