@@ -8,6 +8,8 @@ import Image from "../components/Image";
 function Home() {
   let projects = intro_projects();
 
+  document.title = "Home | Wilhelmus Ole";
+
   return (
     <>
       <Navigator />
