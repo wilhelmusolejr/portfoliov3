@@ -7,6 +7,8 @@ import OtherProject from "../components/OtherProject";
 import PinProject from "../components/PinProject";
 
 export default function Project() {
+  document.title = "Projects | Wilhelmus Ole";
+
   const allProjects = projects();
   const projects_data = allProjects[0];
   const pin_projects_data = allProjects[1];

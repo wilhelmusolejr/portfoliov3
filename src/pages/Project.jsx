@@ -70,6 +70,10 @@ export default function Project() {
 
   project.project_showcase.url = `../${project.project_showcase.url}`;
 
+  useEffect(() => {
+    document.title = `${project.name} | Wilhelmus Ole`;
+  }, [project.name]);
+
   return (
     <>
       <Navigator />

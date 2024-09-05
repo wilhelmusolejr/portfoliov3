@@ -222,6 +222,8 @@ const services = [
 ];
 
 export default function About() {
+  document.title = "About | Wilhelmus Ole";
+
   const [skillOption, setSkillOption] = useState([
     {
       name: "Web Dev",
