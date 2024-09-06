@@ -18,6 +18,7 @@ section.container-fluid {
 /* ABOUT */
 .about {
   padding-top: 10vh !important;
+  border-bottom: 1px solid var(--clr-border) !important;
 }
 
 section.about .container {
@@ -85,6 +86,40 @@ section.about .container {
 }
 
 /* ------------------------ */
+/* banner */
+
+.banner {
+  margin-top: 10vh !important;
+}
+
+.banner .container {
+  padding: 0 !important;
+  margin-top: 10vh !important;
+  margin-bottom: 10vh !important;
+}
+
+/* .banner .container > div {
+  flex: 1;
+} */
+
+.banner .left {
+  flex: 1;
+  background: #222;
+
+  padding: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.banner .right {
+  flex: 1;
+
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+
+  overflow: hidden;
+}
+
+/* ------------------------ */
 /* Work Experiece */
 .work-experience .container {
   padding: 10vh 0 !important;
@@ -138,17 +173,6 @@ section.about .container {
 .accordion-button:focus {
   box-shadow: none;
 }
-
-/* .accordion-button::after {
-  flex-shrink: 0;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background-image: none !important;
-  background: #42f042;
-  margin-left: auto;
-  content: "";
-} */
 
 .work-experience .accordion-item button {
   background: transparent !important;
@@ -282,9 +306,17 @@ section.about .container {
     border-left: none !important;
   }
 
-  /* .work-experience .container {
-    flex-wrap: wrap !important;
-  } */
+  .banner .left {
+    padding: 5vh;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 0;
+  }
+  .banner .right {
+    border-top-left-radius: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
 
   .work-experience .child {
     padding: 15px !important;

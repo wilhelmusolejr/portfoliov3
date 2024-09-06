@@ -29,14 +29,18 @@ import "../css/about.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faCalendarDays,
   faCode,
+  faHeadphones,
   faMicrochip,
   faPaintBrush,
   faPalette,
+  faPenToSquare,
   faRobot,
   faWindowMaximize,
 } from "@fortawesome/free-solid-svg-icons";
 import Service from "../components/Service";
+import ListItem from "../components/ListItem";
 
 let listCategorized = [
   // web
@@ -303,6 +307,7 @@ export default function About() {
           </Button>
         </div>
       </header>
+
       {/* ABOUT */}
       <section className="container-fluid about">
         <div className="container">
@@ -371,6 +376,47 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      <section className="container-fluid banner">
+        <div className="container my-5 d-flex flex-column-reverse flex-md-row">
+          {/* left */}
+          <div className="left d-flex flex-column align-items-start justify-content-center">
+            <h3 className="mb-5 fs-5">Enterprise Suite</h3>
+            <h2 className="fs-1">
+              This is how good companies find good company.
+            </h2>
+
+            <p className="my-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+              enim, sed obcaecati asperiores error officia. Libero dolores neque
+              nulla repudiandae!
+            </p>
+
+            <ul className="d-flex flex-column gap-2 list-unstyled">
+              <ListItem
+                icon={faPenToSquare}
+                paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. A, iure!"
+              />
+
+              <ListItem icon={faHeadphones} paragraph="Lorem dolor sit amet." />
+
+              <ListItem
+                icon={faCalendarDays}
+                paragraph="Lorem ipsum dolor sit amet. Test tite with long text."
+              />
+            </ul>
+
+            <a href="#" className="btn btn-primary mt-4">
+              Learn more
+            </a>
+          </div>
+          {/* right */}
+          <div className="right">
+            <img src={profile} alt="" />
+          </div>
+        </div>
+      </section>
+
       {/* WORK EXPERIENCE */}
       <section className="container-fluid work-experience">
         <div className="container p-0 d-flex flex-sm-row flex-column">
