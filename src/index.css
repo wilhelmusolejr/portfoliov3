@@ -57,7 +57,7 @@ a {
   border: 1px solid white;
   background: white !important;
   color: var(--clr-light-black) !important;
-  font-weight: 500 !important;
+  /* font-weight: 500 !important; */
   transition: all 0.3s cubic-bezier(0.2, 0.6, 0.2, 1);
 }
 

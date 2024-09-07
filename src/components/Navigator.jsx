@@ -43,6 +43,9 @@ export default function Navigator() {
             >
               Projects
             </a>
+            <a href="#" className="btn btn-primary">
+              Resume
+            </a>
           </div>
         </div>
       </nav>

@@ -382,7 +382,7 @@ export default function About() {
           {/* left */}
           <div className="left d-flex flex-column align-items-start justify-content-center">
             <h3 className="mb-5 fs-5">Enterprise Suite</h3>
-            <h2 className="fs-1">
+            <h2 className="fs-1 text-light">
               This is how good companies find good company.
             </h2>
 
