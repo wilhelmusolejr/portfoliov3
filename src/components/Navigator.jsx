@@ -43,7 +43,7 @@ export default function Navigator() {
             >
               Projects
             </a>
-            <a href="#" className="btn btn-primary">
+            <a href="#" className="btn btn-primary ms-5">
               Resume
             </a>
           </div>

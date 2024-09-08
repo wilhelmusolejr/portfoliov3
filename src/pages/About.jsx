@@ -285,6 +285,39 @@ export default function About() {
     }
   }, [skillOption]);
 
+  useEffect(() => {
+    let headerElem = document.querySelector("header");
+    headerElem.style.transition = "background-image 1s ease";
+
+    let start = 30;
+    let end = 60;
+    let currentNum = start;
+    let direction = 1; // 1 for increase, -1 for decrease
+    let speed = 0.2; // Adjust this value to control the speed
+
+    const animateBackground = () => {
+      if (currentNum >= end) {
+        direction = -1; // start decreasing
+      } else if (currentNum <= start) {
+        direction = 1; // start increasing
+      }
+
+      let background = `radial-gradient(125% 125% at ${currentNum}% 0%, black 50%, #333 100%)`;
+      headerElem.style.backgroundImage = background;
+
+      currentNum += direction * speed;
+
+      requestAnimationFrame(animateBackground); // Continue the animation
+    };
+
+    requestAnimationFrame(animateBackground); // Start the animation
+
+    return () => {
+      // Clean up if necessary (for example, if the component is unmounted)
+      cancelAnimationFrame(animateBackground);
+    };
+  }, []);
+
   return (
     <>
       <Navigator />

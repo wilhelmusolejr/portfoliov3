@@ -124,17 +124,20 @@ img {
 nav {
   top: 0;
   z-index: 999;
+
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  backdrop-filter: blur(5px); /* Apply blur effect */
+  z-index: 1000; /* Make sure it's above other content */
 }
 
 nav .container {
   padding-top: 5vh !important;
   padding-bottom: 5vh !important;
   border-bottom: 1px solid var(--clr-bottom);
+}
 
-  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
-  backdrop-filter: blur(5px); /* Apply blur effect */
-  -webkit-backdrop-filter: blur(5); /* For Safari */
-  z-index: 1000; /* Make sure it's above other content */
+nav a {
+  font-weight: 300;
 }
 /* ------------------ */
 /* intro */
