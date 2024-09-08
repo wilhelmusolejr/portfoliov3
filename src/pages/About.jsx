@@ -318,11 +318,42 @@ export default function About() {
     };
   }, []);
 
+  function smoothScroll(target) {
+    const targetElement = document.querySelector(target);
+    const scrollContainer =
+      document.scrollingElement || document.documentElement;
+    const targetY =
+      targetElement.getBoundingClientRect().top + window.pageYOffset;
+
+    const duration = 2000; // Increase duration to make it smoother and slower
+    const startTime = performance.now();
+    const startScrollTop = scrollContainer.scrollTop; // Capture the initial scroll position
+
+    function scrollStep(currentTime) {
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / duration, 1); // Progress of the animation (0 to 1)
+      const ease = easeInOutCubic(progress);
+
+      scrollContainer.scrollTop =
+        startScrollTop + (targetY - startScrollTop) * ease;
+
+      if (progress < 1) {
+        requestAnimationFrame(scrollStep);
+      }
+    }
+
+    function easeInOutCubic(t) {
+      return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
+
+    requestAnimationFrame(scrollStep);
+  }
+
   return (
     <>
       <Navigator />
 
-      <header className=" d-flex align-items-center justify-content-center mt-5">
+      <header className=" d-flex align-items-center justify-content-center mt-5 about-info">
         <div className="container paragraph">
           <div className="image-container text-center mb-3">
             <img src={profile} alt="" className="rounded-circle" />
@@ -335,7 +366,10 @@ export default function About() {
             automation and quality assurance, as well as occasional web design.
           </p>
 
-          <Button className="btn-primary" href="#contact">
+          <Button
+            className="btn-primary"
+            onClick={() => smoothScroll("#contact")}
+          >
             Get in touch
           </Button>
         </div>
@@ -494,7 +528,11 @@ export default function About() {
 
             <div className="text-center flex-center flex-wrap gap-2 pt-5">
               <p>Help me to add more?</p>
-              <Button className="btn-primary" href="#contact">
+
+              <Button
+                className="btn-primary"
+                onClick={() => smoothScroll("#contact")}
+              >
                 Get in touch
               </Button>
             </div>

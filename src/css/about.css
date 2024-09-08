@@ -7,6 +7,9 @@ header img {
 }
 
 /* test */
+header.about-info {
+  border-bottom: 2px solid #444 !important;
+}
 
 section.container-fluid {
   border-top: 1px solid var(--clr-border) !important;

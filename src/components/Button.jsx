@@ -3,10 +3,16 @@ export default function Logo({
   className = "",
   href = "#",
   target = "",
+  onClick = () => {},
 }) {
   return (
     <>
-      <a className={`btn ${className}`} target={target} href={href}>
+      <a
+        onClick={onClick}
+        className={`btn ${className}`}
+        target={target}
+        href={href}
+      >
         {children}
       </a>
     </>
