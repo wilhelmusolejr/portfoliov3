@@ -175,7 +175,6 @@ export default function Project() {
                     className="child image-parent cursor-pointer position-relative"
                     onClick={() => {
                       setActiveScreenshot(screenshot);
-                      console.log(screenshot);
                     }}
                   >
                     <Image
@@ -200,7 +199,6 @@ export default function Project() {
           <div
             id="carouselExampleControls"
             className="carousel"
-            data-bs-ride="carousel"
             onClick={(e) => {
               if (e.target.closest("button")) return;
               setActiveScreenshot(null);
@@ -218,13 +216,14 @@ export default function Project() {
                     <img
                       src={`${project.project_showcase.url}${screenshot}`}
                       alt=""
+                      className="border"
                     />
                   </div>
                 )
               )}
             </div>
             <button
-              className="carousel-control-prev justify-content-end"
+              className="carousel-control-prev "
               type="button"
               data-bs-target="#carouselExampleControls"
               data-bs-slide="prev"
@@ -236,7 +235,7 @@ export default function Project() {
               <span className="visually-hidden">Previous</span>
             </button>
             <button
-              className="carousel-control-next justify-content-start"
+              className="carousel-control-next "
               type="button"
               data-bs-target="#carouselExampleControls"
               data-bs-slide="next"
