@@ -22,7 +22,7 @@ import ProjectType from "../components/ProjectType";
 
 export default function Project() {
   const [languages, setLanguages] = useState(null);
-  const [screenshot, setScreenshot] = useState(null);
+  const [activeScreenshot, setActiveScreenshot] = useState(null);
 
   const location = useLocation();
   const project_name = location.pathname.split("/")[2];
@@ -55,8 +55,6 @@ export default function Project() {
           .slice(0, 3);
 
         setLanguages(topLanguages);
-
-        console.log("ttest");
       } catch (error) {
         console.error(
           "There has been a problem with your fetch operation:",
@@ -176,7 +174,8 @@ export default function Project() {
                     key={index}
                     className="child image-parent cursor-pointer position-relative"
                     onClick={() => {
-                      setScreenshot(screenshot);
+                      setActiveScreenshot(screenshot);
+                      console.log(screenshot);
                     }}
                   >
                     <Image
@@ -197,22 +196,57 @@ export default function Project() {
           </div>
         </div>
 
-        {screenshot && (
+        {activeScreenshot && (
           <div
-            className="screenshot-full cursor-pointer"
+            id="carouselExampleControls"
+            className="carousel"
+            data-bs-ride="carousel"
             onClick={(e) => {
-              if (e.target.className.includes("screenshot-full")) {
-                setScreenshot(null);
-              }
+              if (e.target.closest("button")) return;
+              setActiveScreenshot(null);
             }}
           >
-            <div className="child image-parent flex-center ">
-              <img
-                src={`${project.project_showcase.url}${screenshot}`}
-                alt=""
-                className="border"
-              />
+            <div className="carousel-inner">
+              {project.project_showcase.project.screenshot.map(
+                (screenshot, index) => (
+                  <div
+                    key={index}
+                    className={`carousel-item ${
+                      screenshot == activeScreenshot ? "active" : ""
+                    }`}
+                  >
+                    <img
+                      src={`${project.project_showcase.url}${screenshot}`}
+                      alt=""
+                    />
+                  </div>
+                )
+              )}
             </div>
+            <button
+              className="carousel-control-prev justify-content-end"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev"
+            >
+              <span
+                className="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Previous</span>
+            </button>
+            <button
+              className="carousel-control-next justify-content-start"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="next"
+            >
+              <span
+                className="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Next</span>
+            </button>
           </div>
         )}
       </section>
