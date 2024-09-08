@@ -93,8 +93,9 @@ img {
 
 /* ------------------ */
 /* CLASS */
-.logo {
-  /* font-weight: 500 !important; */
+.logo a {
+  font-weight: 500 !important;
+  text-transform: uppercase;
 }
 
 .text-light-white {
