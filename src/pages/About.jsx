@@ -6,6 +6,11 @@ import Footer from "../components/Footer";
 
 // asset
 import profile from "../assets/me/profile.jpg";
+import foodify from "../assets/projects/foodify/screenshot1.png";
+import mobhie from "../assets/projects/mobhie/screenshot2.png";
+import shopeeling from "../assets/projects/shopeeling/screenshot1.png";
+import nft from "../assets/projects/nft-marketplace/screenshot2.png";
+import netflakes from "../assets/projects/netflakes/screenshot1.png";
 
 // skills
 import laravel from "../assets/skills/laravel.png";
@@ -561,9 +566,9 @@ export default function About() {
         <div className="container layout-space border"></div>
       </section>
       {/* CONTACT */}
-      <section className="container-fluid contact" id="contact">
-        <div className="container border">
-          <div className="paragraph m-auto flex-center flex-column">
+      <section className="container-fluid contact " id="contact">
+        <div className="container border position-relative overflow-hidden">
+          <div className="paragraph m-auto flex-center flex-column about-container">
             <h2 className="text-light mb-5">Get In Touch</h2>
             <p>
               Whether you're interested in working together, have a question, or
@@ -580,6 +585,18 @@ export default function About() {
             >
               Send Email
             </Button>
+          </div>
+
+          <div className="test">
+            <img src={nft} alt="" />
+            <img src={foodify} alt="" />
+            <img src={mobhie} alt="" />
+            <img src={netflakes} alt="" />
+            <img src={shopeeling} alt="" />
+            <img src={foodify} alt="" />
+            <img src={mobhie} alt="" />
+            <img src={nft} alt="" />
+            <img src={mobhie} alt="" />
           </div>
         </div>
       </section>
