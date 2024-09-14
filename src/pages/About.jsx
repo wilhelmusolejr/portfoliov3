@@ -56,7 +56,6 @@ import {
   faPalette,
   faPenToSquare,
   faRobot,
-  faToolbox,
   faWindowMaximize,
 } from "@fortawesome/free-solid-svg-icons";
 import Service from "../components/Service";
@@ -131,11 +130,6 @@ let listCategorized = [
       {
         name: "",
         type: ["Web Dev"],
-        image: postgres,
-      },
-      {
-        name: "",
-        type: ["Web Dev"],
         image: mongodb,
       },
       {
@@ -147,6 +141,21 @@ let listCategorized = [
         name: "",
         type: ["Web Dev"],
         image: nodejs,
+      },
+      {
+        name: "",
+        type: ["Web Dev"],
+        image: empty,
+      },
+      {
+        name: "",
+        type: ["Web Dev"],
+        image: empty,
+      },
+      {
+        name: "",
+        type: ["Web Dev"],
+        image: empty,
       },
     ],
     caption:
@@ -228,6 +237,7 @@ let listCategorized = [
     caption:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, optio! Repellendus, eligendi.",
   },
+  // automation
   {
     type: "Automation",
     programs: [
@@ -245,6 +255,21 @@ let listCategorized = [
         name: "Puppeteer",
         type: ["Automation"],
         image: puppeteer,
+      },
+      {
+        name: "",
+        type: ["Automation"],
+        image: empty,
+      },
+      {
+        name: "",
+        type: ["Automation"],
+        image: empty,
+      },
+      {
+        name: "",
+        type: ["Automation"],
+        image: empty,
       },
     ],
     caption:
@@ -304,6 +329,11 @@ const services = [
 ];
 
 export default function About() {
+  const viewportWidth = window.innerWidth;
+  console.log(viewportWidth);
+
+  let iconSize = viewportWidth > 768 ? 75 : 50;
+
   document.title = "About | Wilhelmus Ole";
 
   const [skillOption, setSkillOption] = useState([
@@ -319,17 +349,12 @@ export default function About() {
     },
     {
       name: "Automation",
-      icon: faMicrochip,
+      icon: faRobot,
       isActive: false,
     },
     {
       name: "Ai",
       icon: faMicrochip,
-      isActive: false,
-    },
-    {
-      name: "Tools",
-      icon: faToolbox,
       isActive: false,
     },
   ]);
@@ -523,7 +548,7 @@ export default function About() {
                   {skill.image[0] === "/" ? (
                     <img src={skill.image} alt="" />
                   ) : (
-                    <SvgIcon icon={skill.image} size={75} />
+                    <SvgIcon icon={skill.image} size={iconSize} />
                   )}
                 </div>
               </div>

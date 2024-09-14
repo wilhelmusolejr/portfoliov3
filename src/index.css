@@ -139,6 +139,22 @@ nav .container {
 nav a {
   font-weight: 300;
 }
+
+nav ul {
+  padding: calc(var(--bs-gutter-x) * 0.5) !important;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ) !important; /* Semi-transparent background */
+  backdrop-filter: blur(5px) !important;
+}
+
+nav ul li {
+  padding-bottom: 10px !important;
+}
+
 /* ------------------ */
 /* intro */
 .intro {
