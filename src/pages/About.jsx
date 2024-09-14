@@ -13,21 +13,35 @@ import nft from "../assets/projects/nft-marketplace/screenshot2.png";
 import netflakes from "../assets/projects/netflakes/screenshot1.png";
 
 // skills
-import laravel from "../assets/skills/laravel.png";
-import react from "../assets/skills/react.png";
-import php from "../assets/skills/php.png";
-import html from "../assets/skills/html.png";
-import css from "../assets/skills/css.png";
-import js from "../assets/skills/js.png";
-import tensorflow from "../assets/skills/tensorflow.png";
 import openai from "../assets/skills/openai.png";
-import photoshop from "../assets/skills/photoshop.png";
-import xd from "../assets/skills/xd.png";
-import mysql from "../assets/skills/mysql.png";
 import postgres from "../assets/skills/postgres.png";
-import figma from "../assets/skills/figma.png";
-import python from "../assets/skills/python.png";
 import empty from "../assets/skills/empty.png";
+
+import {
+  html,
+  css,
+  js,
+  laravel,
+  react,
+  php,
+  tensorflow,
+  photoshop,
+  xd,
+  mysql,
+  python,
+  mongodb,
+  expressjs,
+  nodejs,
+  tailwind,
+  puppeteer,
+  playwright,
+  selenium,
+  behance,
+  nextjs,
+  bootstrap,
+  figma,
+  django,
+} from "../icons/icons";
 
 // css
 import "../css/about.css";
@@ -42,10 +56,12 @@ import {
   faPalette,
   faPenToSquare,
   faRobot,
+  faToolbox,
   faWindowMaximize,
 } from "@fortawesome/free-solid-svg-icons";
 import Service from "../components/Service";
 import ListItem from "../components/ListItem";
+import SvgIcon from "../components/SvgIcon";
 
 let listCategorized = [
   // web
@@ -68,6 +84,31 @@ let listCategorized = [
         image: js,
       },
       {
+        name: "",
+        type: ["Web Dev"],
+        image: tailwind,
+      },
+      {
+        name: "",
+        type: ["Web Dev"],
+        image: bootstrap,
+      },
+      {
+        name: "python",
+        type: ["Web Dev"],
+        image: python,
+      },
+      {
+        name: "django",
+        type: ["Web Dev"],
+        image: django,
+      },
+      {
+        name: "php",
+        type: ["Web Dev"],
+        image: php,
+      },
+      {
         name: "laravel",
         type: ["Web Dev"],
         image: laravel,
@@ -78,14 +119,9 @@ let listCategorized = [
         image: react,
       },
       {
-        name: "php",
+        name: "nextjs",
         type: ["Web Dev"],
-        image: php,
-      },
-      {
-        name: "python",
-        type: ["Web Dev"],
-        image: python,
+        image: nextjs,
       },
       {
         name: "mysql",
@@ -96,6 +132,21 @@ let listCategorized = [
         name: "",
         type: ["Web Dev"],
         image: postgres,
+      },
+      {
+        name: "",
+        type: ["Web Dev"],
+        image: mongodb,
+      },
+      {
+        name: "",
+        type: ["Web Dev"],
+        image: expressjs,
+      },
+      {
+        name: "",
+        type: ["Web Dev"],
+        image: nodejs,
       },
     ],
     caption:
@@ -161,7 +212,7 @@ let listCategorized = [
       {
         name: "",
         type: ["Design"],
-        image: empty,
+        image: behance,
       },
       {
         name: "",
@@ -176,6 +227,28 @@ let listCategorized = [
     ],
     caption:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, optio! Repellendus, eligendi.",
+  },
+  {
+    type: "Automation",
+    programs: [
+      {
+        name: "Selenium",
+        type: ["Automation"],
+        image: selenium,
+      },
+      {
+        name: "Playwright",
+        type: ["Automation"],
+        image: playwright,
+      },
+      {
+        name: "Puppeteer",
+        type: ["Automation"],
+        image: puppeteer,
+      },
+    ],
+    caption:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, dolores.",
   },
 ];
 
@@ -240,13 +313,23 @@ export default function About() {
       isActive: true,
     },
     {
+      name: "Design",
+      icon: faPalette,
+      isActive: false,
+    },
+    {
+      name: "Automation",
+      icon: faMicrochip,
+      isActive: false,
+    },
+    {
       name: "Ai",
       icon: faMicrochip,
       isActive: false,
     },
     {
-      name: "Design",
-      icon: faPalette,
+      name: "Tools",
+      icon: faToolbox,
       isActive: false,
     },
   ]);
@@ -437,7 +520,11 @@ export default function About() {
             {skillList.map((skill, index) => (
               <div key={index} className="child border flex-center p-3">
                 <div className="image-parent flex-center">
-                  <img src={skill.image} alt="" />
+                  {skill.image[0] === "/" ? (
+                    <img src={skill.image} alt="" />
+                  ) : (
+                    <SvgIcon icon={skill.image} size={75} />
+                  )}
                 </div>
               </div>
             ))}
