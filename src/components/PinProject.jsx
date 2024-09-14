@@ -4,6 +4,8 @@ import philippinecurrency from "../assets/projects/philippine-currency-identifie
 import clinic from "../assets/projects/online-appointment-and-consultation-clinic/showcase.webp";
 import depression from "../assets/projects/dass-depression-level-predictor/showcase.jpg";
 import foodify from "../assets/projects/foodify/showcase.webp";
+import pinasmura from "../assets/projects/pinasmura-ph/banner.webp";
+import quiztwist from "../assets/projects/quiztwist/banner.webp";
 
 function PinProject(prop) {
   const project = prop.project;
@@ -33,6 +35,12 @@ function PinProject(prop) {
       break;
     case "foodify":
       image = foodify;
+      break;
+    case "pinasmura-ph":
+      image = pinasmura;
+      break;
+    case "quiztwist":
+      image = quiztwist;
       break;
   }
 

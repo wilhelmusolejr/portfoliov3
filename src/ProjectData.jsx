@@ -25,20 +25,20 @@ function updateProjectLink(projects) {
 
 function getAllProjects() {
   return [
-    // 1 Philippine Currency Identifier
+    // 1 Philippine Currency Identifier | 1 pinned
     {
       id: 1,
       name: "Philippine Currency Identifier",
       information: {
         short_description: "Currency Recognition",
         description: [
-          "Philippine Currency Identifier is a thesis-developed app that helps visually impaired people in the Philippines identify currency denominations using a convolutional neural network. It offers vocal denomination recognition and a user-friendly interface for easy accessibility, enabling independent financial transactions through a quick smartphone scan. This app represents a significant advancement in assistive technology and inclusivity",
+          "Philippine Currency Identifier is a thesis-developed app that helps visually impaired people in the Philippines identify currency denominations using a convolutional neural network. It offers vocal denomination recognition and a user-friendly interface for easy accessibility, enabling independent financial transactions through a quick smartphone scan. This app represents a significant advancement in assistive technology and inclusivity.",
         ],
         features: [
-          "Denomination Recognition: Instantly identifies and vocalizes the denomination of Philippine currency, aiding users in recognizing various banknotes and coins",
-          "Accessibility Optimized: Specifically designed to enhance usability for visually impaired individuals, ensuring that navigation and interaction are intuitive and straightforward",
-          "Real-Time Identification: Employs advanced convolutional neural network technology to deliver swift and precise currency identification, facilitating immediate feedback",
-          "Money Counter Tool: Includes an integrated money counter feature that assists users in calculating the total value of a batch of currency, simplifying financial transactions and money management",
+          "Denomination Recognition: Instantly identifies and vocalizes the denomination of Philippine currency, aiding users in recognizing various banknotes and coins.",
+          "Accessibility Optimized: Specifically designed to enhance usability for visually impaired individuals, ensuring that navigation and interaction are intuitive and straightforward.",
+          "Real-Time Identification: Employs advanced convolutional neural network technology to deliver swift and precise currency identification, facilitating immediate feedback.",
+          "Money Counter Tool: Includes an integrated money counter feature that assists users in calculating the total value of a batch of currency, simplifying financial transactions and money management.",
         ],
         type: ["design", "develop"],
         tags: {
@@ -74,6 +74,7 @@ function getAllProjects() {
         project: {
           banner_image: "showcase.webp",
           screenshot: [
+            "showcase.webp",
             "banner.jpg",
             "screenshot1.png",
             "screenshot2.png",
@@ -85,76 +86,7 @@ function getAllProjects() {
         name: "philippine-currency-identifier",
         github: undefined,
         project: undefined,
-        external: null,
-      },
-      design: {
-        font: ["poppins"],
-        color: ["#327b36", "#fbca01", "#f36969"],
-      },
-    },
-    // 4 Foodify
-    {
-      id: 4,
-      name: "Foodify",
-      information: {
-        short_description: "Currency Recognition",
-        description: [
-          "Philippine Currency Identifier is a thesis-developed app that helps visually impaired people in the Philippines identify currency denominations using a convolutional neural network. It offers vocal denomination recognition and a user-friendly interface for easy accessibility, enabling independent financial transactions through a quick smartphone scan. This app represents a significant advancement in assistive technology and inclusivity",
-        ],
-        features: [
-          "Denomination Recognition: Instantly identifies and vocalizes the denomination of Philippine currency, aiding users in recognizing various banknotes and coins",
-          "Accessibility Optimized: Specifically designed to enhance usability for visually impaired individuals, ensuring that navigation and interaction are intuitive and straightforward",
-          "Real-Time Identification: Employs advanced convolutional neural network technology to deliver swift and precise currency identification, facilitating immediate feedback",
-          "Money Counter Tool: Includes an integrated money counter feature that assists users in calculating the total value of a batch of currency, simplifying financial transactions and money management",
-        ],
-        type: ["design", "develop"],
-        tags: {
-          technology: [
-            "TensorFLOW",
-            "Kotlin",
-            "Python",
-            "Goole Colab",
-            "Adobe XD",
-            "Adobe PS",
-            "Text-To-Speech API",
-            "Label Img",
-            "Video to Image",
-          ],
-          project: [
-            "Voice-Assistance",
-            "Currency-Identification",
-            "Machine-learning",
-            "Visually-Impaired-Assistance",
-            "Mobile-Application",
-            "Object-Detection",
-            "Image-Classification",
-          ],
-        },
-      },
-      project_showcase: {
-        is_intro: null,
-        is_pinned: {
-          order: 2,
-          image: "showcase.webp",
-        },
-        is_other: null,
-        project: {
-          banner_image: "showcase.webp",
-          screenshot: [
-            "showcase.webp",
-            "screenshot1.png",
-            "screenshot2.png",
-            "screenshot3.png",
-            "screenshot4.png",
-            "screenshot5.png",
-          ],
-        },
-      },
-      link: {
-        name: "foodify",
-        github: undefined,
-        project: undefined,
-        external: null,
+        external: "https://bit.ly/ph-identifier",
       },
       design: {
         font: ["poppins"],
@@ -162,9 +94,9 @@ function getAllProjects() {
       },
     },
 
-    // 3 Online Consultationn Clinic
+    // 2 Online Consultationn Clinic | 2 pinned | 2 intro
     {
-      id: 3,
+      id: 2,
       name: "WMSU Consultation Clinic",
       information: {
         short_description: "Online Consultation Clinic",
@@ -207,20 +139,21 @@ function getAllProjects() {
           image: "mockup.webp",
         },
         is_pinned: {
-          order: 3,
+          order: 2,
           image: "showcase.webp",
         },
         is_other: null,
         project: {
           banner_image: "showcase.webp",
           screenshot: [
+            "showcase.webp",
             "screenshot1.png",
             "screenshot2.png",
             "screenshot3.png",
             "screenshot4.png",
             "screenshot5.png",
-            "screenshot6.png",
             "screenshot7.png",
+            "screenshot8.png",
             "banner.png",
           ],
         },
@@ -237,9 +170,212 @@ function getAllProjects() {
       },
     },
 
-    // 2 Depression Predictor
+    // 3 Foodify | 3 pinned
     {
-      id: 2,
+      id: 3,
+      name: "Foodify",
+      information: {
+        short_description: "An app for all things food-related.",
+        description: [
+          "Foodify is a comprehensive platform designed to provide users with access to a wide variety of recipes and detailed cooking procedures. The application categorizes dishes into various types such as desserts, lunches, steaks, and more. Each recipe comes with an ingredient list, step-by-step instructions, and nutritional information to help users make informed decisions about their meals.",
+          "The app leverages the Spoonacular API, a powerful food-related API that aggregates data from various sources to provide detailed recipes, ingredient information, and nutritional breakdowns. With this API integration, Foodify offers users access to an extensive collection of recipes and food-related data.",
+          "With its user-friendly interface, Foodify makes it easy to search for recipes by category, ingredient, or cuisine, providing a seamless experience for both amateur and experienced cooks. The app also offers personalized recipe suggestions based on user preferences and dietary restrictions.",
+          "https://spoonacular.com/food-api",
+        ],
+        features: [
+          "Recipe Variety: Offers a wide range of recipes categorized into different food types like desserts, lunches, steaks, etc.",
+          "User-Friendly Interface: Simple and intuitive design, making it easy to browse and search for recipes.",
+          "Personalized Suggestions: Recommends recipes based on user preferences and dietary needs.",
+          "Step-by-Step Instructions: Detailed cooking procedures for each recipe to ensure accurate preparation.",
+          "Nutritional Information: Provides essential nutritional data to help users make informed food choices.",
+        ],
+        type: ["design", "develop"],
+        tags: {
+          technology: [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Laravel",
+            "Sqlite",
+            "Bootstrap",
+            "Spoonacular API",
+            "React",
+          ],
+          project: [
+            "Food-App",
+            "Recipe-Platform",
+            "Ingredient-Management",
+            "Personalized-Suggestions",
+            "Web-Application",
+          ],
+        },
+      },
+      project_showcase: {
+        is_intro: null,
+        is_pinned: {
+          order: 2,
+          image: "showcase.webp",
+        },
+        is_other: null,
+        project: {
+          banner_image: "showcase.webp",
+          screenshot: [
+            "showcase.webp",
+            "screenshot1.png",
+            "screenshot2.png",
+            "screenshot3.png",
+            "screenshot4.png",
+            "screenshot5.png",
+          ],
+        },
+      },
+      link: {
+        name: "foodify",
+        github: undefined,
+        project: undefined,
+        external: "https://foodify-ivory.vercel.app/",
+      },
+      design: {
+        font: ["poppins"],
+        color: ["#327b36", "#f4f4f4"],
+      },
+    },
+
+    // 4 pinasmura | 4 pinned
+    {
+      id: 4,
+      name: "PinasMura",
+      information: {
+        short_description: "eCommerce for Philippine-made items",
+        description: [
+          "PinasMura is a eCommerce platform that specializes in selling various Philippine-made items. From local handicrafts to popular food products, PinasMura aims to promote the culture and craftsmanship of the Philippines by providing a marketplace for locally sourced goods.",
+          "The platform offers a complete shopping experience with features such as product browsing, adding items to the cart, checking out, and managing orders. It also includes user account functionalities like registration and login to keep track of orders and preferences.",
+        ],
+        features: [
+          "User Registration & Login: Allows users to create accounts, log in, and manage their profiles and orders.",
+          "Product Browsing: Provides an extensive catalog of Philippine-made products categorized for easy navigation.",
+          "Add to Cart: Enables users to add items to their cart and manage them before making a purchase.",
+          "Checkout System: Secure and straightforward checkout process for purchasing items.",
+        ],
+        type: ["Design", "develop"],
+        tags: {
+          technology: [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "PHP",
+            "MySQL",
+            "Tailwind",
+            "Laravel",
+            "React",
+            "NPM Libraries",
+            "Adobe XD",
+            "Adobe PS",
+          ],
+          project: [
+            "Ecommerce",
+            "Philippine-Products",
+            "Cart-System",
+            "Login-Register",
+            "Order-Tracking",
+          ],
+        },
+      },
+      project_showcase: {
+        is_intro: null,
+        is_pinned: {
+          order: 4,
+          image: "banner.webp",
+        },
+        is_other: null,
+        project: {
+          banner_image: "banner.webp",
+          screenshot: [
+            "banner.webp",
+            "screenshot1.png",
+            "screenshot2.png",
+            "screenshot3.png",
+          ],
+        },
+      },
+      link: {
+        name: "pinasmura-ph",
+        github: undefined,
+        project: undefined,
+        external: "https://pinas-mura.vercel.app/",
+      },
+      design: {
+        font: ["poppins"],
+        color: ["#3B82F6", "#eab308", "#f4f4f4"],
+      },
+    },
+
+    // 5 QuizTwist | 5 pinned
+    {
+      id: 5,
+      name: "QuizTwist",
+      information: {
+        short_description: "A quiz app with 15 questions and a point system.",
+        description: [
+          "QuizTwist is an engaging quiz application designed to challenge users with 15 questions across various categories. Users can choose from four distinct categories: General, English, Science, and Country. The app also includes a point system, rewarding users with points based on their quiz performance.",
+          "QuizTwist features a user-friendly interface where individuals can register, log in, and track their quiz progress. It encourages learning while making the experience fun and competitive through its point-earning mechanism.",
+        ],
+        features: [
+          "Multiple Categories: Offers four quiz categories - General, English, Science, and Country.",
+          "Point System: Users earn points for each correct answer, motivating them to improve their scores.",
+          "User Authentication: Login and register functionality for tracking quiz results and progress.",
+          "Interactive UI: Easy-to-use interface for navigating quizzes and tracking points.",
+        ],
+        type: ["design", "develop"],
+        tags: {
+          technology: [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Express",
+            "Node.js",
+            "MongoDB",
+            "Adobe PS",
+            "figma",
+            "bootstrap",
+          ],
+          project: [
+            "Quiz-App",
+            "Education-Tech",
+            "Login-Register",
+            "Point-System",
+            "Web-Application",
+          ],
+        },
+      },
+      project_showcase: {
+        is_intro: null,
+        is_pinned: {
+          order: 5,
+          image: "banner.webp",
+        },
+        is_other: null,
+        project: {
+          banner_image: "banner.webp",
+          screenshot: ["banner.webp", "screenshot1.png", "screenshot2.png"],
+        },
+      },
+      link: {
+        name: "quiztwist",
+        github: undefined,
+        project: undefined,
+        external: "https://quiztwist-frontend.vercel.app/",
+      },
+      design: {
+        font: ["poppins"],
+        color: ["#39546d", "#13273e"],
+      },
+    },
+
+    // 6 DASS | 6 pinned
+    {
+      id: 6,
       name: "Depression Level Predictor (DASS)",
       information: {
         short_description: "Predicts person's depression level",
@@ -288,6 +424,7 @@ function getAllProjects() {
         is_other: null,
         project: {
           banner_image: "banner.webp",
+          screenshot: ["banner.webp"],
         },
       },
       link: {
@@ -304,9 +441,9 @@ function getAllProjects() {
 
     // -- /////////////////
 
-    // 6 mobhie = other = 2
+    // 7 mobhie | 2 other
     {
-      id: 6,
+      id: 7,
       name: "Mobhie",
       information: {
         short_description: "Online movie platform",
@@ -353,12 +490,13 @@ function getAllProjects() {
         },
         is_pinned: null,
         is_other: {
-          orderr: 2,
+          order: 2,
           image: "banner.webp",
         },
         project: {
           banner_image: "banner.webp",
           screenshot: [
+            "banner.webp",
             "banner.png",
             "screenshot1.png",
             "screenshot2.png",
@@ -378,9 +516,54 @@ function getAllProjects() {
       },
     },
 
-    // 5 PennyWise = other = 1
+    // 17 Loustech | 12 other
     {
-      id: 5,
+      id: 17,
+      name: "Louis Tech Vuitton",
+      information: {
+        short_description: "E-commerce app for phone cases with a techy design",
+        description: [
+          "Louis Tech Vuitton is an e-commerce app designed exclusively for phone cases, featuring a tech-inspired aesthetic. This project is a design-only showcase, illustrating how technology can influence fashion and consumer electronics. It blends modern design elements with functional e-commerce features, offering a unique look at how tech can enhance product presentation in the fashion space.",
+        ],
+        type: ["design"],
+        tags: {
+          technology: [],
+          project: ["e-commerce", "phone-cases", "tech-design"],
+        },
+      },
+      project_showcase: {
+        is_intro: null,
+        is_pinned: null,
+        is_other: {
+          order: 12,
+          image: "banner.webp",
+        },
+        project: {
+          banner_image: "banner.webp",
+          screenshot: [
+            "banner.webp",
+            "screenshot1.png",
+            "screenshot2.png",
+            "screenshot3.png",
+            "screenshot4.png",
+          ],
+        },
+      },
+      link: {
+        name: "louis-tech-vuitton",
+        github: null,
+        project: undefined,
+        external: null,
+      },
+      design: {
+        font: ["poppins"],
+        color: ["#ffa31a", "#202020", "#f4f4f4"],
+      },
+    },
+
+    // 8 PennyWise | 1 other
+    {
+      id: 8,
       name: "PennyWISE PH",
       information: {
         short_description: "Online money tracker application",
@@ -433,9 +616,9 @@ function getAllProjects() {
         project: {
           banner_image: "banner.webp",
           screenshot: [
+            "banner.webp",
             "screenshot1.png",
             "screenshot2.png",
-            "screenshot3.png",
             "screenshot4.png",
             "screenshot5.png",
           ],
@@ -453,9 +636,9 @@ function getAllProjects() {
       },
     },
 
-    // 7 JollyMax = other = 3
+    // 9 JollyMax | 3 other
     {
-      id: 7,
+      id: 9,
       name: "J077YM4X PH",
       information: {
         short_description: "Bot for auto buy digital items",
@@ -502,17 +685,26 @@ function getAllProjects() {
       design: null,
     },
 
-    // 8 Shopeeling = other = 4
+    // 10 Shopeeling | 4 other
     {
-      id: 8,
+      id: 10,
       name: "Shopeeling",
       information: {
-        short_description: "E-commerce platform",
-        description: ["Old project, for practice purposes only."],
-        type: ["automate"],
+        short_description: "Minimalist clothing e-commerce platform",
+        description: [
+          "Shopeeling is a sleek and minimalist e-commerce platform designed for clothing enthusiasts. The platform focuses on offering a clean and intuitive shopping experience, making it easy for users to browse and purchase products effortlessly.",
+          "Shopeeling features a streamlined design with simple navigation, product filters, and a cart system. It allows users to explore a wide range of clothing items, from casual wear to more formal attire, all presented in an aesthetically pleasing manner.",
+          "The platform is built with a focus on modern UI/UX principles, ensuring a smooth and efficient shopping experience across both desktop and mobile devices.",
+        ],
+        type: ["design"],
         tags: {
-          technology: ["HTML", "CSS"],
-          project: ["test"],
+          technology: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+          project: [
+            "E-commerce",
+            "Minimalist-Design",
+            "Clothing",
+            "Web-Application",
+          ],
         },
       },
       project_showcase: {
@@ -528,6 +720,7 @@ function getAllProjects() {
         project: {
           banner_image: "banner.webp",
           screenshot: [
+            "banner.webp",
             "screenshot1.png",
             "screenshot2.png",
             "screenshot3.png",
@@ -547,19 +740,20 @@ function getAllProjects() {
       },
     },
 
-    // Video to image converter
-
-    // 13 MoneyTracker v1 = other = 8
+    // 11 MoneyTracker v1 | 8 other
     {
-      id: 13,
+      id: 11,
       name: "Money Tracker v1",
       information: {
-        short_description: "Money Tracker Version 1",
-        description: ["Old project, for practice purposes only."],
+        short_description: "Simple money tracker for practice",
+        description: [
+          "Money Tracker v1 is an old, basic project created for practice purposes. It allows users to track their income and expenses, providing a simple interface to manage personal finances.",
+          "Though limited in functionality, it serves as an early-stage project for honing design and development skills. The app includes basic features for logging transactions and viewing total balances.",
+        ],
         type: ["design", "develop"],
         tags: {
           technology: ["HTML", "CSS"],
-          project: ["test"],
+          project: ["Money-Tracking", "Practice-Project"],
         },
       },
       project_showcase: {
@@ -571,7 +765,7 @@ function getAllProjects() {
         },
         project: {
           banner_image: "banner.webp",
-          screenshot: ["screenshot1.png"],
+          screenshot: ["banner.webp", "screenshot1.png"],
         },
       },
       link: {
@@ -586,9 +780,9 @@ function getAllProjects() {
       },
     },
 
-    // 14 Gcash PH = other = 9
+    // 12 Gcash PH | 9 other
     {
-      id: 14,
+      id: 12,
       name: "GC4SH PH",
       information: {
         short_description: "Bot for account auto create",
@@ -620,6 +814,7 @@ function getAllProjects() {
         },
         project: {
           banner_image: "banner.webp",
+          screenshot: ["banner.webp"],
         },
       },
       link: {
@@ -631,17 +826,20 @@ function getAllProjects() {
       design: null,
     },
 
-    // 11 NFT Marketplace = other = 6
+    // 13 NFT Marketplace | 6 other
     {
-      id: 11,
-      name: "NFT marketplace",
+      id: 13,
+      name: "NFT Marketplace",
       information: {
         short_description: "NFT marketplace platform",
-        description: ["Old project, for practice purposes only."],
+        description: [
+          "NFT Marketplace is a project designed for practice purposes, focused on creating a user interface for an NFT (Non-Fungible Token) trading platform. The goal of this project was to practice design skills using Adobe XD, creating mockups for buying, selling, and displaying NFTs.",
+          "This project serves as an exploration of the design concepts required to build a marketplace specifically for digital assets. It includes various elements such as NFT listings, user profiles, and transaction flows.",
+        ],
         type: ["design"],
         tags: {
           technology: ["Adobe XD"],
-          project: ["NFT"],
+          project: ["NFT", "Design-Project"],
         },
       },
       project_showcase: {
@@ -651,12 +849,12 @@ function getAllProjects() {
         },
         is_pinned: null,
         is_other: {
-          order: 4,
+          order: 6,
           image: "banner.webp",
         },
         project: {
           banner_image: "banner.webp",
-          screenshot: ["screenshot1.png", "screenshot2.png"],
+          screenshot: ["banner.webp", "screenshot1.png", "screenshot2.png"],
         },
       },
       link: {
@@ -671,12 +869,12 @@ function getAllProjects() {
       },
     },
 
-    // 10 Microsoft Reward Bot = 5
+    // 14 Microsoft | 5 other
     {
-      id: 10,
+      id: 14,
       name: "M1cros0ft R3w4rd BOT",
       information: {
-        short_description: "Bot for auto grind points.",
+        short_description: "Bot for auto grind points",
         description: [
           "This is an automated software designed to independently perform tasks and accumulate points within the Microsoft Rewards program.",
         ],
@@ -702,11 +900,12 @@ function getAllProjects() {
         is_intro: null,
         is_pinned: null,
         is_other: {
-          orderr: 5,
+          order: 5,
           image: "banner.webp",
         },
         project: {
           banner_image: "banner.jpg",
+          screenshot: ["banner.webp", "banner.jpg"],
         },
       },
       link: {
@@ -718,21 +917,21 @@ function getAllProjects() {
       design: null,
     },
 
-    // 9 Netflakes = other = 10
+    // 15 Netflakes | 10 other
     {
-      id: 9,
+      id: 15,
       name: "Netflakes",
       information: {
         short_description: "Online movie platform",
         description: [
-          "Old project, for practice purposes only.",
+          "Netflakes is an old project created for practice purposes. It serves as an online movie platform that allows users to browse movies by fetching data from external APIs such as The Movie Database (TMDb).",
+          "This project demonstrates the integration of APIs into a web application, showcasing the ability to display movie details like titles, descriptions, and ratings. Built with basic web technologies, it was a good learning experience for handling API calls and rendering dynamic data.",
           "https://www.themoviedb.org/",
         ],
-
         type: ["Design", "Develop"],
         tags: {
           technology: ["HTML", "CSS", "API"],
-          project: ["movie", "api"],
+          project: ["movie-app", "API-integration"],
         },
       },
       project_showcase: {
@@ -759,17 +958,19 @@ function getAllProjects() {
       },
     },
 
-    // 15 E-Commerce = other 11
+    // 16 E-Commerce | 11 other
     {
-      id: 15,
+      id: 16,
       name: "E-commerce",
       information: {
         short_description: "E-commerce Platform",
-        description: ["Old project, for practice purposes only."],
+        description: [
+          "An old project created for practice purposes. This e-commerce platform demonstrates basic functionality such as browsing products, adding items to a cart, and viewing product details. Although the project is intended for learning, it follows standard e-commerce architecture with design and development elements.",
+        ],
         type: ["design", "develop"],
         tags: {
-          technology: [],
-          project: [],
+          technology: ["HTML", "CSS", "JavaScript"],
+          project: ["e-commerce", "practice-project"],
         },
       },
       project_showcase: {
@@ -781,7 +982,12 @@ function getAllProjects() {
         },
         project: {
           banner_image: "banner.webp",
-          screenshot: ["screenshot1.png", "screenshot2.png", "screenshot3.png"],
+          screenshot: [
+            "banner.webp",
+            "screenshot1.png",
+            "screenshot2.png",
+            "screenshot3.png",
+          ],
         },
       },
       link: {
@@ -795,50 +1001,6 @@ function getAllProjects() {
         color: ["#ffa31a", "#202020", "#f4f4f4"],
       },
     },
-
-    // 16 Loustech = other 11
-    {
-      id: 16,
-      name: "Louis Tech Vuitton",
-      information: {
-        short_description: "When technology meets fashion.",
-        description: ["Old project, for practice purposes only."],
-        type: ["design"],
-        tags: {
-          technology: [],
-          project: [],
-        },
-      },
-      project_showcase: {
-        is_intro: null,
-        is_pinned: null,
-        is_other: {
-          order: 11,
-          image: "banner.webp",
-        },
-        project: {
-          banner_image: "banner.webp",
-          screenshot: [
-            "screenshot1.png",
-            "screenshot2.png",
-            "screenshot3.png",
-            "screenshot4.png",
-          ],
-        },
-      },
-      link: {
-        name: "louis-tech-vuitton",
-        github: null,
-        project: undefined,
-        external: null,
-      },
-      design: {
-        font: ["poppins"],
-        color: ["#ffa31a", "#202020", "#f4f4f4"],
-      },
-    },
-
-    // 16 Loustech = other 11
   ];
 }
 
