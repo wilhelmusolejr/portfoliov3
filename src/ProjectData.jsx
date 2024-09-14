@@ -65,7 +65,10 @@ function getAllProjects() {
         },
       },
       project_showcase: {
-        is_intro: null,
+        is_intro: {
+          order: 2,
+          image: "mockup.webp",
+        },
         is_pinned: {
           order: 1,
           image: "showcase.webp",
@@ -282,7 +285,10 @@ function getAllProjects() {
         },
       },
       project_showcase: {
-        is_intro: null,
+        is_intro: {
+          order: 3,
+          image: "mockup.webp",
+        },
         is_pinned: {
           order: 4,
           image: "banner.webp",
@@ -350,7 +356,10 @@ function getAllProjects() {
         },
       },
       project_showcase: {
-        is_intro: null,
+        is_intro: {
+          order: 4,
+          image: "mockup.webp",
+        },
         is_pinned: {
           order: 5,
           image: "banner.webp",
@@ -604,10 +613,7 @@ function getAllProjects() {
         },
       },
       project_showcase: {
-        is_intro: {
-          order: 4,
-          image: "mockup.webp",
-        },
+        is_intro: null,
         is_pinned: null,
         is_other: {
           orderr: 1,
@@ -708,10 +714,7 @@ function getAllProjects() {
         },
       },
       project_showcase: {
-        is_intro: {
-          order: 3,
-          image: "mockup.webp",
-        },
+        is_intro: null,
         is_pinned: null,
         is_other: {
           order: 4,
@@ -843,10 +846,7 @@ function getAllProjects() {
         },
       },
       project_showcase: {
-        is_intro: {
-          order: 5,
-          image: "mockup.webp",
-        },
+        is_intro: null,
         is_pinned: null,
         is_other: {
           order: 6,
