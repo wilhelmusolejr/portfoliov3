@@ -471,12 +471,14 @@ export default function About() {
           <div className="image-container text-center mb-3">
             <img src={profile} alt="" className="rounded-circle" />
           </div>
-          <p className="fs-6">Hi, my name is</p>
+          <p className="fs-6">Hola, my name is</p>
           <h1 className="text-light mb-2 fs-1 name">Wilhelmus Ole Jr.</h1>
           <p className="mb-5">
-            I’m a Junior Full-Stack Web Developer dedicated to creating
-            exceptional digital experiences. My skills also include web
-            automation and quality assurance, as well as occasional web design.
+            I’m an <em>aspiring, self-taught</em> Junior Full-Stack Web
+            Developer dedicated to creating websites that are modern, clean,
+            responsive, and, most importantly, functional and easy to use. My
+            skills also include web automation, along with occasional web
+            design.
           </p>
 
           <Button
@@ -496,25 +498,38 @@ export default function About() {
             <h2 className="text-light mb-5 d-nones">About</h2>
 
             <p className="mt-5 position-relative">
-              My name is Wilhelmus Ole Jr. I am a Junior Full-Stack Web
-              Developer and Computer Science Student specializing in creating
-              visually appealing, responsive, and user-friendly websites.
+              Kamusta! I’m a recent graduate of Western Mindanao State
+              University with a degree in Computer Science. Throughout my
+              studies, I developed my programming skills and gained hands-on
+              experience through freelancing. Along the way, I also taught
+              myself web automation, building bots for personal projects.
             </p>
 
             <p className="mt-3">
-              While I enjoy designing and developing both simple to complex
-              websites, I also delved into web automation and bot development.
-              This experience allowed me to create various bots tailored to my
-              needs (SORRY!).
-            </p>
-            <p className="mt-3">
-              Currently, my main focus is to return to my roots in web
-              development and continue building innovative and impactful digital
-              experiences.
+              In terms of technology, I focus on front-end development, but I’m
+              comfortable enough to be a full stack. I’m passionate about
+              creating websites that are modern, clean, responsive, and easy to
+              use. My goal is always to build user-friendly and visually
+              appealing websites that offer a great user experience.
             </p>
 
             <p className="mt-3">
-              Here are few technologies I’ve been working with recently:
+              As a self-taught developer, I know that learning never really
+              stops. Right now, I’m improving my knowledge of the MERN stack
+              tech and applying what I learn to real-world and hobby projects.
+            </p>
+
+            <p className="mt-3">
+              Looking ahead, I’m excited to keep growing as a developer,
+              learning new tools, and taking on more complex projects. My goal
+              is to work on projects that make a real difference and have a
+              positive impact, and I’m always open to opportunities to
+              collaborate and create meaningful digital experiences.
+            </p>
+
+            <p className="my-5">
+              Below are the technologies I have worked with and am still
+              learning.
             </p>
           </div>
 
@@ -565,28 +580,36 @@ export default function About() {
         <div className="container my-5 d-flex flex-column-reverse flex-md-row">
           {/* left */}
           <div className="left d-flex flex-column align-items-start justify-content-center">
-            <h3 className="mb-5 fs-5">Enterprise Suite</h3>
-            <h2 className="fs-1 text-light">
-              This is how good companies find good company.
+            <h3 className="mb-5 fs-6">random banner hehe</h3>
+
+            <h2 className="fs-1 text-light">On my journey to GSI!</h2>
+
+            <h2 className="fs-1 text-light d-none">
+              To help myself, is to help others
             </h2>
 
-            <p className="my-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-              enim, sed obcaecati asperiores error officia. Libero dolores neque
-              nulla repudiandae!
+            <p className="mt-4 d-nones">
+              Freelancing has taught me the value of hard work, adaptability,
+              and continuous learning. While it’s been a rollercoaster ride, I’m
+              grateful for all the lessons na natutunan ko along the way.
             </p>
+
+            <p className="my-3">Now, I am ready to...</p>
 
             <ul className="d-flex flex-column gap-2 list-unstyled">
               <ListItem
                 icon={faPenToSquare}
-                paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. A, iure!"
+                paragraph="GROW, learn new things."
               />
-
-              <ListItem icon={faHeadphones} paragraph="Lorem dolor sit amet." />
 
               <ListItem
                 icon={faCalendarDays}
-                paragraph="Lorem ipsum dolor sit amet. Test tite with long text."
+                paragraph="SOLVE, create solutions."
+              />
+
+              <ListItem
+                icon={faHeadphones}
+                paragraph="IMPROVE, make things better."
               />
             </ul>
 
