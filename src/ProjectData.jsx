@@ -25,7 +25,7 @@ function updateProjectLink(projects) {
 
 function getAllProjects() {
   return [
-    // 1 Philippine Currency Identifier | 1 pinned
+    // 1 Philippine Currency Identifier | 1 pinned | 2 intro
     {
       id: 1,
       name: "Philippine Currency Identifier",
@@ -97,7 +97,7 @@ function getAllProjects() {
       },
     },
 
-    // 2 Online Consultationn Clinic | 2 pinned | 2 intro
+    // 2 Online Consultationn Clinic | 2 pinned | 1 intro
     {
       id: 2,
       name: "WMSU Consultation Clinic",
@@ -138,7 +138,7 @@ function getAllProjects() {
       },
       project_showcase: {
         is_intro: {
-          order: 2,
+          order: 1,
           image: "mockup.webp",
         },
         is_pinned: {
@@ -244,7 +244,7 @@ function getAllProjects() {
       },
     },
 
-    // 4 pinasmura | 4 pinned
+    // 4 pinasmura | 4 pinned | 3 intro
     {
       id: 4,
       name: "PinasMura",
@@ -316,7 +316,7 @@ function getAllProjects() {
       },
     },
 
-    // 5 QuizTwist | 5 pinned
+    // 5 QuizTwist | 5 pinned | 5 intro
     {
       id: 5,
       name: "QuizTwist",
@@ -357,7 +357,7 @@ function getAllProjects() {
       },
       project_showcase: {
         is_intro: {
-          order: 4,
+          order: 5,
           image: "mockup.webp",
         },
         is_pinned: {
@@ -450,7 +450,7 @@ function getAllProjects() {
 
     // -- /////////////////
 
-    // 7 mobhie | 2 other
+    // 7 mobhie | 2 other | 4 intro
     {
       id: 7,
       name: "Mobhie",
@@ -494,7 +494,7 @@ function getAllProjects() {
       },
       project_showcase: {
         is_intro: {
-          order: 1,
+          order: 4,
           image: "mockup.webp",
         },
         is_pinned: null,
@@ -1031,6 +1031,11 @@ export function intro_projects() {
       return dump;
     },
     []
+  );
+
+  projects.sort(
+    (a, b) =>
+      a.project_showcase.is_intro.order - b.project_showcase.is_intro.order
   );
 
   return projects;
