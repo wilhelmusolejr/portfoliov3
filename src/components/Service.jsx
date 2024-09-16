@@ -25,12 +25,10 @@ function Service({ icon, title, description, iframesSrc, list }) {
           {list.map((item, index) => (
             <li key={index} className="d-flex align-items-center gap-2 mb-1">
               <FontAwesomeIcon icon={faCheck} className="d-nones" />
-              <p>{item}</p>
+              <p className="text-capitalize">{item}</p>
             </li>
           ))}
         </ul>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       </div>
     </div>
   );

@@ -279,25 +279,16 @@ let listCategorized = [
 
 let work_experience = [
   {
-    name: "Freelancer PH",
-    date: "June 2022 - February 2023",
+    name: "Freelancer",
+    date: "Jan 2023 - Mar 2024",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, sed.",
-    position: "Full-stack Developer",
-  },
-  {
-    name: "Accenture",
-    date: "June 2022 - February 2023",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, sed.",
-    position: "Full-stack Developer",
-  },
-  {
-    name: "Samsung",
-    date: "June 2022 - February 2023",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, sed.",
-    position: "Full-stack Developer",
+      "Freelanced within my local community, taking on multiple roles based on client needs, including design, front-end, and back-end development.",
+    list: [
+      "Collaborated with clients on design and development.",
+      "Handled front-end tasks, building responsive interfaces.",
+      "Worked on back-end development and server-side logic.",
+    ],
+    position: "Freelancer (All-Around)",
   },
 ];
 
@@ -307,23 +298,32 @@ const services = [
     icon: faPaintBrush,
     gif_src: "https://giphy.com/embed/SvRmX9NAeUeiyLcMtw",
     description:
-      "I create visually stunning and user-centric web designs that reflect your brand's identity, ensuring a seamless experience across all devices with a focus on aesthetics and functionality.",
-    list: ["Responsive layouts", "Brand identity", "User-centered design"],
+      "My goal is to design websites that are clean, easy to use, and reflect your brand. I focus on creating simple, functional designs that look great and meet user needs.",
+    list: [
+      "Responsive layouts",
+      "Brand identity",
+      "User-centric design",
+      "Modern and clean",
+    ],
   },
   {
     name: "Web Development",
     icon: faCode,
     gif_src: "https://giphy.com/embed/zOvBKUUEERdNm",
     description:
-      "I build robust, scalable, and fast websites using the latest technologies. My focus is on creating clean, maintainable code that ensures your site performs well and is easy to manage.",
-    list: ["Fast performance", "Scalability", "Maintainable code"],
+      "My goal is to build websites that are fast, reliable, and easy to manage using modern tools and technologies. I focus on writing clean, simple code to ensure your site works well and is easy to maintain.",
+    list: [
+      "Fast performance",
+      "Clean and maintainable code",
+      "Modern tools and technologies",
+    ],
   },
   {
     name: "Web Automation",
     icon: faRobot,
     gif_src: "https://giphy.com/embed/PDsgxQoXvUZGg",
     description:
-      "I develop custom automation tools and bots to streamline your workflows, save time, and increase productivity, tailored specifically to your unique business needs.",
+      "My goal is to create simple automation tools and bots to make tasks easier, save time, and improve productivity. Each solution is tailored to fit your specific needs.",
     list: ["Task automation", "Efficiency tools", "Custom bots"],
   },
 ];
@@ -332,7 +332,7 @@ export default function About() {
   const viewportWidth = window.innerWidth;
   console.log(viewportWidth);
 
-  let iconSize = viewportWidth > 768 ? 75 : 50;
+  let iconSize = viewportWidth > 768 ? 75 : 40;
 
   document.title = "About | Wilhelmus Ole";
 
@@ -468,21 +468,20 @@ export default function About() {
 
       <header className=" d-flex align-items-center justify-content-center mt-5 about-info">
         <div className="container paragraph">
-          <div className="image-container text-center mb-3">
+          <div className="image-container text-center mb-4">
             <img src={profile} alt="" className="rounded-circle" />
           </div>
           <p className="fs-6">Hola, my name is</p>
           <h1 className="text-light mb-2 fs-1 name">Wilhelmus Ole Jr.</h1>
           <p className="mb-5">
-            I’m an <em>aspiring, self-taught</em> Junior Full-Stack Web
-            Developer dedicated to creating websites that are modern, clean,
-            responsive, and, most importantly, functional and easy to use. My
-            skills also include web automation, along with occasional web
-            design.
+            I'm an <em>aspiring, self-taught</em> Junior Full-Stack Web
+            Developer focused on building modern, clean, responsive, and
+            functional websites. I also have experience in web automation and
+            occasional web design.
           </p>
 
           <Button
-            className="btn-primary"
+            className="btn-primary mb-5"
             onClick={() => smoothScroll("#contact")}
           >
             Get in touch
@@ -580,7 +579,7 @@ export default function About() {
         <div className="container my-5 d-flex flex-column-reverse flex-md-row">
           {/* left */}
           <div className="left d-flex flex-column align-items-start justify-content-center">
-            <h3 className="mb-5 fs-6">random banner hehe</h3>
+            <h3 className="mb-5 fs-6">thoughts_101</h3>
 
             <h2 className="fs-1 text-light">On my journey to GSI!</h2>
 
@@ -643,23 +642,32 @@ export default function About() {
                 <div key={index} className="accordion-item">
                   <h3 className="accordion-header">
                     <button
-                      className="accordion-button "
+                      className="accordion-button d-flex flex-column align-items-start flex-lg-row gap-1 gap-lg-2 position-relative"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target={`#collapse${index}`}
                       aria-expanded="true"
                       aria-controls={`collapse${index}`}
                     >
-                      {work.name}
+                      <span>{work.name}</span>
+                      <span className="text-light-white fs-6">{work.date}</span>
                     </button>
                   </h3>
                   <div
                     id={`collapse${index}`}
-                    className="accordion-collapse collapse"
+                    className="accordion-collapse collapse text-light-white"
                     data-bs-parent="#accordionExample"
                   >
-                    <div className="accordion-body text-light-white">
+                    <div className="accordion-body ">
                       <p>{work.description}</p>
+
+                      <ul className="my-3 my-lg-2 ">
+                        {work.list.map((item, index) => (
+                          <li key={index}>
+                            <p>{item}</p>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -706,11 +714,11 @@ export default function About() {
           <div className="paragraph m-auto flex-center flex-column about-container">
             <h2 className="text-light mb-5">Get In Touch</h2>
             <p>
-              Whether you're interested in working together, have a question, or
-              just want to say hi, I'd love to hear from you! I'm always open to
-              discussing new projects, creative ideas, or opportunities to be
-              part of your vision. Feel free to reach out to me via email, and
-              I'll get back to you as soon as possible.
+              Halooo, thank you for visiting! I'm so glad you made it to this
+              section. If you're interested in working together, have a
+              question, or just want to say hi, feel free to reach out! I'm
+              always open to new projects, ideas, or opportunities. Drop me an
+              email, and I’ll respond as soon as I can.
             </p>
 
             <Button
