@@ -289,6 +289,7 @@ let work_experience = [
       "Worked on back-end development and server-side logic.",
     ],
     position: "Freelancer (All-Around)",
+    location: "Zamboanga City, Philippines",
   },
 ];
 
@@ -670,6 +671,8 @@ export default function About() {
                           </li>
                         ))}
                       </ul>
+
+                      <p className="mt-3">📌 {work.location}</p>
                     </div>
                   </div>
                 </div>
