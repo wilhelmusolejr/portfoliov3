@@ -496,26 +496,28 @@ export default function About() {
           <div className="info">
             <h2 className="text-light mb-5 d-nones">About</h2>
 
-            <p className="mt-5 position-relative">
+            <p className="mt-5">
               Kamusta! I’m a recent graduate of Western Mindanao State
               University with a degree in Computer Science. Throughout my
               studies, I developed my programming skills and gained hands-on
-              experience through freelancing. Along the way, I also taught
-              myself web automation, building bots for personal projects.
+              experience through school projects (App Dev, Software Engineering,
+              Thesis) and freelancing. Along the way, I also taught myself web
+              automation, building bots for personal projects.
             </p>
 
             <p className="mt-3">
               In terms of technology, I focus on front-end development, but I’m
               comfortable enough to be a full stack. I’m passionate about
-              creating websites that are modern, clean, responsive, and easy to
+              creating websites that are clean, modern, responsive, and easy to
               use. My goal is always to build user-friendly and visually
               appealing websites that offer a great user experience.
             </p>
 
             <p className="mt-3">
               As a self-taught developer, I know that learning never really
-              stops. Right now, I’m improving my knowledge of the MERN stack
-              tech and applying what I learn to real-world and hobby projects.
+              stops. Currently, I’m improving my knowledge specifically MERN and
+              Laravel tech stack and applying what I learn to real-world and
+              hobby projects.
             </p>
 
             <p className="mt-3">
