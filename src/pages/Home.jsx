@@ -51,9 +51,9 @@ function Home() {
         <div className="paragraph ">
           <p className="mb-3">
             {" "}
-            <em>Just graduated, yay! So, what's next?</em> <br /> Kamusta, I'm
-            an <em>aspiring, self-taught</em> Junior Full-Stack Web Developer
-            and Computer Science student. I create websites that look good, feel
+            <em>Just graduated, yay! So, what's next?</em> <br /> Aloha, I'm an{" "}
+            <em>aspiring, self-taught</em> Junior Full-Stack Web Developer and
+            Computer Science student. I create websites that look good, feel
             good, work well, and are easy to use. When I have free time, I like
             to find ways to improve my work.{" "}
           </p>

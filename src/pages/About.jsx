@@ -519,11 +519,11 @@ export default function About() {
             </p>
 
             <p className="mt-3">
-              Looking ahead, I’m excited to keep growing as a developer,
-              learning new tools, and taking on more complex projects. My goal
-              is to work on projects that make a real difference and have a
-              positive impact, and I’m always open to opportunities to
-              collaborate and create meaningful digital experiences.
+              Looking ahead, I’m excited to keep growing, learning new tools,
+              and taking on more complex projects. My goal is to work on
+              projects that make a real difference and have a positive impact,
+              and I’m always open to opportunities to collaborate and create
+              meaningful digital experiences.
             </p>
 
             <p className="my-5">

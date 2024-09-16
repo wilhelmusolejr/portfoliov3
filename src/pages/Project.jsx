@@ -138,12 +138,7 @@ export default function Project() {
             <h2 className="mb-4 text-light">Contact</h2>
             <p>
               If you encounter any issues or have questions about this project,
-              please don&apos;t hesitate to reach out to me directly at
-              wilhelmus.olejr@gmail.com. As the sole developer, I am dedicated
-              to providing support and will do my best to respond to your
-              concerns promptly, aiming to offer solutions and address your
-              queries.If you encounter any issues or have questions about this
-              project, please don&apos;t hesitate to reach out to me directly at{" "}
+              please don&apos;t hesitate to reach out to me directly at{" "}
               <span className="text-light">wilhelmus.olejr@gmail.com</span>. As
               the sole developer, I am dedicated to providing support and will
               do my best to respond to your concerns promptly, aiming to offer
