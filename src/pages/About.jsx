@@ -594,7 +594,7 @@ export default function About() {
             {skillList.map((skill, index) => (
               <div key={index} className="child border flex-center p-3">
                 <div className="image-parent flex-center">
-                  {skill.image[0] === "/" ? (
+                  {skill.image.startsWith("data:image") ? (
                     <img src={skill.image} alt="Skill" />
                   ) : (
                     <SvgIcon icon={skill.image} size={iconSize} />
