@@ -49,18 +49,26 @@ import "../css/about.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCalendarDays,
+  faChartLine,
   faCode,
   faHeadphones,
+  faLightbulb,
   faMicrochip,
   faPaintBrush,
   faPalette,
   faPenToSquare,
   faRobot,
+  faSeedling,
   faWindowMaximize,
 } from "@fortawesome/free-solid-svg-icons";
 import Service from "../components/Service";
 import ListItem from "../components/ListItem";
 import SvgIcon from "../components/SvgIcon";
+import {
+  faLinkedin,
+  faSquareFacebook,
+  faSquareGithub,
+} from "@fortawesome/free-brands-svg-icons";
 
 let listCategorized = [
   // web
@@ -333,7 +341,7 @@ export default function About() {
   const viewportWidth = window.innerWidth;
   console.log(viewportWidth);
 
-  let iconSize = viewportWidth > 768 ? 75 : 40;
+  let iconSize = viewportWidth > 768 ? 75 : 35;
 
   document.title = "About | Wilhelmus Ole";
 
@@ -481,12 +489,38 @@ export default function About() {
             occasional web design.
           </p>
 
-          <Button
-            className="btn-primary mb-5"
-            onClick={() => smoothScroll("#contact")}
-          >
-            Get in touch
-          </Button>
+          <div className="mb-5 d-flex gap-4 align-items-center">
+            <Button
+              className="btn-primary "
+              onClick={() => smoothScroll("#contact")}
+            >
+              Get in touch
+            </Button>
+
+            <div className="d-flex gap-4 socials ">
+              <a
+                href="https://www.linkedin.com/in/wilhelmusolejr"
+                target="_blank"
+                className="text-light-white fs-5"
+              >
+                <FontAwesomeIcon icon={faLinkedin} />
+              </a>
+              <a
+                href="https://github.com/wilhelmusolejr"
+                target="_blank"
+                className="text-light-white fs-5"
+              >
+                <FontAwesomeIcon icon={faSquareGithub} />
+              </a>
+              <a
+                href="https://web.facebook.com/wilhelms.ole/"
+                target="_blank"
+                className="text-light-white fs-5"
+              >
+                <FontAwesomeIcon icon={faSquareFacebook} />
+              </a>
+            </div>
+          </div>
         </div>
       </header>
 
@@ -600,18 +634,21 @@ export default function About() {
 
             <ul className="d-flex flex-column gap-2 list-unstyled">
               <ListItem
-                icon={faPenToSquare}
+                icon={faSeedling}
                 paragraph="GROW, learn new things."
+                color="green"
               />
 
               <ListItem
-                icon={faCalendarDays}
+                icon={faLightbulb}
                 paragraph="SOLVE, create solutions."
+                color="yellow"
               />
 
               <ListItem
-                icon={faHeadphones}
+                icon={faChartLine}
                 paragraph="IMPROVE, make things better."
+                color="blue"
               />
             </ul>
 

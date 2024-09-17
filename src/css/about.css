@@ -427,3 +427,22 @@ section.contact {
   height: 200px;
   border-radius: 10px;
 }
+
+.green {
+  color: #31b034;
+}
+.yellow {
+  color: #d9d659;
+}
+.blue {
+  color: #3337cc;
+}
+
+.svg-width {
+  width: 15px;
+  height: 15px;
+}
+
+.socials a:hover {
+  color: #fff !important;
+}
