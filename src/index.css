@@ -170,6 +170,14 @@ nav ul li {
 .projects-container {
   max-width: 1200px;
 }
+
+.projects-container h2 {
+  font-size: 18px;
+}
+.projects-container p {
+  padding: 10px 20px 0 20px !important;
+}
+
 .projects-container .child {
   margin-bottom: 25px;
 }
@@ -179,6 +187,7 @@ nav ul li {
 
 .projects-container .image-parent {
   height: 400px;
+
   border-radius: 24px;
   overflow: hidden;
   transition: all 0.8s cubic-bezier(0.2, 0.6, 0.2, 1);
@@ -259,6 +268,11 @@ footer p {
     justify-content: space-between !important;
   }
 
+  .projects-container .child {
+    width: calc(50% - 50px) !important;
+    margin-bottom: 100px;
+  }
+
   .projects-container .child:nth-child(2n-2) {
     position: relative;
     top: 200px;
@@ -283,6 +297,10 @@ footer p {
   /* body {
     font-size: 1.25rem;
   } */
+
+  .projects-container h2 {
+    font-size: 24px;
+  }
 
   .projects-container {
     padding: 0 50px;
