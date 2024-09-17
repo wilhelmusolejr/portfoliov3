@@ -755,7 +755,7 @@ export default function About() {
           <div className="paragraph m-auto flex-center flex-column about-container">
             <h2 className="text-light mb-5">Get In Touch</h2>
             <p>
-              Halooo, thank you for visiting! I'm so glad you made it to this
+              Halo, thank you for the visit! I'm so glad you made it to this
               section. If you're interested in working together, have a
               question, or just want to say hi, feel free to reach out! I'm
               always open to new projects, ideas, or opportunities. Drop me an
