@@ -335,6 +335,8 @@ const services = [
 ];
 
 export default function About() {
+  console.log(empty);
+
   const viewportWidth = window.innerWidth;
   let iconSize = viewportWidth > 768 ? 75 : 35;
 
@@ -592,7 +594,7 @@ export default function About() {
               <div key={index} className="child border flex-center p-3">
                 <div className="image-parent flex-center">
                   {skill.image[0] === "/" ? (
-                    <img src={empty} alt="" />
+                    <img src={profile} alt="" />
                   ) : (
                     <SvgIcon icon={skill.image} size={iconSize} />
                   )}
