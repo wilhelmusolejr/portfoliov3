@@ -800,7 +800,7 @@ export default function About() {
             }}
             className="actual-email text-light cursor-pointer"
           >
-            hey@wilhelmus.dev
+            wilhelmus.olejr@gmail.com
           </p>
         </div>
       </section>
