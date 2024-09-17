@@ -45,7 +45,11 @@ export default function Navigator() {
             >
               Projects
             </a>
-            <a href="#" className="btn btn-primary ms-5">
+            <a
+              href="/files/WILHELMUS_OLE_RESUME_WHITE.pdf"
+              className="btn btn-primary ms-5"
+              download={true}
+            >
               Resume
             </a>
           </div>

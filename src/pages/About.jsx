@@ -48,15 +48,12 @@ import "../css/about.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faCalendarDays,
   faChartLine,
   faCode,
-  faHeadphones,
   faLightbulb,
   faMicrochip,
   faPaintBrush,
   faPalette,
-  faPenToSquare,
   faRobot,
   faSeedling,
   faWindowMaximize,
@@ -339,8 +336,6 @@ const services = [
 
 export default function About() {
   const viewportWidth = window.innerWidth;
-  console.log(viewportWidth);
-
   let iconSize = viewportWidth > 768 ? 75 : 35;
 
   document.title = "About | Wilhelmus Ole";
