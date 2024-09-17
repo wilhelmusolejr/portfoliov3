@@ -592,7 +592,7 @@ export default function About() {
               <div key={index} className="child border flex-center p-3">
                 <div className="image-parent flex-center">
                   {skill.image[0] === "/" ? (
-                    <img src={skill.image} alt="" />
+                    <img src={empty} alt="" />
                   ) : (
                     <SvgIcon icon={skill.image} size={iconSize} />
                   )}
