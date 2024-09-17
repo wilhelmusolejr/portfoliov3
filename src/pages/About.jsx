@@ -335,8 +335,6 @@ const services = [
 ];
 
 export default function About() {
-  console.log(listCategorized);
-
   const viewportWidth = window.innerWidth;
   let iconSize = viewportWidth > 768 ? 75 : 35;
 
@@ -797,7 +795,7 @@ export default function About() {
               e.target.textContent = "Email Copied";
 
               setTimeout(() => {
-                e.target.textContent = "hey@wilhelmus.dev";
+                e.target.textContent = "wilhelmus.olejr@gmail.com";
               }, 3000);
             }}
             className="actual-email text-light cursor-pointer"
