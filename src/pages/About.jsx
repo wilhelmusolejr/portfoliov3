@@ -595,13 +595,16 @@ export default function About() {
               <div key={index} className="child border flex-center p-3">
                 <div className="image-parent flex-center">
                   {skill.image[0] === "/" ? (
-                    <img src={profile} alt="Skill" />
+                    <img src={skill.image} alt="Skill" />
                   ) : (
                     <SvgIcon icon={skill.image} size={iconSize} />
                   )}
                 </div>
               </div>
             ))}
+
+            <img src={profile} alt="Skill" />
+            <img src={empty} alt="Skill" />
 
             <div className="text-center text-light py-5 skill-info w-100">
               <p className="m-auto paragraph">{skillParagraph}</p>
