@@ -335,9 +335,6 @@ const services = [
 ];
 
 export default function About() {
-  console.log(empty);
-  console.log(profile);
-
   const viewportWidth = window.innerWidth;
   let iconSize = viewportWidth > 768 ? 75 : 35;
 
