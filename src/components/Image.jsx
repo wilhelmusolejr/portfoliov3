@@ -1,5 +1,5 @@
 import { useState, useCallback, memo } from "react";
-import LazyLoad from "react-lazyload";
+// import LazyLoad from "react-lazyload";
 import PropTypes from "prop-types";
 
 const Image = memo(({ url, alt = "" }) => {
@@ -10,7 +10,7 @@ const Image = memo(({ url, alt = "" }) => {
   }, []);
 
   return (
-    <LazyLoad height={200} offset={100}>
+    <div className="lazyload-wrapper">
       <img
         src={`${url}`}
         alt={alt}
@@ -24,7 +24,7 @@ const Image = memo(({ url, alt = "" }) => {
           </div>
         </div>
       )}
-    </LazyLoad>
+    </div>
   );
 });
 
