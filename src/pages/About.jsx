@@ -335,6 +335,8 @@ const services = [
 ];
 
 export default function About() {
+  console.log(listCategorized);
+
   const viewportWidth = window.innerWidth;
   let iconSize = viewportWidth > 768 ? 75 : 35;
 
@@ -591,7 +593,8 @@ export default function About() {
             {skillList.map((skill, index) => (
               <div key={index} className="child border flex-center p-3">
                 <div className="image-parent flex-center">
-                  {skill.image.startsWith("data:image") ? (
+                  {skill.image.startsWith("data:image") ||
+                  skill.image.startsWith("/assets/") ? (
                     <img src={skill.image} alt="Skill" />
                   ) : (
                     <SvgIcon icon={skill.image} size={iconSize} />
@@ -607,6 +610,7 @@ export default function About() {
         </div>
       </section>
 
+      {/* BANNER */}
       <section className="container-fluid banner">
         <div className="container my-5 d-flex flex-column-reverse flex-md-row">
           {/* left */}
@@ -724,6 +728,7 @@ export default function About() {
           </div>
         </div>
       </section>
+
       {/* POSITIVE */}
       <section className="container-fluid positive">
         <div className="container layout-space border"></div>
@@ -745,6 +750,7 @@ export default function About() {
 
         <div className="container layout-space border"></div>
       </section>
+
       {/* CONTACT */}
       <section className="container-fluid contact " id="contact">
         <div className="container border position-relative overflow-hidden">
@@ -780,6 +786,8 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* EMAIL */}
       <section className="email">
         <div className="container paragraph">
           <p>Get in touch (Click to copy)</p>
@@ -798,6 +806,7 @@ export default function About() {
           </p>
         </div>
       </section>
+
       <Footer />
     </>
   );
