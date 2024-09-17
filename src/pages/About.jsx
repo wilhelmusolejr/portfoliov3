@@ -603,9 +603,6 @@ export default function About() {
               </div>
             ))}
 
-            <img src={profile} alt="Skill" />
-            <img src={empty} alt="Skill" />
-
             <div className="text-center text-light py-5 skill-info w-100">
               <p className="m-auto paragraph">{skillParagraph}</p>
             </div>
