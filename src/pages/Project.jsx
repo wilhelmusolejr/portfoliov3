@@ -114,6 +114,8 @@ export default function Project() {
               ))}
             </div>
 
+            <h2 className="mb-4 text-light">Project overview</h2>
+
             {project.information.description.map((description, index) => (
               <p key={index} className="mb-3">
                 {description}
@@ -134,7 +136,7 @@ export default function Project() {
             </div>
           )}
 
-          <div className="project-contact mt-5 pb-5">
+          <div className="project-contact mt-5 ">
             <h2 className="mb-4 text-light">Contact</h2>
             <p>
               If you encounter any issues or have questions about this project,
@@ -145,6 +147,15 @@ export default function Project() {
               solutions and address your queries.
             </p>
           </div>
+
+          {project.link.external && (
+            <div className="project-demo mt-5 pb-5">
+              <h2 className="mb-4 text-light">Project Demo</h2>
+              <a href="#" className="text-light-white">
+                {project.link.external}
+              </a>
+            </div>
+          )}
 
           <div className="project-technology my-5 flex-center">
             <div className="flex-center flex-wrap gap-2 text-light paragraph">
