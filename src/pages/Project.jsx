@@ -151,7 +151,7 @@ export default function Project() {
           {project.link.external && (
             <div className="project-demo mt-5 pb-5">
               <h2 className="mb-4 text-light">Project Demo</h2>
-              <a href="#" className="text-light-white">
+              <a href={project.link.external} className="text-light-white">
                 {project.link.external}
               </a>
             </div>
