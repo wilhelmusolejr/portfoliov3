@@ -321,7 +321,7 @@ function getAllProjects() {
       id: 5,
       name: "QuizTwist",
       information: {
-        short_description: "A quiz app with 15 questions and a point system.",
+        short_description: "A quiz app and a point system.",
         description: [
           "QuizTwist is an engaging quiz application designed to challenge users with 15 questions across various categories. Users can choose from four distinct categories: General, English, Science, and Country. The app also includes a point system, rewarding users with points based on their quiz performance.",
           "QuizTwist features a user-friendly interface where individuals can register, log in, and track their quiz progress. It encourages learning while making the experience fun and competitive through its point-earning mechanism.",

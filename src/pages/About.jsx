@@ -164,7 +164,7 @@ let listCategorized = [
       },
     ],
     caption:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, distinctio?",
+      "Web Develop. Build websites that are fast, reliable, and easy to manage using modern tools and technologies. ",
   },
   // Ai
   {
@@ -201,8 +201,7 @@ let listCategorized = [
         image: empty,
       },
     ],
-    caption:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aperiam eaque molestias molestiae voluptates ducimus.",
+    caption: "Ai tools. Making work faster and productive. ",
   },
   // design
   {
@@ -240,7 +239,7 @@ let listCategorized = [
       },
     ],
     caption:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, optio! Repellendus, eligendi.",
+      "Web Design. Creating beautiful, user-friendly websites that make a great first impression.",
   },
   // automation
   {
@@ -277,21 +276,28 @@ let listCategorized = [
         image: empty,
       },
     ],
-    caption:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, dolores.",
+    caption: "Web Automation. Making work easier, faster, and more efficient.",
   },
 ];
 
 let work_experience = [
   {
-    name: "Freelancer",
+    name: "Full Stack Web Developer",
     date: "Jan 2023 - Mar 2024",
     description:
-      "Freelanced within my local community, taking on multiple roles based on client needs, including design, front-end, and back-end development.",
+      "Freelanced within my local community, taking on multiple roles based on client needs, including web design, front-end, and back-end development.",
     list: [
-      "Collaborated with clients on design and development.",
-      "Handled front-end tasks, building responsive interfaces.",
-      "Worked on back-end development and server-side logic.",
+      `Plannedand developed 4 custommodern and responsive websites for
+      local clients, managing both front-end and back-end development
+      based on client needs.`,
+      `Collaborated with 6 clientsto gather requirements and translate them
+      into technical specifications, ensuring client satisfaction and a 100%
+      success rate in project delivery.`,
+      `Improved server-side logic and managed databases using Laravel and
+      MySQL for scalable and maintainable app solutions`,
+      `Optimized front-end and back-end code, resulting in a 30% improvement in website performance by reducing load times and increasing efficiency.`,
+      `Leveraged modern technologies such as Laravel, React, MySQL, and
+      Node.jsto develop custom app solutions that met client-specific needs.`,
     ],
     position: "Freelancer (All-Around)",
     location: "Zamboanga City, Philippines",
