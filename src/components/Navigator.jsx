@@ -46,7 +46,7 @@ export default function Navigator() {
               Projects
             </a>
             <a
-              href="/files/WILHELMUS_OLE_RESUME_WHITE.pdf"
+              href="/files/WILHELMUS_OLE_RESUME.pdf"
               className="btn btn-primary ms-5"
               download={true}
             >
