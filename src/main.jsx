@@ -4,6 +4,9 @@ import "./index.css";
 
 import { Analytics } from "@vercel/analytics/react";
 
+const botToken = import.meta.env.VITE_BOT_TOKEN;
+const chatId = import.meta.env.VITE_BOT_CHATID;
+
 const extractBrowserName = (userAgent) => {
   let browser;
   if (userAgent.includes("Chrome")) {
@@ -73,8 +76,6 @@ const getVisitorInfo = async () => {
 };
 
 const sendMessageToTelegram = async (message) => {
-  const botToken = import.meta.env.VITE_BOT_TOKEN;
-  const chatId = import.meta.env.VITE_BOT_CHATID;
   const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
   try {
@@ -102,6 +103,8 @@ const sendMessageToTelegram = async (message) => {
 };
 
 getVisitorInfo().then((info) => sendMessageToTelegram(info));
+
+console.log(botToken, chatId);
 
 createRoot(document.getElementById("root")).render(
   <>
