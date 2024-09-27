@@ -50,10 +50,17 @@ const getVisitorInfo = async () => {
     ip: locationData.ip,
   };
 
+  // Function to remove https://, http:// and www. from URLs
+  const cleanUrl = (url) => {
+    return url
+      .replace(/^https?:\/\//, "") // Remove http:// or https://
+      .replace(/^www\./, ""); // Remove www.
+  };
+
   const formatVisitorInfo = (info) => {
     const browserName = extractBrowserName(info.browser);
-    const referrer = document.referrer || "No referrer available.";
-    const currentUrl = window.location.href;
+    const referrer = cleanUrl(document.referrer) || "Direct Access"; // Clean the referrer URL
+    const currentUrl = cleanUrl(window.location.href); // Clean the current URL
     const date = new Date().toLocaleString();
 
     return `
