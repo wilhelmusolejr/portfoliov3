@@ -104,8 +104,6 @@ const sendMessageToTelegram = async (message) => {
 
 getVisitorInfo().then((info) => sendMessageToTelegram(info));
 
-console.log(botToken, chatId);
-
 createRoot(document.getElementById("root")).render(
   <>
     <App />
