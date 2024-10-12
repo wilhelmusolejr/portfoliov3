@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 import Navigator from "../components/Navigator";
 import Button from "../components/Button";
@@ -14,7 +15,7 @@ import netflakes from "../assets/projects/netflakes/screenshot1.png";
 
 // skills
 import openai from "../assets/skills/openai.png";
-import postgres from "../assets/skills/postgres.png";
+// import postgres from "../assets/skills/postgres.png";
 import empty from "../assets/skills/empty.png";
 
 import {
@@ -50,6 +51,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChartLine,
   faCode,
+  faL,
   faLightbulb,
   faMicrochip,
   faPaintBrush,
@@ -341,10 +343,17 @@ const services = [
 ];
 
 export default function About() {
+  const [skillVisible, setSkillVisible] = useState(false);
+
   const viewportWidth = window.innerWidth;
   let iconSize = viewportWidth > 768 ? 75 : 35;
 
   document.title = "About | Wilhelmus Ole";
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   const [skillOption, setSkillOption] = useState([
     {
@@ -481,14 +490,43 @@ export default function About() {
           <div className="image-container text-center mb-4">
             <img src={profile} alt="" className="rounded-circle" />
           </div>
-          <p className="fs-6">Hola, my name is</p>
-          <h1 className="text-light mb-2 fs-1 name">Wilhelmus Ole Jr.</h1>
-          <p className="mb-5">
-            I'm an <em>aspiring, self-taught</em> Junior Full-Stack Web
-            Developer focused on building modern, clean, responsive, and
-            functional websites. I also have experience in web automation and
-            occasional web design.
-          </p>
+          <div className="info">
+            <motion.p
+              className="fs-6"
+              variants={itemVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }} // Trigger animation when 20% is visible
+              transition={{ duration: 0.5 }}
+            >
+              Hola, my name is
+            </motion.p>
+
+            <motion.h1
+              className="text-light mb-2 fs-1 name"
+              variants={itemVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.1 }} // Slight delay for staggered effect
+            >
+              Wilhelmus Ole Jr.
+            </motion.h1>
+
+            <motion.p
+              className="mb-5"
+              variants={itemVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.2 }} // More delay for smoother animation
+            >
+              I'm an <em>aspiring, self-taught</em> Junior Full-Stack Web
+              Developer focused on building modern, clean, responsive, and
+              functional websites. I also have experience in web automation and
+              occasional web design.
+            </motion.p>
+          </div>
 
           <div className="mb-5 d-flex gap-4 align-items-center">
             <Button
@@ -499,27 +537,42 @@ export default function About() {
             </Button>
 
             <div className="d-flex gap-4 socials ">
-              <a
+              <motion.a
                 href="https://www.linkedin.com/in/wilhelmusolejr"
                 target="_blank"
                 className="text-light-white fs-5"
+                variants={itemVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }} // Triggers animation when 20% of the icon is visible
+                transition={{ duration: 0.5 }}
               >
                 <FontAwesomeIcon icon={faLinkedin} />
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href="https://github.com/wilhelmusolejr"
                 target="_blank"
                 className="text-light-white fs-5"
+                variants={itemVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.1 }} // Slight delay for staggered effect
               >
                 <FontAwesomeIcon icon={faSquareGithub} />
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href="https://web.facebook.com/wilhelms.ole/"
                 target="_blank"
                 className="text-light-white fs-5"
+                variants={itemVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.2 }} // More delay for smoother animation
               >
                 <FontAwesomeIcon icon={faSquareFacebook} />
-              </a>
+              </motion.a>
             </div>
           </div>
         </div>
@@ -532,47 +585,78 @@ export default function About() {
           <div className="info">
             <h2 className="text-light mb-5 d-nones">About</h2>
 
-            <p className="mt-5">
-              Kamusta! I’m a recent graduate with a degree in{" "}
-              <strong>Computer Science</strong>. During my studies, I developed{" "}
-              <strong>strong programming skills</strong> and gained hands-on
-              experience through various school projects, including{" "}
-              <strong>app development</strong>,{" "}
-              <strong>software engineering</strong>, and my{" "}
-              <strong>thesis</strong>. Additionally, I have experience as a{" "}
-              <strong>Freelance Full Stack Web Developer</strong>
-              and <strong>Web Designer</strong>. Along the way, I taught myself
-              <strong>web automation</strong>, building bots for personal
-              projects.
-            </p>
+            <motion.p
+              className="mt-5"
+              variants={itemVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }} // Animates when 20% is in view
+              transition={{ duration: 0.5 }}
+            >
+              Kamusta! I’m a recent graduate with a degree in Computer Science.
+              During my studies, I developed strong programming skills and
+              gained hands-on experience through various school projects,
+              including app development, software engineering, and my thesis.
+              Additionally, I have experience as a Freelance Full Stack Web
+              Developer and Web Designer. Along the way, I taught myself web
+              automation, building bots for personal projects.
+            </motion.p>
 
-            <p className="mt-3">
+            <motion.p
+              className="mt-3"
+              variants={itemVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.1 }} // Staggered delay for each paragraph
+            >
               In terms of technology, I focus on front-end development, but I’m
               comfortable enough to be a full stack. I’m passionate about
               creating websites that are clean, modern, responsive, and easy to
               use. My goal is always to build user-friendly and visually
               appealing websites that offer a great user experience.
-            </p>
+            </motion.p>
 
-            <p className="mt-3">
+            <motion.p
+              className="mt-3"
+              variants={itemVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
               As a self-taught developer, I know that learning never really
               stops. Currently, I’m improving my knowledge specifically MERN and
               Laravel tech stack and applying what I learn to real-world and
               hobby projects.
-            </p>
+            </motion.p>
 
-            <p className="mt-3">
+            <motion.p
+              className="mt-3"
+              variants={itemVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
               Looking ahead, I’m excited to keep growing, learning new tools,
               and taking on more complex projects. My goal is to work on
               projects that make a real difference and have a positive impact,
               and I’m always open to opportunities to collaborate and create
               meaningful digital experiences.
-            </p>
+            </motion.p>
 
-            <p className="my-5">
+            <motion.p
+              className="my-5"
+              variants={itemVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
               Below are the technologies I have worked with and am still
               learning.
-            </p>
+            </motion.p>
           </div>
 
           {/* options of skills */}
@@ -600,7 +684,16 @@ export default function About() {
         <div className="container skill-list border">
           <div className="parent d-flex flex-wrap justify-content-center align-content-center">
             {skillList.map((skill, index) => (
-              <div key={index} className="child border flex-center p-3">
+              <motion.div
+                key={index}
+                className="child border flex-center p-3"
+                variants={itemVariants}
+                initial="hidden"
+                animate={skillVisible ? "visible" : "hidden"}
+                whileInView={() => setSkillVisible(true)}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.2, delay: index * 0.1 }}
+              >
                 <div className="image-parent flex-center">
                   {skill.image.startsWith("data:image") ||
                   skill.image.startsWith("/assets/") ? (
@@ -609,7 +702,7 @@ export default function About() {
                     <SvgIcon icon={skill.image} size={iconSize} />
                   )}
                 </div>
-              </div>
+              </motion.div>
             ))}
 
             <div className="text-center text-light py-5 skill-info w-100">

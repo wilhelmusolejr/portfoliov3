@@ -20,6 +20,8 @@ import ProjectStructure from "../components/ProjectStructure";
 import Image from "../components/Image";
 import ProjectType from "../components/ProjectType";
 
+import { motion } from "framer-motion";
+
 export default function Project() {
   const [languages, setLanguages] = useState(null);
   const [activeScreenshot, setActiveScreenshot] = useState(null);
@@ -27,6 +29,11 @@ export default function Project() {
   const location = useLocation();
   const project_name = location.pathname.split("/")[2];
   const project = getProject(project_name);
+
+  const paragraphVariants = {
+    hidden: { opacity: 0, y: 20 }, // Start with invisible and slightly below
+    visible: { opacity: 1, y: 0 }, // Fade in and move to original position
+  };
 
   useEffect(() => {
     const fetchLanguages = async () => {
@@ -117,9 +124,17 @@ export default function Project() {
             <h2 className="mb-4 text-light">Project overview</h2>
 
             {project.information.description.map((description, index) => (
-              <p key={index} className="mb-3">
+              <motion.p
+                key={index}
+                className="mb-3"
+                variants={paragraphVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }} // Triggers animation when 10% of the paragraph is visible
+                transition={{ duration: 0.5, delay: index * 0.1 }} // Staggered delay based on index
+              >
                 {description}
-              </p>
+              </motion.p>
             ))}
           </div>
 
@@ -128,9 +143,16 @@ export default function Project() {
               <h2 className="mb-4 text-light">Features</h2>
               <ul className=" d-flex flex-column gap-2">
                 {project.information.features.map((feature, index) => (
-                  <li key={index}>
+                  <motion.li
+                    key={index}
+                    variants={paragraphVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.5 }} // Triggers animation when 10% of the feature is visible
+                    transition={{ duration: 0.5, delay: index * 0.1 }} // Staggered delay based on index
+                  >
                     <p>{feature}</p>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
             </div>
@@ -164,14 +186,19 @@ export default function Project() {
           <div className="project-technology my-5 flex-center">
             <div className="flex-center flex-wrap gap-2 text-light paragraph">
               {project.information.tags.technology.map((tag, index) => (
-                <a
+                <motion.a
                   key={index}
                   href={`https://www.google.com/search?q=${tag}`}
                   target="_blank"
                   className="child flex-center text-capitalize p-2 text-decoration-none text-light-white"
+                  variants={paragraphVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.1 }} // Triggers animation when 10% of the tag is visible
+                  transition={{ duration: 0.3, delay: index * 0.1 }} // Staggered delay based on index
                 >
                   {tag}
-                </a>
+                </motion.a>
               ))}
             </div>
           </div>
@@ -319,9 +346,17 @@ export default function Project() {
           <div className="tags info">
             <div className="project-tags-project my-5">
               {project.information.tags.project.map((tag, index) => (
-                <p className="fs-6 text-lowercase" key={index}>
+                <motion.p
+                  key={index}
+                  className="fs-6 text-lowercase"
+                  variants={paragraphVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.1 }} // Triggers animation when 10% of the tag is visible
+                  transition={{ duration: 0.3, delay: index * 0.1 }} // Staggered delay based on index
+                >
                   {tag}
-                </p>
+                </motion.p>
               ))}
             </div>
           </div>

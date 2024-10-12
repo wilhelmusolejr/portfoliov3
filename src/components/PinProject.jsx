@@ -7,8 +7,15 @@ import foodify from "../assets/projects/foodify/showcase.webp";
 import pinasmura from "../assets/projects/pinasmura-ph/banner.webp";
 import quiztwist from "../assets/projects/quiztwist/banner.webp";
 
+import { motion } from "framer-motion";
+
 function PinProject(prop) {
   const project = prop.project;
+
+  const tagVariants = {
+    hidden: { opacity: 0, scale: 0.8 }, // Start with invisible and slightly smaller
+    visible: { opacity: 1, scale: 1 }, // Fade in and scale to original size
+  };
 
   function truncateToTwentyWords(text) {
     // Split the text into an array of words
@@ -64,9 +71,17 @@ function PinProject(prop) {
           </p>
           <div className="d-flex flex-wrap gap-2 mt-3">
             {project.information.tags.project.map((tag, index) => (
-              <span key={index} className="badge bg-primary text-lowercase">
+              <motion.span
+                key={index}
+                className="badge bg-primary text-lowercase"
+                variants={tagVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }} // Triggers animation when 10% of the tag is visible
+                transition={{ duration: 0.3, delay: index * 0.1 }} // Staggered delay based on index
+              >
                 {tag}
-              </span>
+              </motion.span>
             ))}
           </div>
         </div>
