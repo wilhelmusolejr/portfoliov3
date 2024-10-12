@@ -48,7 +48,7 @@ export default function Navigator() {
             <a
               href="/files/WILHELMUS_OLE_RESUME.pdf"
               className="btn btn-primary ms-5"
-              download={true}
+              rel="noopener noreferrer"
             >
               Resume
             </a>
