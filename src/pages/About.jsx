@@ -533,12 +533,17 @@ export default function About() {
             <h2 className="text-light mb-5 d-nones">About</h2>
 
             <p className="mt-5">
-              Kamusta! I’m a recent graduate with a degree in Computer Science.
-              Throughout my studies, I developed my programming skills and
-              gained hands-on experience through school projects (App
-              Development, Software Engineering, Thesis) and freelancing. Along
-              the way, I also taught myself web automation, building bots for
-              personal projects, as well as some occasional web design.
+              Kamusta! I’m a recent graduate with a degree in{" "}
+              <strong>Computer Science</strong>. During my studies, I developed{" "}
+              <strong>strong programming skills</strong> and gained hands-on
+              experience through various school projects, including{" "}
+              <strong>app development</strong>,{" "}
+              <strong>software engineering</strong>, and my{" "}
+              <strong>thesis</strong>. Additionally, I have experience as a{" "}
+              <strong>Freelance Full Stack Web Developer</strong>
+              and <strong>Web Designer</strong>. Along the way, I taught myself
+              <strong>web automation</strong>, building bots for personal
+              projects.
             </p>
 
             <p className="mt-3">

@@ -1,7 +1,7 @@
-import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 
+import { createRoot } from "react-dom/client";
 import { Analytics } from "@vercel/analytics/react";
 
 const botToken = import.meta.env.VITE_BOT_TOKEN;
@@ -50,33 +50,69 @@ const getVisitorInfo = async () => {
     ip: locationData.ip,
   };
 
-  // Function to remove https://, http:// and www. from URLs
-  const cleanUrl = (url) => {
-    return url
-      .replace(/^https?:\/\//, "") // Remove http:// or https://
-      .replace(/^www\./, ""); // Remove www.
-  };
-
   const formatVisitorInfo = (info) => {
     const browserName = extractBrowserName(info.browser);
-    const referrer = cleanUrl(document.referrer) || "Direct Access"; // Clean the referrer URL
-    const currentUrl = cleanUrl(window.location.href); // Clean the current URL
+    const currentUrl = document.location.pathname; // Clean the current URL
     const date = new Date().toLocaleString();
 
-    return `
-    ${date}
-  --------------------------
-  🌐  Browser : ${browserName}
-  🔗  Referrer : ${referrer}
-  📍  Current URL : ${currentUrl}
-  💻  Platform : ${info.platform}
-  📱  Screen Size : ${info.screenWidth}x${info.screenHeight}
-  🌍  Country : ${info.country}
-  🏙️  City : ${info.city}
-  🌏  Region : ${info.region}
-  🔢  IP Address : ${info.ip}
-  --------------------------
-  `;
+    // Get the query parameters from the URL
+    const params = new URLSearchParams(window.location.search);
+    const ref = params.get("ref");
+
+    if (ref) {
+      // Retrieve the existing referrer array from localStorage
+      const existingReferrers =
+        JSON.parse(localStorage.getItem("referrer")) || [];
+
+      // Check if the ref already exists in the array
+      if (!existingReferrers.includes(ref)) {
+        // Add the new ref to the array if it doesn't exist
+        existingReferrers.push(ref.toUpperCase());
+
+        // Save the updated array back to localStorage
+        localStorage.setItem("referrer", JSON.stringify(existingReferrers));
+      }
+
+      // Hide the parameter from the URL
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+
+    // Retrieve the stored referrer from localStorage and parse it back into an array
+    const storedReferrer = JSON.parse(localStorage.getItem("referrer")) || [];
+    let originText;
+
+    // Check if it's an array and log its values, or handle the case when it's empty
+    if (storedReferrer.length > 0) {
+      originText = storedReferrer.join(", ");
+    } else {
+      originText = "No referrer data available.";
+    }
+
+    let referrer = document.referrer;
+    let referrerPathname;
+
+    if (referrer) {
+      referrerPathname = new URL(referrer).pathname;
+    } else {
+      referrerPathname = "Direct Access";
+    }
+
+    return `${date}
+--------------------------
+ 🌐  Browser : ${browserName}
+ 🔗  Origin : ${originText}
+------
+ 🔗  Referrer : ${referrerPathname}
+ 📍  Current URL : ${currentUrl}
+ 💻  Platform : ${info.platform}
+ 📱  Screen Size : ${info.screenWidth}x${info.screenHeight}
+------
+ 🌍  Country : ${info.country}
+ 🏙️  City : ${info.city}
+ 🌏  Region : ${info.region}
+ 📍  IP Address : ${info.ip}
+---------------------------
+ `;
   };
 
   return formatVisitorInfo(visitorInfo);
@@ -86,7 +122,7 @@ const sendMessageToTelegram = async (message) => {
   const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
   try {
-    const response = await fetch(apiUrl, {
+    await fetch(apiUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -96,18 +132,12 @@ const sendMessageToTelegram = async (message) => {
         text: message,
       }),
     });
-
-    // const data = await response.json();
-
-    // if (data.ok) {
-    //   console.log("Message sent successfully:", data);
-    // } else {
-    //   console.error("Error sending message:", data);
-    // }
   } catch (error) {
     console.error("Error:", error);
   }
 };
+
+// ------------------------------------------------------
 
 getVisitorInfo().then((info) => sendMessageToTelegram(info));
 
