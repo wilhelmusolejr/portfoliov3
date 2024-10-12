@@ -287,7 +287,7 @@ let work_experience = [
     description:
       "Freelanced within my local community, taking on multiple roles based on client needs, including web design, front-end, and back-end development.",
     list: [
-      `Plannedand developed 4 custommodern and responsive websites for
+      `Planned and developed 4 custommodern and responsive websites for
       local clients, managing both front-end and back-end development
       based on client needs.`,
       `Collaborated with 6 clientsto gather requirements and translate them
