@@ -88,7 +88,11 @@ export default function Navigator() {
               </a>
             </li>
             <li className="mt-3">
-              <a href="#" className="btn btn-primary">
+              <a
+                href="/files/WILHELMUS_OLE_RESUME.pdf"
+                className="btn btn-primary"
+                rel="noopener noreferrer"
+              >
                 Resume
               </a>
             </li>
