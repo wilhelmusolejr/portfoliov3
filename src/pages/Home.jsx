@@ -5,10 +5,23 @@ import { intro_projects } from "../ProjectData";
 import Footer from "../components/Footer";
 import Image from "../components/Image";
 
+import { motion } from "framer-motion";
+
 function Home() {
   let projects = intro_projects();
 
   document.title = "Home | Wilhelmus Ole";
+
+  // Define variants for sliding in from the left and right
+  const slideInLeft = {
+    hidden: { opacity: 0, x: -50 }, // Start slightly offscreen to the left
+    visible: { opacity: 1, x: 0 }, // Slide into place
+  };
+
+  const slideInRight = {
+    hidden: { opacity: 0, x: 50 }, // Start slightly offscreen to the right
+    visible: { opacity: 1, x: 0 }, // Slide into place
+  };
 
   return (
     <>
@@ -17,8 +30,10 @@ function Home() {
       {/* INTRO */}
       <div className="intro text-center d-flex justify-content-center">
         <p className="paragraph">
-          A passionate enthusiast of automation, design, and web development.
-          With a natural curiosity for technology and a flair for innovation.
+          A <span className="text-emphasis">passionate enthusiast</span> of{" "}
+          <em>web development, design, and automation</em>. With a natural
+          curiosity for technology and a{" "}
+          <span className="text-emphasis">flair for innovation</span>.
         </p>
       </div>
 
@@ -26,7 +41,15 @@ function Home() {
       <section className="container projects-container my-5">
         <div className="parent d-flex flex-wrap justify-content-center justify-content-lg-between gap-3">
           {projects.map((project, index) => (
-            <div key={index} className="child">
+            <motion.div
+              key={index}
+              className="child"
+              variants={index % 2 === 0 ? slideInLeft : slideInRight} // Even index slides right, odd slides left
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }} // Triggers when 20% is in view
+              transition={{ duration: 0.5, delay: index * 0.1 }} // Stagger each element
+            >
               <div className="image-parent">
                 <a href={project.link.project}>
                   <Image
@@ -41,7 +64,7 @@ function Home() {
                   {project.information.short_description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>
@@ -52,10 +75,12 @@ function Home() {
           <p className="mb-3">
             {" "}
             <em>Just graduated, yay! So, what's next?</em> <br /> Aloha, I'm an{" "}
-            <em>aspiring, self-taught</em> Junior Full-Stack Web Developer and
-            Computer Science student. I create websites that look good, feel
-            good, work well, and are easy to use. When I have free time, I like
-            to find ways to improve my work.{" "}
+            <em> self-taught</em> Junior Full-Stack Web Developer and Computer
+            Science student. I create websites that{" "}
+            <span className="text-emphasis">
+              look good, feel good, work well, and are easy to use
+            </span>
+            . When I have free time, I like to find ways to improve my work.{" "}
           </p>
           <a href="/about" className="text-light">
             More about me

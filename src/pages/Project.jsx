@@ -163,10 +163,10 @@ export default function Project() {
             <p>
               If you encounter any issues or have questions about this project,
               please don&apos;t hesitate to reach out to me directly at{" "}
-              <span className="text-light">wilhelmus.olejr@gmail.com</span>. As
-              the sole developer, I am dedicated to providing support and will
-              do my best to respond to your concerns promptly, aiming to offer
-              solutions and address your queries.
+              <span className="text-emphasis">wilhelmus.olejr@gmail.com</span>.
+              As the sole developer, I am dedicated to providing support and
+              will do my best to respond to your concerns promptly, aiming to
+              offer solutions and address your queries.
             </p>
           </div>
 

@@ -521,10 +521,13 @@ export default function About() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: 0.2 }} // More delay for smoother animation
             >
-              I'm an <em>aspiring, self-taught</em> Junior Full-Stack Web
-              Developer focused on building modern, clean, responsive, and
-              functional websites. I also have experience in web automation and
-              occasional web design.
+              I'm an <em> self-taught</em> Junior Full-Stack Web Developer
+              focused on building{" "}
+              <span className="text-emphasis">
+                modern, clean, responsive, and functional{" "}
+              </span>
+              websites. I also have experience in web automation and occasional
+              web design.
             </motion.p>
           </div>
 
@@ -590,16 +593,18 @@ export default function About() {
               variants={itemVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }} // Animates when 20% is in view
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5 }}
             >
               Kamusta! I’m a recent graduate with a degree in Computer Science.
-              During my studies, I developed strong programming skills and
-              gained hands-on experience through various school projects,
-              including app development, software engineering, and my thesis.
-              Additionally, I have experience as a Freelance Full Stack Web
-              Developer and Web Designer. Along the way, I taught myself web
-              automation, building bots for personal projects.
+              During my studies, I
+              <span> developed strong programming skills</span> and{" "}
+              <span>gained hands-on experience</span> through various school
+              projects, including app development, software engineering, and my
+              thesis. Additionally, I have experience as a Freelance{" "}
+              <span>Full Stack Web Developer</span> and Web Designer. Along the
+              way, I taught myself web automation, building bots for personal
+              projects.
             </motion.p>
 
             <motion.p
@@ -608,13 +613,13 @@ export default function About() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, delay: 0.1 }} // Staggered delay for each paragraph
+              transition={{ duration: 0.5, delay: 0.1 }}
             >
-              In terms of technology, I focus on front-end development, but I’m
-              comfortable enough to be a full stack. I’m passionate about
-              creating websites that are clean, modern, responsive, and easy to
-              use. My goal is always to build user-friendly and visually
-              appealing websites that offer a great user experience.
+              I focus on front-end development but I’m comfortable as a full
+              stack developer. I’m passionate about creating websites that are{" "}
+              <span>clean, modern, responsive, and easy to use</span>. My goal
+              is to build user-friendly and visually appealing websites that
+              offer a great user experience.
             </motion.p>
 
             <motion.p
@@ -626,9 +631,9 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               As a self-taught developer, I know that learning never really
-              stops. Currently, I’m improving my knowledge specifically MERN and
-              Laravel tech stack and applying what I learn to real-world and
-              hobby projects.
+              stops. Currently, I’m improving my knowledge in
+              <span> MERN</span> and <span>Laravel</span> technologies, applying
+              what I learn to real-world and hobby projects.
             </motion.p>
 
             <motion.p
@@ -642,8 +647,8 @@ export default function About() {
               Looking ahead, I’m excited to keep growing, learning new tools,
               and taking on more complex projects. My goal is to work on
               projects that make a real difference and have a positive impact,
-              and I’m always open to opportunities to collaborate and create
-              meaningful digital experiences.
+              and I’m <span>always open to opportunities to collaborate</span>{" "}
+              and create meaningful digital experiences.
             </motion.p>
 
             <motion.p
@@ -726,9 +731,12 @@ export default function About() {
             </h2>
 
             <p className="mt-4 d-nones">
-              Freelancing has taught me the value of hard work, adaptability,
-              and continuous learning. While it’s been a rollercoaster ride, I’m
-              grateful for all the lessons na natutunan ko along the way.
+              Freelancing has taught me the value of{" "}
+              <span className="text-emphasis">
+                hard work, adaptability, and continuous learning
+              </span>{" "}
+              . While it’s been a rollercoaster ride, I’m grateful for all the
+              lessons na natutunan ko along the way.
             </p>
 
             <p className="my-3">Now, I am ready to...</p>
@@ -861,9 +869,10 @@ export default function About() {
             <p>
               Halo, thank you for the visit! I'm so glad you made it to this
               section. If you're interested in working together, have a
-              question, or just want to say hi, feel free to reach out! I'm
-              always open to new projects, ideas, or opportunities. Drop me an
-              email, and I’ll respond as soon as I can.
+              question, or just want to say hi, feel free to reach out!{" "}
+              <span className="text-emphasis">I'm always open</span> to new
+              projects, ideas, or opportunities. Drop me an email, and I’ll
+              respond as soon as I can.
             </p>
 
             <Button
@@ -897,9 +906,13 @@ export default function About() {
             onClick={(e) => {
               navigator.clipboard.writeText(e.target.textContent);
               e.target.textContent = "Email Copied";
+              e.target.classList.toggle("text-light");
+              e.target.classList.toggle("text-emphasis");
 
               setTimeout(() => {
                 e.target.textContent = "wilhelmus.olejr@gmail.com";
+                e.target.classList.toggle("text-light");
+                e.target.classList.toggle("text-emphasis");
               }, 3000);
             }}
             className="actual-email text-light cursor-pointer"

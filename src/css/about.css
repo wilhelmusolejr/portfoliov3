@@ -26,6 +26,11 @@ section.container-fluid {
   border-bottom: 1px solid var(--clr-border) !important;
 }
 
+.text-emphasis,
+.about span {
+  color: #31b034;
+}
+
 section.about .container {
   border-top: 1px solid var(--clr-border);
   border-left: 1px solid var(--clr-border);
