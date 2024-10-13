@@ -46,7 +46,8 @@ export default function Navigator() {
               Projects
             </a>
             <a
-              href="/files/WILHELMUS_OLE_RESUME.pdf"
+              href="https://drive.google.com/file/d/1OYfzSr7biSVoiTU052svmt24gvcfev4p/view"
+              target="_blank"
               className="btn btn-primary ms-5"
               rel="noopener noreferrer"
             >
@@ -89,7 +90,8 @@ export default function Navigator() {
             </li>
             <li className="mt-3">
               <a
-                href="/files/WILHELMUS_OLE_RESUME.pdf"
+                href="https://drive.google.com/file/d/1OYfzSr7biSVoiTU052svmt24gvcfev4p/view"
+                target="_blank"
                 className="btn btn-primary"
                 rel="noopener noreferrer"
               >
