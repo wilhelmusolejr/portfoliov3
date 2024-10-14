@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/react";
 
 const botToken = import.meta.env.VITE_BOT_TOKEN;
 const chatId = import.meta.env.VITE_BOT_CHATID;
+const env = import.meta.env.VITE_ENV;
 
 const extractBrowserName = (userAgent) => {
   let browser;
@@ -139,7 +140,11 @@ const sendMessageToTelegram = async (message) => {
 
 // ------------------------------------------------------
 
-getVisitorInfo().then((info) => sendMessageToTelegram(info));
+console.log(env);
+
+if (env != "LOCAL") {
+  getVisitorInfo().then((info) => sendMessageToTelegram(info));
+}
 
 createRoot(document.getElementById("root")).render(
   <>
