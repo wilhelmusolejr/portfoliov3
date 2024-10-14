@@ -481,6 +481,18 @@ export default function About() {
     requestAnimationFrame(scrollStep);
   }
 
+  let interest = [
+    "Front end Developer",
+    "Back end Developer",
+    "Full Stack Developer",
+    "Bot Developer",
+    "Web Designer",
+    "Web Scraping",
+    "Quality Testing",
+    "Machine Learning",
+    "Artificial Intelligence",
+  ];
+
   return (
     <>
       <Navigator />
@@ -587,7 +599,6 @@ export default function About() {
           {/* Info */}
           <div className="info">
             <h2 className="text-light mb-5 d-nones">About</h2>
-
             <motion.p
               className="mt-5"
               variants={itemVariants}
@@ -606,7 +617,6 @@ export default function About() {
               way, I taught myself web automation, building bots for personal
               projects.
             </motion.p>
-
             <motion.p
               className="mt-3"
               variants={itemVariants}
@@ -621,7 +631,6 @@ export default function About() {
               is to build user-friendly and visually appealing websites that
               offer a great user experience.
             </motion.p>
-
             <motion.p
               className="mt-3"
               variants={itemVariants}
@@ -635,7 +644,6 @@ export default function About() {
               <span> MERN</span> and <span>Laravel</span> technologies, applying
               what I learn to real-world and hobby projects.
             </motion.p>
-
             <motion.p
               className="mt-3"
               variants={itemVariants}
@@ -652,7 +660,37 @@ export default function About() {
             </motion.p>
 
             <motion.p
-              className="my-5"
+              className="mt-5"
+              variants={itemVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              I am interested in.
+            </motion.p>
+            <div className="project-technology mt-3 mb-5">
+              <div className="d-flex flex-wrap gap-2 text-light paragraph">
+                {interest.map((tag, index) => (
+                  <motion.a
+                    key={index}
+                    href={`https://www.google.com/search?q=${tag}`}
+                    target="_blank"
+                    className="child flex-center text-capitalize p-2 text-decoration-none text-light-white"
+                    variants={itemVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.1 }} // Triggers animation when 10% of the tag is visible
+                    transition={{ duration: 0.3, delay: index * 0.1 }} // Staggered delay based on index
+                  >
+                    {tag}
+                  </motion.a>
+                ))}
+              </div>
+            </div>
+
+            <motion.p
+              className="mt-5"
               variants={itemVariants}
               initial="hidden"
               whileInView="visible"

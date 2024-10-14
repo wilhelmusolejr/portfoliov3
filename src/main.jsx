@@ -139,7 +139,7 @@ const sendMessageToTelegram = async (message) => {
 
 // ------------------------------------------------------
 
-getVisitorInfo().then((info) => sendMessageToTelegram(info));
+// getVisitorInfo().then((info) => sendMessageToTelegram(info));
 
 createRoot(document.getElementById("root")).render(
   <>
