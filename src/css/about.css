@@ -174,7 +174,7 @@ section.about .container {
   min-width: 250px !important;
   border-radius: 10px !important;
   background-color: #131313 !important;
-  border: 1px solid #50964b !important;
+  border: 1px solid var(--clr-border) !important;
 }
 
 .work-experience .accordion-button {
