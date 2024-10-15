@@ -51,7 +51,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChartLine,
   faCode,
-  faL,
   faLightbulb,
   faMicrochip,
   faPaintBrush,
