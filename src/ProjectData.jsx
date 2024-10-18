@@ -165,7 +165,7 @@ function getAllProjects() {
         name: "online-appointment-and-consultation-clinic",
         github: undefined,
         project: undefined,
-        external: null,
+        external: "wmsu-dietitianconsult.online",
       },
       design: {
         font: ["poppins"],
