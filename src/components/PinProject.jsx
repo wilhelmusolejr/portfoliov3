@@ -6,6 +6,7 @@ import depression from "../assets/projects/dass-depression-level-predictor/showc
 import foodify from "../assets/projects/foodify/showcase.webp";
 import pinasmura from "../assets/projects/pinasmura-ph/banner.webp";
 import quiztwist from "../assets/projects/quiztwist/banner.webp";
+import ems from "../assets/projects/enterprise-management-solutions/showcase.webp";
 
 import { motion } from "framer-motion";
 
@@ -49,6 +50,8 @@ function PinProject(prop) {
     case "quiztwist":
       image = quiztwist;
       break;
+    case "enterprise-management-solutions":
+      image = ems;
   }
 
   return (
