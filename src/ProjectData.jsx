@@ -241,6 +241,72 @@ function getAllProjects() {
       },
     },
 
+    // 18 Course Match
+    {
+      id: 1,
+      name: "Coursematch",
+      information: {
+        short_description: "Website Revamp",
+        description: [
+          "This project was a redesign and restructuring of the Enterprise Management Solutions website (originally at https://enterprisemgmtinc.com). It involved updating the interface with a modern design, improving user experience, and implementing a responsive framework for better accessibility.",
+        ],
+        features: [
+          "Revamped UI/UX design",
+          "Responsive layout for mobile and desktop",
+          "Improved content structure",
+          "Enhanced accessibility features",
+          "Integrated with Next.js framework for optimized performance",
+          "SEO Feature",
+        ],
+        type: ["design", "develop"],
+        tags: {
+          technology: [
+            "html",
+            "css",
+            "javascript",
+            "next.js",
+            "figma",
+            "Adobe Photoshop",
+          ],
+          project: [
+            "website-revamp",
+            "UI/UX-design",
+            "content-restructuring",
+            "responsive-design",
+            "modern-framework",
+          ],
+        },
+      },
+      project_showcase: {
+        is_intro: null,
+        is_pinned: {
+          order: 1,
+          image: "showcase.webp",
+        },
+        is_other: null,
+        project: {
+          banner_image: "showcase.webp",
+          screenshot: [
+            "showcase.webp",
+            "screenshot1.png",
+            "screenshot2.png",
+            "screenshot3.png",
+            "screenshot4.png",
+          ],
+        },
+      },
+      link: {
+        name: "coursematch",
+        github: undefined,
+        project: undefined,
+        external: "https://enterprise-management-solutions.vercel.app/",
+      },
+      design: {
+        font: ["poppins"],
+        color: ["#327b36", "#fbca01", "#f36969"],
+      },
+    },
+
     // 3 Foodify | 3 pinned
     {
       id: 3,
