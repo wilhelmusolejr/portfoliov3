@@ -11,13 +11,45 @@ export default function Navigator() {
     return (
       <>
         <nav className="fs-4 position-fixed w-100 ">
-          <div className="container d-flex justify-content-between">
+          <div className="container d-flex align-items-center justify-content-between">
             <Logo />
-            <div>
-              <a className="text-light-white" href="/about">
+
+            <div className="d-none gap-4 text-capitalize d-md-flex">
+              <a href="/about" className="text-light-white">
                 About
               </a>
+              <a href="/projects" className="text-light-white">
+                Projects
+              </a>
             </div>
+
+            {/* bar */}
+            <FontAwesomeIcon
+              icon={faBars}
+              className="dropdown-toggle d-block d-md-none text-light-white"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            />
+
+            {/* ABOUT */}
+            {/* for mobile */}
+            <ul
+              className="dropdown-menu w-100 text-white container d-md-none"
+              aria-labelledby="dropdownMenuButton1"
+            >
+              <li>
+                <a href="/about" className={`text-light-white`}>
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="/projects" className={`text-light-white`}>
+                  Projects
+                </a>
+              </li>
+            </ul>
           </div>
         </nav>
       </>
@@ -65,6 +97,7 @@ export default function Navigator() {
             aria-expanded="false"
           />
 
+          {/* ABOUT */}
           {/* for mobile */}
           <ul
             className="dropdown-menu w-100 text-white container d-md-none"

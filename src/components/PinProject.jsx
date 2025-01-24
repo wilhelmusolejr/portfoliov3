@@ -74,7 +74,7 @@ function PinProject(prop) {
             <h2 className="text-light mt-3">{project.name}</h2>
           </a>
           <p>{project.information.short_description}</p>
-          <p className="mt-3">
+          <p className="mt-3 text-capitalize">
             {truncateToTwentyWords(project.information.description)}
           </p>
           <div className="d-flex flex-wrap gap-2 mt-3">
