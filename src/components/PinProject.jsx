@@ -70,11 +70,13 @@ function PinProject(prop) {
         </div>
         {/* Right */}
         <div className="right border w-100">
-          <a href={project.link.project} className="text-decoration-none">
+          <a href={project.link.project} className="text-decoration-none ">
             <h2 className="text-light mt-3">{project.name}</h2>
           </a>
-          <p>{project.information.short_description}</p>
-          <p className="mt-3 text-capitalize">
+          <p className="text-capitalize mt-1">
+            {project.information.short_description}
+          </p>
+          <p className="mt-3 ">
             {truncateToTwentyWords(project.information.description)}
           </p>
           <div className="d-flex flex-wrap gap-2 mt-3">

@@ -9,6 +9,7 @@ import gc4shph from "../assets/projects/gc4sh-ph/banner.webp";
 import ecommerce from "../assets/projects/e-commerce/banner.webp";
 import nft from "../assets/projects/nft-marketplace/banner.webp";
 import louis from "../assets/projects/louis-tech-vuitton/banner.webp";
+import crossfire from "../assets/projects/crossfire-autoclicker/banner.webp";
 
 import Image from "./Image";
 
@@ -51,6 +52,8 @@ function OtherProject(prop) {
     case "louis-tech-vuitton":
       image = louis;
       break;
+    case "crossfire-autoclicker":
+      image = crossfire;
   }
 
   return (

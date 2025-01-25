@@ -101,7 +101,9 @@ export default function Project() {
             <p>Back</p>
           </a>
           <h1 className="text-light">{project.name}</h1>
-          <p>{project.information.short_description}.</p>
+          <p className="text-capitalize">
+            {project.information.short_description}.
+          </p>
         </div>
       </section>
 
@@ -151,7 +153,7 @@ export default function Project() {
                     viewport={{ once: true, amount: 0.5 }} // Triggers animation when 10% of the feature is visible
                     transition={{ duration: 0.5, delay: index * 0.1 }} // Staggered delay based on index
                   >
-                    <p>{feature}</p>
+                    <p>{feature}.</p>
                   </motion.li>
                 ))}
               </ul>

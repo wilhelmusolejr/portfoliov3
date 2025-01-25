@@ -30,7 +30,7 @@ function getAllProjects() {
       id: 1,
       name: "Philippine Currency Identifier",
       information: {
-        short_description: "Currency Recognition",
+        short_description: "Currency Recognition App",
         description: [
           "Philippine Currency Identifier is a thesis-developed app that helps visually impaired people in the Philippines identify currency denominations using a convolutional neural network. It offers vocal denomination recognition and a user-friendly interface for easy accessibility, enabling independent financial transactions through a quick smartphone scan. This app represents a significant advancement in assistive technology and inclusivity.",
         ],
@@ -173,7 +173,7 @@ function getAllProjects() {
       },
     },
 
-    // 17 EMS
+    // 17 Enterprise Management Solutions
     {
       id: 1,
       name: "Enterprise Management Solutions",
@@ -196,6 +196,7 @@ function getAllProjects() {
             "html",
             "css",
             "javascript",
+            "tailwind",
             "next.js",
             "figma",
             "Adobe Photoshop",
@@ -265,6 +266,9 @@ function getAllProjects() {
             "CSS",
             "JavaScript",
             "Next.js",
+            "tailwind",
+            "jsPDF",
+            "NPM Libraries",
             "Figma",
             "Adobe Photoshop",
             "Machine Learning",
@@ -315,7 +319,7 @@ function getAllProjects() {
       id: 3,
       name: "Foodify",
       information: {
-        short_description: "An app for all things food-related",
+        short_description: "all food-related App",
         description: [
           "Foodify is a comprehensive platform designed to provide users with access to a wide variety of recipes and detailed cooking procedures. The application categorizes dishes into various types such as desserts, lunches, steaks, and more. Each recipe comes with an ingredient list, step-by-step instructions, and nutritional information to help users make informed decisions about their meals.",
           "The app leverages the Spoonacular API, a powerful food-related API that aggregates data from various sources to provide detailed recipes, ingredient information, and nutritional breakdowns. With this API integration, Foodify offers users access to an extensive collection of recipes and food-related data.",
@@ -386,7 +390,7 @@ function getAllProjects() {
       id: 4,
       name: "PinasMura",
       information: {
-        short_description: "eCommerce for Philippine-made items",
+        short_description: "ecommerce for Philippine-made items",
         description: [
           "PinasMura is a eCommerce platform that specializes in selling various Philippine-made items. From local handicrafts to popular food products, PinasMura aims to promote the culture and craftsmanship of the Philippines by providing a marketplace for locally sourced goods.",
           "The platform offers a complete shopping experience with features such as product browsing, adding items to the cart, checking out, and managing orders. It also includes user account functionalities like registration and login to keep track of orders and preferences.",
@@ -878,6 +882,57 @@ function getAllProjects() {
         font: ["poppins"],
         color: ["#fff0db", "#E6E6FA", "#f5f5f5", "#111"],
       },
+    },
+
+    // Crossfire
+    {
+      id: 9,
+      name: "Keyboard and Mouse Simulation",
+      information: {
+        short_description: "Bot for keyboard and mouse simulation",
+        description: [
+          "An application that records keyboard and mouse inputs for convenience, eliminating the need for manual repetition. It works across all applications, including games, browsers, and productivity software.",
+          "Originally developed for Crossfire, an FPS game, it turned out to be useful for a wide range of tasks, making it a powerful automation tool. This bot simulates user actions programmatically, making it ideal for automation, bot development, and simulations.",
+        ],
+        features: [
+          "Record keyboard keystrokes and replay them effortlessly.",
+          "Capture and simulate mouse movement and clicks.",
+          "Easy-to-use recording and playback functionality.",
+          "Saves recorded actions in a JSON file for future use.",
+          "Works with all applications, including games, browsers, and productivity tools.",
+        ],
+        type: ["automate", "bot"],
+        tags: {
+          technology: ["Python", "pynput"],
+          project: [
+            "Automation",
+            "Bot-Development",
+            "Simulation",
+            "Crossfire",
+            "Macro",
+            "Scripting",
+          ],
+        },
+      },
+      project_showcase: {
+        is_intro: null,
+        is_pinned: null,
+        is_other: {
+          orderr: 3,
+          image: "banner.webp",
+        },
+        project: {
+          banner_image: "banner.webp",
+          screenshot: ["banner.webp", "screenshot.png"],
+        },
+      },
+      link: {
+        name: "crossfire-autoclicker",
+        github: undefined,
+        project: undefined,
+        external: null,
+      },
+      design: null,
     },
 
     // 11 MoneyTracker v1 | 8 other
