@@ -903,7 +903,7 @@ function getAllProjects() {
         ],
         type: ["automate", "develop"],
         tags: {
-          technology: ["Python", "pynput"],
+          technology: ["Python", "pynput", "tkinter", "telegram", "json"],
           project: [
             "Automation",
             "Bot-Development",
