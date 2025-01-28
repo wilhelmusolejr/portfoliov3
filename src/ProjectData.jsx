@@ -887,7 +887,7 @@ function getAllProjects() {
     // Crossfire
     {
       id: 9,
-      name: "Keyboard and Mouse Simulation",
+      name: "Tracker Mate Simulation",
       information: {
         short_description: "Bot for keyboard and mouse simulation",
         description: [
@@ -927,10 +927,10 @@ function getAllProjects() {
         },
       },
       link: {
-        name: "crossfire-autoclicker",
+        name: "tracker-mate-simulation",
         github: undefined,
         project: undefined,
-        external: null,
+        external: "https://bit.ly/Tracker-Mate",
       },
       design: null,
     },
