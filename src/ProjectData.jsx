@@ -901,7 +901,7 @@ function getAllProjects() {
           "Saves recorded actions in a JSON file for future use.",
           "Works with all applications, including games, browsers, and productivity tools.",
         ],
-        type: ["automate", "bot"],
+        type: ["automate", "develop"],
         tags: {
           technology: ["Python", "pynput"],
           project: [
