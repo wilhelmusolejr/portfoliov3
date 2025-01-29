@@ -306,7 +306,7 @@ function getAllProjects() {
         name: "coursematch",
         github: "https://github.com/wilhelmusolejr/coursematch",
         project: undefined,
-        external: undefined,
+        external: "https://coursematch.vercel.app",
       },
       design: {
         font: ["Poppins"],
@@ -319,7 +319,7 @@ function getAllProjects() {
       id: 3,
       name: "Foodify",
       information: {
-        short_description: "all food-related App",
+        short_description: "all food-related Recipe App",
         description: [
           "Foodify is a comprehensive platform designed to provide users with access to a wide variety of recipes and detailed cooking procedures. The application categorizes dishes into various types such as desserts, lunches, steaks, and more. Each recipe comes with an ingredient list, step-by-step instructions, and nutritional information to help users make informed decisions about their meals.",
           "The app leverages the Spoonacular API, a powerful food-related API that aggregates data from various sources to provide detailed recipes, ingredient information, and nutritional breakdowns. With this API integration, Foodify offers users access to an extensive collection of recipes and food-related data.",
