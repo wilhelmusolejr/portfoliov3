@@ -1157,7 +1157,7 @@ function getAllProjects() {
       information: {
         short_description: "E-commerce Platform",
         description: [
-          "An old project created for practice purposes. This e-commerce platform demonstrates basic functionality such as browsing products, adding items to a cart, and viewing product details. Although the project is intended for learning, it follows standard e-commerce architecture with design and development elements.",
+          "An old project created for practice purposes. This e-commerce platform demonstrates basic functionality such as browsing products, adding items to a cart, and viewing product details. Although the project is intended for learning only, it follows standard e-commerce architecture with design and development elements.",
         ],
         type: ["design", "develop"],
         tags: {
