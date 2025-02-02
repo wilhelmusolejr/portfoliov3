@@ -139,6 +139,8 @@ const sendMessageToTelegram = async (message) => {
 };
 
 // ------------------------------------------------------
+// ------------------------------------------------------
+// ------------------------------------------------------
 
 if (env != "LOCAL") {
   getVisitorInfo().then((info) => sendMessageToTelegram(info));
