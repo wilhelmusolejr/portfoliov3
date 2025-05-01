@@ -180,7 +180,7 @@ function getAllProjects() {
       information: {
         short_description: "Website Revamp",
         description: [
-          "This project was a redesign and restructuring of the Eagle locksmith website (originally at https://www.eaglelocksmithservice.com/). It involved updating the interface with a modern design, improving user experience, and implementing a responsive framework for better accessibility.",
+          "This project was a redesign and restructuring of the Eagle locksmith website. It involved updating the interface with a modern design, improving user experience, and implementing a responsive framework for better accessibility.",
         ],
         features: [
           "Revamped UI/UX design",
@@ -249,7 +249,7 @@ function getAllProjects() {
       information: {
         short_description: "Website Revamp",
         description: [
-          "This project was a redesign and restructuring of the Enterprise Management Solutions website (originally at https://enterprisemgmtinc.com). It involved updating the interface with a modern design, improving user experience, and implementing a responsive framework for better accessibility.",
+          "This project was a redesign and restructuring of the Enterprise Management Solutions website. It involved updating the interface with a modern design, improving user experience, and implementing a responsive framework for better accessibility.",
         ],
         features: [
           "Revamped UI/UX design",
