@@ -173,6 +173,75 @@ function getAllProjects() {
       },
     },
 
+    // 18 Eagle locksmith
+    {
+      id: 8,
+      name: "Eagle Locksmith",
+      information: {
+        short_description: "Website Revamp",
+        description: [
+          "This project was a redesign and restructuring of the Eagle locksmith website (originally at https://www.eaglelocksmithservice.com/). It involved updating the interface with a modern design, improving user experience, and implementing a responsive framework for better accessibility.",
+        ],
+        features: [
+          "Revamped UI/UX design",
+          "Responsive layout for mobile and desktop",
+          "Improved content structure",
+          "Enhanced accessibility features",
+          "Integrated with Next.js framework for optimized performance",
+          "SEO Feature",
+        ],
+        type: ["design", "develop"],
+        tags: {
+          technology: [
+            "html",
+            "css",
+            "javascript",
+            "tailwind",
+            "next.js",
+            "figma",
+            "Adobe Photoshop",
+          ],
+          project: [
+            "website-revamp",
+            "UI/UX-design",
+            "content-restructuring",
+            "responsive-design",
+            "modern-framework",
+          ],
+        },
+      },
+      project_showcase: {
+        is_intro: null,
+        is_pinned: {
+          order: 1,
+          image: "banner.webp",
+        },
+        is_other: null,
+        project: {
+          banner_image: "banner.webp",
+          screenshot: [
+            "banner.webp",
+            "screenshot1.png",
+            "screenshot2.png",
+            "screenshot3.png",
+            "screenshot4.png",
+            "screenshot5.png",
+            "screenshot6.png",
+          ],
+        },
+      },
+      link: {
+        name: "eagle-locksmith",
+        github: undefined,
+        project: undefined,
+        external: "https://eagle-locksmith.vercel.app/",
+      },
+      design: {
+        font: ["poppins"],
+        color: ["#16126F", "#FF0000", "#ff8904", "#000000", "#ffffff"],
+      },
+    },
+
     // 17 Enterprise Management Solutions
     {
       id: 1,

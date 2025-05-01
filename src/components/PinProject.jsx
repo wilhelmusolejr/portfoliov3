@@ -8,6 +8,7 @@ import pinasmura from "../assets/projects/pinasmura-ph/banner.webp";
 import quiztwist from "../assets/projects/quiztwist/banner.webp";
 import ems from "../assets/projects/enterprise-management-solutions/showcase.webp";
 import coursematch from "../assets/projects/coursematch/showcase.webp";
+import eaglelocksmith from "../assets/projects/eagle-locksmith/banner.webp";
 
 import { motion } from "framer-motion";
 
@@ -56,6 +57,9 @@ function PinProject(prop) {
       break;
     case "coursematch":
       image = coursematch;
+      break;
+    case "eagle-locksmith":
+      image = eaglelocksmith;
       break;
   }
 
