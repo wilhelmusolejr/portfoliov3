@@ -123,7 +123,7 @@ export default function Project() {
               ))}
             </div>
 
-            <h2 className="mb-4 text-light">Project overview</h2>
+            <h2 className="mb-4 text-light">Overview</h2>
 
             {project.information.description.map((description, index) => (
               <motion.p
@@ -174,7 +174,7 @@ export default function Project() {
 
           {project.link.external && (
             <div className="project-demo mt-5 pb-5">
-              <h2 className="mb-4 text-light">Project Demo</h2>
+              <h2 className="mb-4 text-light">Demo</h2>
               <a
                 href={project.link.external}
                 className="text-light-white"
