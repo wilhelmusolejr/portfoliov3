@@ -324,7 +324,7 @@ const services = [
     icon: faCode,
     gif_src: "https://giphy.com/embed/zOvBKUUEERdNm",
     description:
-      "My goal is to build websites that are fast, reliable, and easy to manage using modern tools and technologies. I focus on writing clean, simple code to ensure your site works well and is easy to maintain.",
+      "I build websites that are fast, reliable, and easy to manage using modern tools and technologies. I focus on writing clean, simple code to ensure your site works well and is easy to maintain.",
     list: [
       "Fast performance",
       "Clean and maintainable code",
@@ -754,8 +754,14 @@ export default function About() {
         </div>
       </section>
 
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
       {/* BANNER */}
-      <section className="container-fluid banner">
+      <section className="container-fluid banner d-none">
         <div className="container my-5 d-flex flex-column-reverse flex-md-row">
           {/* left */}
           <div className="left d-flex flex-column align-items-start justify-content-center">
@@ -818,14 +824,14 @@ export default function About() {
           </div>
 
           {/* right */}
-          <div className="border right d-flex flex-column justify-content-between">
+          <div className="border right d-flex flex-column justify-content-center">
             {/* parent */}
             <div
-              className="accordion d-flex flex-column gap-2"
+              className="accordion d-flex flex-column gap-2 d-none"
               id="accordionExample"
             >
               {work_experience.map((work, index) => (
-                <div key={index} className="accordion-item">
+                <div key={index} className="accordion-item ">
                   <h3 className="accordion-header">
                     <button
                       className="accordion-button d-flex flex-column align-items-start flex-lg-row gap-1 gap-lg-2 position-relative"
